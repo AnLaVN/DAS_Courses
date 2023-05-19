@@ -1,3 +1,3 @@
-# ADS_Courses
+# ADS_Course
 
-Make by AnLaVN, ThanhDat, TienSy
+Make by AnLaVN, ThanhDat, TienSysd
