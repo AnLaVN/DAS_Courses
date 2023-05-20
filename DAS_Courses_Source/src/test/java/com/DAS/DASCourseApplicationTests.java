@@ -1,11 +1,11 @@
-package com.ADS;
+package com.DAS;
 //Make by Bình An || AnLaVN || KatoVN
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ADSCourseApplicationTests {
+class DASCourseApplicationTests {
 
 	@Test
 	void contextLoads() {

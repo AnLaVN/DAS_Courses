@@ -1,4 +1,4 @@
-package com.ADS;
+package com.DAS;
 //Make by Bình An || AnLaVN || KatoVN
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -8,7 +8,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(ADSCourseApplication.class);
+		return application.sources(DASCourseApplication.class);
 	}
 
 }
