@@ -28,8 +28,8 @@
 
 
 
-	<div class="card border-2 border-{{Theme == 'dark' ? 'secondary' : 'primary'}} my-4 mx-1 mx-md-3">
-		<div class="card-header border-{{Theme == 'dark' ? 'secondary' : 'primary'}} h4">Tiêu đề khoá học</div>
+	<div class="card border-2 border-primary-subtle my-4 mx-1 mx-md-3">
+		<div class="card-header border-primary-subtle h4">Tiêu đề khoá học</div>
 		<div class="card-body row">
 
 			<blockquote class="m-0 blockquotecol-12 col-lg-7 col-xl-8 fs-5">
@@ -113,83 +113,68 @@
 				<div class="accordion-header">
 					<button class="accordion-button collapsed alert alert-{{Theme == 'dark' ? 'light' : 'success'}} fw-bold h5 m-0 py-0"
 					type="button" data-bs-toggle="collapse" data-bs-target="#AccorRating">
-					<div class="m-0 p-0 col-auto text-center">
-						<div class="my-0 d-none d-sm-block ">Đánh giá</div>
-						<div class="d-sm-none d-block fs-1"><i class="bi bi-stars"></i></div>
-					</div>
-					<div class="col rating rating-disable" data-vote="0">
-						<div class="star hidden my-1">
-							<span class="full" data-value="0"></span>
-							<span class="half" data-value="0"></span>
+						<div class="m-0 p-0 col-auto text-center">
+							<div class="my-0 d-none d-sm-block ">Đánh giá</div>
+							<div class="d-sm-none d-block fs-1"><i class="bi bi-stars"></i></div>
 						</div>
-						<div class="star mx-0 mx-md-1">
-							<span class="full" data-value="1"></span>
-							<span class="half" data-value="0.5"></span>
-							<span class="selected"></span>
+						<div class="col rating rating-disabled" data-vote="0">
+							<div class="star hidden my-1">
+								<span class="full" data-value="0"></span>
+								<span class="half" data-value="0"></span>
+							</div>
+							<div class="star mx-0 mx-md-1">
+								<span class="full" data-value="1"></span>
+								<span class="half" data-value="0.5"></span>
+								<span class="selected"></span>
+							</div>
+							<div class="star mx-0 mx-md-1">
+								<span class="full" data-value="2"></span>
+								<span class="half" data-value="1.5"></span>
+								<span class="selected"></span>
+							</div>
+							<div class="star mx-0 mx-md-1">
+								<span class="full" data-value="3"></span>
+								<span class="half" data-value="2.5"></span>
+								<span class="selected"></span>
+							</div>
+							<div class="star mx-0 mx-md-1">
+								<span class="full" data-value="4"></span>
+								<span class="half" data-value="3.5"></span>
+								<span class="selected"></span>
+							</div>
+							<div class="star mx-0 mx-md-1">
+								<span class="full" data-value="5"></span>
+								<span class="half" data-value="4.5"></span>
+								<span class="selected"></span>
+							</div>
+							<div class="score m-0 h5">
+								<span class="score-rating js-score">0</span>
+								<span>/</span>
+								<span class="total">5</span>
+							</div>
 						</div>
-						<div class="star mx-0 mx-md-1">
-							<span class="full" data-value="2"></span>
-							<span class="half" data-value="1.5"></span>
-							<span class="selected"></span>
-						</div>
-						<div class="star mx-0 mx-md-1">
-							<span class="full" data-value="3"></span>
-							<span class="half" data-value="2.5"></span>
-							<span class="selected"></span>
-						</div>
-						<div class="star mx-0 mx-md-1">
-							<span class="full" data-value="4"></span>
-							<span class="half" data-value="3.5"></span>
-							<span class="selected"></span>
-						</div>
-						<div class="star mx-0 mx-md-1">
-							<span class="full" data-value="5"></span>
-							<span class="half" data-value="4.5"></span>
-							<span class="selected"></span>
-						</div>
-						<div class="score m-0 h5">
-							<span class="score-rating js-score">0</span>
-							<span>/</span>
-							<span class="total">5</span>
-						</div>
-					</div>
 					</button>
 				</div>
-				<div class="accordion-collapse collapse row m-0" id="AccorRating" style="border: 1px solid red;">
+				<div class="accordion-collapse collapse m-0" id="AccorRating">
 					
-					<div class="card border-info col-auto m-2 p-0">
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt deleniti perferendis officia enim aut necessitatibus, explicabo laborum libero labore obcaecati, reprehenderit adipisci cupiditate fugiat modi voluptatibus. Aliquid quam quae similique.</p></div>
-					</div>
-
-					<div class="card border-info col-auto m-2 p-0" >
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p></div>
-					</div>
-
-					<div class="card border-info col-auto m-2 p-0" >
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p></div>
-					</div>
-					<div class="card border-info col-auto m-2 p-0" >
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">ipsum quibusdam omnis excepturi deeius, quae ea?</p></div>
-					</div>
-					<div class="card border-info col-auto m-2 p-0" >
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">Fuga assumenda porro molestiae int nemo incidunt.</p></div>
-					</div>
-					<div class="card border-info col-auto m-2 p-0" >
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">Lorem ipsum dolor sit amet consectetursequuntur cupiditate ratione illo?</p></div>
-					</div>
-					<div class="card border-info col-auto m-2 p-0" >
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">Lorem ipsum dol,eritatis odit eaque!</p></div>
-					</div>
-					<div class="card border-info col-auto m-2 p-0" >
-						<div class="card-header">Sy Tran</div>
-						<div class="card-body"><p class="card-text">Lorem ipsum dolor, sit amet cos dolor distinctio. Fugirerum, quidem eaque?</p></div>
+					<div class="card border-info-subtle m-2 mt-4 p-0" ng-repeat="i in [1,2,3,4,5]">
+						<div class="card-header" ng-init="star = 2.5">
+							<div class="row">
+								<div class="col">Sy Tran</div>
+								<div class="col-auto" style="color: #ffd700;">
+									<i class="bi bi-star{{star <= 0 ? '' : (star == 0.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star <= 1 ? '' : (star == 1.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star <= 2 ? '' : (star == 2.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star <= 3 ? '' : (star == 3.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star <= 4 ? '' : (star == 4.5 ? '-half' : '-fill')}}"></i>
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<p class="card-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa beatae officiis earum blanditiis? Quia, nostrum! Fugit, eos reprehenderit? Voluptatem tempore, cupiditate nemo earum soluta debitis enim natus similique odit placeat.
+							</p>
+						</div>
 					</div>
 
 				</div>
