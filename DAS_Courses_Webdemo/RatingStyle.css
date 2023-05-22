@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
+.rating-disable .star{
+    pointer-events: none;
+}
+
 .rating {
-    text-align: center;
-    position: relative;
+    text-align: right;
 }
 
 .hidden {
@@ -11,10 +14,10 @@
 
 .star {
     display: inline-block;
-    margin: 5px;
     font-size: 30px;
     color: whitesmoke;
     position: relative;
+    cursor: pointer;
 }
 
 .star.animate {
@@ -91,37 +94,18 @@
 
 .score {
     font-family: arial;
-    font-size: 20px;
     color: green;
-    margin-top: 20px;
-    margin-left: 50px;
+    display: inline-block;
 }
 
 .score-rating {
-    vertical-align: sup;
-    top: -5px;
+    top: -8px;
     position: relative;
     font-size: 150%;
 }
 
 .total {
-    vertical-align: sub;
     top: 0px;
     position: relative;
     font-size: 100%;
-}
-
-.average {
-    font-family: arial;
-    font-size: 20px;
-    color: indianred;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.average .score-average {
-    padding-top: 30px;
 }
