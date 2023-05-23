@@ -45,14 +45,18 @@ app.controller("MyCtrl", function ($scope){
 		else return $scope.ListBGImage[3] 
 	}
 
+
+
+
 	$scope.Validation = function(){
-		const forms = document.querySelectorAll('.needs-validation')
+		const forms = document.querySelectorAll('.needs-validation');
 
 		Array.from(forms).forEach(form => {
 			form.addEventListener('submit', event => {
 				if (!form.checkValidity()) {
 					event.preventDefault()
 					event.stopPropagation()
+					new bootstrap.Toast(document.getElementById('Toast')).show();
 				}
 				form.classList.add('was-validated')
 			}, false)
@@ -60,8 +64,24 @@ app.controller("MyCtrl", function ($scope){
 	}
 
 
-
-
+	$scope.Mark = 0.0;
+	
+	$scope.CheckSentence = function(){
+		var form = document.forms["ExamForm"];
+		form.addEventListener('submit', event => {
+			Array.from(form.getElementsByClassName("accordion-item")).forEach(sen =>{
+				var isSelect = false;
+				var senHeader = sen.getElementsByTagName("button")[0]
+				Array.from( sen.getElementsByTagName("input")).forEach(ans =>{
+					if(ans.checked) isSelect = true;
+				})
+				if(isSelect){ 
+					senHeader.classList.remove("bg-danger");
+					senHeader.classList.add("bg-success");
+				}else senHeader.classList.add("bg-danger");
+			})
+		})
+	}
 
 
 	
