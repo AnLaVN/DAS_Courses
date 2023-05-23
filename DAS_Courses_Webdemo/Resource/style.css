@@ -1,0 +1,6 @@
+:root {
+    --bs-body-bg: rgb(var(--bs-body-bg-rgb), 0.75);
+}
+.card{
+    backdrop-filter: blur(5px);
+}
