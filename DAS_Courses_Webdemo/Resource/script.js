@@ -64,12 +64,15 @@ app.controller("MyCtrl", function ($scope){
 	}
 
 
-	$scope.Mark = 0.0;
-	
 	$scope.CheckSentence = function(){
 		var form = document.forms["ExamForm"];
 		form.addEventListener('submit', event => {
-			Array.from(form.getElementsByClassName("accordion-item")).forEach(sen =>{
+			var sens = form.getElementsByClassName("accordion-item");
+			var mark = 100.0;
+			var senMark = (mark / sens.length).toFixed(2);
+			console.log("Mark of each Sententces : " + senMark)
+			
+			Array.from(sens).forEach(sen =>{
 				var isSelect = false;
 				var senHeader = sen.getElementsByTagName("button")[0]
 				Array.from( sen.getElementsByTagName("input")).forEach(ans =>{
@@ -78,8 +81,17 @@ app.controller("MyCtrl", function ($scope){
 				if(isSelect){ 
 					senHeader.classList.remove("bg-danger");
 					senHeader.classList.add("bg-success");
-				}else senHeader.classList.add("bg-danger");
+				}else{
+					senHeader.classList.add("bg-danger");
+					mark = (mark - senMark).toFixed(2);
+				}
 			})
+			var divMark = document.getElementById("Mark");
+			var finalMark = mark + "%";
+			divMark.removeAttribute("style");
+			divMark.style.width=finalMark;
+			divMark.innerHTML = finalMark;
+			console.log('Total mark: ' + finalMark);
 		})
 	}
 
