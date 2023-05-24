@@ -86,11 +86,13 @@ app.controller("MyCtrl", function ($scope){
 					mark = (mark - senMark).toFixed(2);
 				}
 			})
-			var divMark = document.getElementById("Mark");
 			var finalMark = mark + "%";
-			divMark.removeAttribute("style");
-			divMark.style.width=finalMark;
-			divMark.innerHTML = finalMark;
+			for (let i = 1; i <= 2; i++) {
+				var divMark = document.getElementById("Mark"+i);
+				divMark.removeAttribute("style");
+				divMark.style.width = finalMark;
+				divMark.innerHTML = finalMark;
+			}
 			console.log('Total mark: ' + finalMark);
 		})
 	}
