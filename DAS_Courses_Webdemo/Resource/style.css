@@ -5,3 +5,7 @@
 .accordion{
     --bs-body-bg: rgb(var(--bs-body-bg-rgb), 0.75);
 }
+div.navbar, footer{
+    background-color: #171615;
+    z-index: 1025;
+}

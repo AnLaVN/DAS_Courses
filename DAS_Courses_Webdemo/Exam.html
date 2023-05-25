@@ -24,32 +24,71 @@
 </head>
 
 <body id="BGImage" class="d-flex flex-column h-100">
-	<div ng-include="'Module/Header.html'"></div>
+
+
+
+	<!-- Toast -->
+	<div class="toast-container position-fixed bottom-0 end-0 p-3"  >
+		<div id="Toast" class="toast align-items-center" role="alert">
+			<div class="d-flex">
+				<div class="toast-body text-danger fw-bold fs-6">Vui lòng hoàn thành tất cả câu hỏi trước khi nộp bài</div>
+				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+			</div>
+		</div>
+	</div>
+
 
 
 	<div class="mt-4 mb-5 mx-1 mx-md-5 row">
+		<!-- Default Card -->
+		<div class="col-12 m-0 p-0 d-lg-none d-block">
+			<div class="card mb-5">
+				<div class="row m-0 p-0">
+					<div class="col-auto col-sm-5 m-0 p-0">
+						<img class="img-fluid" src="https://marketplace.canva.com/EAFAMirCsX4/2/0/1600w/canva-purple-creative-livestream-youtube-thumbnail-X2eVuOzURSM.jpg">
+					</div>
+					<div class="col col-sm-7 m-0 p-0">
+						<div class="card-body">
+							<h4 class="card-title">Trương Thành Đạt</h4>
+							<p class="card-text" style="font-size: 1.1vw;">
+								Mô tả khoá học
+							</p>
+							<h6 class="card-subtitle mb-2 text-body-secondary">Tiến độ bài thi / điểm đạt được</h6>
+							<div class="progress" role="progressbar">
+								<div class="progress-bar" id="Mark1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Float Card -->
 		<div class="col-12 col-lg-4 m-0 p-0 position-relative row d-none d-lg-block">
 			<div class="sticky-top">
 				<div class="col-11 position-absolute" style="top: 25%; left: 50%; transform: translateX(-50%)">
 					<div class="card mt-5">
 						<img class="card-img-top" src="https://marketplace.canva.com/EAFAMirCsX4/2/0/1600w/canva-purple-creative-livestream-youtube-thumbnail-X2eVuOzURSM.jpg">
 						<div class="card-body">
-							<h5 class="card-title">Light card tile</h5>
+							<h4 class="card-title">Trương Thành Đạt</h4>
 							<p class="card-text" style="font-size: 1.1vw;">
-								There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
-								you need to be sure there isn't anything embarrassing hidden in the middle of text.
+								Mô tả khoá học
 							</p>
+							<h6 class="card-subtitle mb-2 text-body-secondary">Tiến độ bài thi / điểm đạt được</h6>
+							<div class="progress" role="progressbar">
+								<div class="progress-bar" id="Mark2"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- Exam Sentences -->
 		<div class="col-12 col-lg-8 m-0 p-0">
-			<form class="needs-validation" novalidate ng-init="Validation()" action="#" method="post">
-				<div class="accordion" id="ExamSentences" style="backdrop-filter: blur(20px);">
-					<div class="accordion-item" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]" ng-init="sen = $index">
+			<form class="needs-validation" name="ExamForm" novalidate ng-init="Validation()" action="#" method="post">
+				<div class="accordion" id="ExamSentences" style="backdrop-filter: blur(20px);" ng-init="CheckSentence()">
+					<div class="accordion-item" ng-repeat="i in [1,2,3,4,5,6,7,8,9]" ng-init="sen = $index">
 						<h2 class="accordion-header">
-							<button class="accordion-button collapsed{{sen==0?'':' collapsed'}}" type="button" data-bs-toggle="collapse" data-bs-target="#Sentence{{sen+1}}">
+							<button class="accordion-button collapsed{{sen==0?'':' collapsed'}} bg-opacity-75 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#Sentence{{sen+1}}">
 								Câu hỏi {{sen+1}}: 
 							</button>
 						</h2>
@@ -70,14 +109,14 @@
 						</div>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-lg btn-outline-primary mt-5 w-100 fw-bolder fs-3">HOÀN THÀNH</button>
+				<button type="submit" class="btn btn-lg btn-primary mt-5 w-100 fw-bolder fs-5">HOÀN THÀNH</button>
 			</form>
 		</div>
 	</div>
 
 
 
-	<footer class="footer mt-auto py-1 bg-dark">
+	<footer class="footer mt-auto py-1">
 		<ul class="nav justify-content-center border-bottom pb-2 mb-2">
 			<li class="nav-item"><a href="#" class="nav-link text-secondary">Home</a></li>
 			<li class="nav-item"><a href="#" class="nav-link text-secondary">Features</a></li>

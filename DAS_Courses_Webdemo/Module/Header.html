@@ -52,7 +52,7 @@
 </div>
 
 <!-- Header on Desktop/Laptop device -->
-<div class="row navbar navbar-expand-lg align-items-center m-0 py-3 text-center navbar-dark" style="background-color: #171615; font-size: 1vmax;">
+<div class="row navbar navbar-expand-lg align-items-center m-0 py-3 text-center navbar-dark" style="font-size: 1vmax;">
 	<a class="col-1 navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#MenuSlide"><span class="navbar-toggler-icon"></span></a>
 	<div class="col-md-6 col-xl-6 collapse navbar-collapse p-0" id="NavMC">
 		<div class="col-2 col-xl-1 mx-xl-2 m-0"><a class="text-decoration-none text-light link-info navitem" href="${url}Home"><img src="../Image/Text.png" class="img-fluid"></a></div>
@@ -90,9 +90,9 @@
 			</div>
 		</div>
 	</div>
-	<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2" role="search" novalidate ng-init="Validation()" action="/Home" method="post">
+	<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2" role="search" novalidate ng-init="Validation()" action="/Submit" method="post">
 		<input class="form-control me-2" type="search" name="txtSearch" placeholder='Search' required>
-		<button class="btn btn-outline-info" type="submit">Search</button>
+		<button class="btn btn-outline-primary" type="submit">Search</button>
 		<i class="bi bi-{{Theme=='dark'?'moon-stars':'sun'}} fs-4 text-light link-info mx-2" ng-click="ChangeTheme()" role="button"></i>
 		<div class="dropdown">
 			<ul class="dropdown-menu">
