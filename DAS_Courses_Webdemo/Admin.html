@@ -11,18 +11,31 @@
     <!-- link fontw -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- angularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+
+
     <link rel="stylesheet" href="Resource/Admin.css">
+    <script src="Resource/Admin.js"></script>
     <title>admin</title>
+    <script>
+        var app = angular.module('myApp', []);
+    </script>
+
 
 </head>
 
-<body>
+<body ng-app="myApp">
     <header class="navbar navbar-expand-lg bg-black sticky-top" data-bs-theme="dark" style="height: 10vh;">
         <div class="container-fluid">
             <div class="d-md-none">
                 <a class="text-white mt-1 h6" href="#"><i class="fa-solid fa-user me-2"></i>Login</a>
             </div>
-            <a class="navbar-brand col-3 col-md-2 col-lg-1 d-flex justify-content-center" href="#"><img src="Text.png" width="70%" alt=""></a>
+            <a class="navbar-brand col-3 col-md-2 col-lg-1 d-flex justify-content-center" href="#"><img src="Image/Text.png" width="70%" alt=""></a>
             <button class="navbar-toggler  d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,7 +50,7 @@
                 <div class="position-sticky  pt-md-5 mt-3 sidebar-sticky">
                     <ul class="nav flex-column mt-md-4 mt-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" id="themMoii" href="#">
                                 <span data-feather="home" class="align-text-bottom"></span> Dashboard
                             </a>
                         </li>
@@ -93,19 +106,34 @@
                     </ul>
                 </div>
             </nav>
-            <article class="col-md-9 ms-sm-auto col-lg-10 p-0 ">
-                <div class="bg-body" style="height: 1000px;">
 
+            <article class="col-md-9 ms-sm-auto col-lg-10 p-2 ">
 
+                <div class="bg-body" style="height: 1000px;" ng-include="'/ModuleAdmin/ADKhoaHoc.html'">
                 </div>
             </article>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
-
-
-
-
 </body>
 
 </html>
