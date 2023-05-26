@@ -62,7 +62,7 @@ app.controller("MyCtrl", function ($scope){
 					event.preventDefault();
 					event.stopPropagation();
 					var formName = form.getAttribute('name');	//Code to show Toast on only ExamForm
-					if(formName != null && formName != "ExamForm") new bootstrap.Toast(document.getElementById('Toast')).show();
+					if(formName != null && formName != "ExamForm" && formName != "formSU" && formName != "formRP") new bootstrap.Toast(document.getElementById('Toast')).show();
 				}
 				form.classList.add('was-validated')
 			}, false)
