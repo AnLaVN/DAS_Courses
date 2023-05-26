@@ -30,7 +30,7 @@
 </head>
 
 <body ng-app="myApp">
-    <header class="navbar navbar-expand-lg bg-black sticky-top" data-bs-theme="dark" style="height: 10vh;">
+    <header class="navbar navbar-expand-xxl bg-black sticky-top" data-bs-theme="dark" style="height: 10vh;">
         <div class="container-fluid">
             <div class="d-md-none">
                 <a class="text-white mt-1 h6" href="#"><i class="fa-solid fa-user me-2"></i>Login</a>
@@ -82,7 +82,7 @@
                     </ul>
 
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-                        <span>Manage</span>
+                        <span>QUẢN LÝ</span>
                         <a class="link-secondary" href="#" aria-label="Add a new report">
                             <span data-feather="plus-circle" class="align-text-bottom"></span>
                         </a>
@@ -90,42 +90,67 @@
                     <ul class="nav flex-column mb-2 ms-3">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span><i class="fa-solid fa-circle me-2"></i>Course
+                                <span data-feather="file-text" class="align-text-bottom"></span><i class="fa-solid fa-circle me-2"></i>Khóa học
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span><i class="fa-solid fa-circle me-2"></i>resources
+                                <span data-feather="file-text" class="align-text-bottom"></span><i class="fa-solid fa-circle me-2"></i>Tài nguyên khóa học
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span><i class="fa-solid fa-circle me-2"></i>question
+                                <span data-feather="file-text" class="align-text-bottom"></span><i class="fa-solid fa-circle me-2"></i>Bộ câu hỏi kiểm tra
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
 
-            <article class="col-md-9 ms-sm-auto col-lg-10 p-2 ">
-
-                <div class="bg-body" style="height: 1000px;" ng-include="'/ModuleAdmin/ADKhoaHoc.html'">
+            <article class="col-md-9 ms-sm-auto col-lg-10 p-2 bg-body-tertiary">
+                <div class="" style="height: auto;" ng-include="'/ModuleAdmin/ADCTKhoaHoc.html'">
                 </div>
             </article>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+            <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog mt-5">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Thông tin khóa học</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <form class="row">
+                                <div class="col-6 mb-3">
+                                    <a href="#"><img width="100%" src="https://marketplace.canva.com/EAFAMirCsX4/2/0/1600w/canva-purple-creative-livestream-youtube-thumbnail-X2eVuOzURSM.jpg" alt=""></a>
+                                </div>
+                                <div class="mb-3 col-6 text-center">
+                                    <label for="maKhoaHoc" class="form-label mt-4 h6">Mã khóa học</label>
+                                    <h4>JAVA001</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tenKhoaHoc" class="form-label">Tên khóa học</label>
+                                    <input type="text" class="form-control" id="tenKhoaHoc" placeholder="Nhập tên khóa học">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="tenKhoaHoc" class="form-label">Phân loại</label>
+                                    <select id="course-filter" class="form-select">
+                                          <option value="math">Java</option>
+                                          <option value="science">Cơ sở dữ liệu</option>
+                                          <option value="history">Lịch sử</option>
+                                          <!-- Thêm các tùy chọn khác tại đây -->
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="moTa" class="form-label">Mô tả</label>
+                                    <textarea class="form-control" id="moTa" rows="3" placeholder="Nhập mô tả khóa học"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-end column-gap-3">
+                                    <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Đóng</button>
+                                    <button type="button" class="btn btn-primary fw-bold">Quản trị</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
