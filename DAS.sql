@@ -3,6 +3,8 @@ DROP DATABASE  IF EXISTS DAS
 CREATE DATABASE DAS
 USE DAS
 
+-- jdbc:sqlserver://DAS-SQL.mssql.somee.com;DatabaseName=DAS-SQL;encrypt=true;trustServerCertificate=true
+
 CREATE TABLE SINHVIEN(
 	USERNAME VARCHAR(10) NOT NULL PRIMARY KEY,
 	MATKHAU VARCHAR(50),
