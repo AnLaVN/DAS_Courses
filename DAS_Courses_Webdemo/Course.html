@@ -115,10 +115,10 @@
 	<!-- Ratting Course -->
 	<div class="my-4 mx-1 mx-md-5 row">
 		<div class="m-0 p-0 col-lg-7 col-xl-8 accordion">
-			<div class="accordion-item">
+			<div class="accordion-item" ng-init="ViewRatting = false">
 				<div class="accordion-header">
 					<button class="accordion-button collapsed alert alert-{{Theme == 'dark' ? 'light' : 'success'}} fw-bold h5 m-0 py-0"
-					type="button" data-bs-toggle="collapse" data-bs-target="#AccorRating">
+					type="button" data-bs-toggle="collapse" data-bs-target="#AccorRating" ng-click="ViewRatting = true">
 						<div class="m-0 p-0 col-auto text-center">
 							<div class="my-0 d-none d-sm-block ">Đánh giá</div>
 							<div class="d-sm-none d-block fs-1"><i class="bi bi-stars"></i></div>
@@ -161,9 +161,9 @@
 						</div>
 					</button>
 				</div>
-				<div class="accordion-collapse collapse m-0" id="AccorRating">
-					<div class="card border-info-subtle m-2 mt-3 p-0" ng-repeat="i in [1,2,3,4,5]"  style="background: rgb(var(--bs-body-bg-rgb), 0.75); backdrop-filter: blur(5px);">
-						<div class="card-header" ng-init="star = 3.5">
+				<div class="accordion-collapse collapse m-0" id="{{ViewRatting == false ? 'AccorRating' : ''}}">
+					<div class="card border-info-subtle m-2 mt-3 p-0" ng-repeat="i in [1,2,3,4,5]">
+						<div class="card-header" ng-init="star = 2.5">
 							<div class="row">
 								<div class="col">Sy Tran</div>
 								<div class="col-auto" style="color: #ffd700;">
