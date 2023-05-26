@@ -108,3 +108,12 @@ app.controller("MyCtrl", function ($scope){
 
 	
 });
+
+
+
+
+function checkYT(img){
+	if (img.naturalWidth === 120 && img.naturalHeight === 90) {
+		img.src = img.src.replace("maxresdefault", "hqdefault");
+	}
+}

@@ -27,13 +27,13 @@
 	<div ng-include="'Module/Header.html'"></div>
 
 
-	<div class="card my-4 mx-3">
+	<div class="card my-4 mx-1 mx-md-5">
 		<div class="card-body m-0 p-0">
 			<form class="row justify-content-center mx-0 py-4 needs-validation" novalidate ng-init="Validation()" action="${url}AdVideos" method="post">
 				<!-- Video Detail -->
 				<div class="col-12 col-lg-8 ps-4 pe-4 pe-lg-2 mx-0">
 					<div class="input-group mb-4 has-validation">
-						<span class="input-group-text d-none d-md-flex">https://www.youtube.com/watch?v=</span>
+						<span class="input-group-text">https://www.youtube.com/watch?v=</span>
 						<input type="text" class="form-control form-control-lg" name="idYoutube" ng-init="IDVideo='eq8r1ZTma08'" ng-model="IDVideo" placeholder="IDYoutube" required>
 						<div class="invalid-feedback">ID Youtube</div>
 					</div>
@@ -54,7 +54,7 @@
 						<c:when test="${video.thumbnail != null}"><img class="img-fluid" src="${video.thumbnail}"></c:when>
 						<c:otherwise><img class="img-fluid" src="{{'https://i3.ytimg.com/vi/'+IDVideo+'/maxresdefault.jpg'}}"></c:otherwise>
 					</c:choose> -->
-					<img class="img-fluid" src="{{'https://i3.ytimg.com/vi/'+IDVideo+'/maxresdefault.jpg'}}">
+					<img class="img-fluid" src="{{'https://i3.ytimg.com/vi/'+IDVideo+'/maxresdefault.jpg'}}" onload="checkYT(this)">
 					<div class="p-0 my-4"><div class="fs-5">{{TitleVideo}}</div></div>
 				</div>
 		
