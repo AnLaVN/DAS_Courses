@@ -1,9 +1,10 @@
-package com.AnLa.DAO;
+package com.DAS.DAO;
 //Make by Bình An || AnLaVN || KatoVN
 
-import com.AnLa.Entity.Danhgia;
-import com.AnLa.Entity.DanhgiaId;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.DAS.Entity.Danhgia;
+import com.DAS.Entity.DanhgiaId;
 
 public interface DanhgiaDAO extends JpaRepository<Danhgia, DanhgiaId>{
 

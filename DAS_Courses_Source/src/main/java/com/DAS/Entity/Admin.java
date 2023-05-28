@@ -1,4 +1,4 @@
-package com.AnLa.Entity;
+package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import jakarta.persistence.Column;
@@ -11,7 +11,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "ADMIN", schema = "dbo", catalog = "DAS", uniqueConstraints = @UniqueConstraint(columnNames = "EMAIL"))
+@Table(name = "ADMIN", schema = "dbo", catalog = "DASJ5SQL", uniqueConstraints = @UniqueConstraint(columnNames = "EMAIL"))
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

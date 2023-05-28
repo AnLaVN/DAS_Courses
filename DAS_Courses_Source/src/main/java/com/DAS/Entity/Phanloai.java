@@ -1,4 +1,4 @@
-package com.AnLa.Entity;
+package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.HashSet;
@@ -17,7 +17,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@Table(name = "PHANLOAI", schema = "dbo", catalog = "DAS")
+@Table(name = "PHANLOAI", schema = "dbo", catalog = "DASJ5SQL")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

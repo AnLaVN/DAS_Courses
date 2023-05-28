@@ -1,4 +1,4 @@
-package com.AnLa.Entity;
+package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import jakarta.persistence.Column;
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DiemId{
+public class DanhgiaId implements java.io.Serializable {
 
 	@Column(name = "USERNAME", nullable = false, length = 64)
 	private String username;
@@ -24,9 +24,9 @@ public class DiemId{
 			return true;
 		if ((other == null))
 			return false;
-		if (!(other instanceof DiemId))
+		if (!(other instanceof DanhgiaId))
 			return false;
-		DiemId castOther = (DiemId) other;
+		DanhgiaId castOther = (DanhgiaId) other;
 
 		return ((this.getUsername() == castOther.getUsername()) || (this.getUsername() != null
 				&& castOther.getUsername() != null && this.getUsername().equals(castOther.getUsername())))

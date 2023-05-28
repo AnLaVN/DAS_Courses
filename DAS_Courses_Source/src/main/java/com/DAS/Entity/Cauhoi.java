@@ -1,4 +1,4 @@
-package com.AnLa.Entity;
+package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import jakarta.persistence.Column;
@@ -15,7 +15,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@Table(name = "CAUHOI", schema = "dbo", catalog = "DAS")
+@Table(name = "CAUHOI", schema = "dbo", catalog = "DASJ5SQL")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

@@ -1,4 +1,4 @@
-package com.AnLa.Entity;
+package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.HashSet;
@@ -21,7 +21,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@Table(name = "SINHVIEN", schema = "dbo", catalog = "DAS", uniqueConstraints = @UniqueConstraint(columnNames = "EMAIL"))
+@Table(name = "SINHVIEN", schema = "dbo", catalog = "DASJ5SQL", uniqueConstraints = @UniqueConstraint(columnNames = "EMAIL"))
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

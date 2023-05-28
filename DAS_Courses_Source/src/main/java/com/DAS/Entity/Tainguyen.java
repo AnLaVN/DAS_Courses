@@ -1,4 +1,4 @@
-package com.AnLa.Entity;
+package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Entity
-@Table(name = "TAINGUYEN", schema = "dbo", catalog = "DAS")
+@Table(name = "TAINGUYEN", schema = "dbo", catalog = "DASJ5SQL")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
