@@ -3,7 +3,6 @@ DROP DATABASE  IF EXISTS DAS
 CREATE DATABASE DAS
 USE DAS
 
--- jdbc:sqlserver://DAS-SQL.mssql.somee.com;DatabaseName=DAS-SQL;encrypt=true;trustServerCertificate=true
 
 CREATE TABLE ADMIN(
 	USERNAME VARCHAR(64) NOT NULL PRIMARY KEY,
