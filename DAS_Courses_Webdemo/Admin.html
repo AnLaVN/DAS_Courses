@@ -30,7 +30,6 @@
 </head>
 
 <body ng-app="myApp">
-    <div ng-include="'Module/Header.html'"></div>
     <header class="navbar navbar-expand-xxl bg-black sticky-top" data-bs-theme="dark" style="height: 10vh;">
         <div class="container-fluid">
             <div class="d-md-none">
@@ -110,7 +109,7 @@
             </nav>
 
             <article class="col-md-9 ms-sm-auto col-lg-10 p-2 bg-body-tertiary">
-                <div class="" style="height: auto;" ng-include="'/ModuleAdmin/ADCTKhoaHoc.html'">
+                <div class="" style="height: auto;" ng-include="'/ModuleAdmin/ADKhoaHoc.html'">
                 </div>
             </article>
             <!-- Modal -->
@@ -153,6 +152,34 @@
                                     <button type="button" class="btn btn-primary fw-bold">Quản trị</button>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header fw-bold">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne">
+                                <h4 class="fw-bold"> Bộ tài liệu khóa học</h4>
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div ng-include="'/ModuleAdmin/ADTaiLieuKH.html'"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo">
+                                <h4 class="fw-bold"> Bộ câu hỏi kiểm tra</h4>
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div ng-include="'/ModuleAdmin/ADBoCauHoi.html'"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
