@@ -7,6 +7,22 @@
     font-family: "NotoSans-Bold";
     src: url("//cdn.shopify.com/s/files/1/0266/4841/2351/t/27/assets/NotoSans-Bold.woff?v=174965189005659812701668030118") format("woff"), url("//cdn.shopify.com/s/files/1/0266/4841/2351/t/27/assets/NotoSans-Bold.woff2?v=16089708071501136451668030118") format("woff2");
 }
+
+
+.card{
+    --bs-body-bg: rgb(var(--bs-body-bg-rgb), 0.75);
+    backdrop-filter: blur(5px);
+}
+.accordion{
+    --bs-body-bg: rgb(var(--bs-body-bg-rgb), 0.75);
+}
+div.navbar, footer{
+    background-color: #171615;
+    z-index: 1025;
+}
+
+
+
  
 .GH{
 	font-family: "Minecraft-Ten";

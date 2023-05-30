@@ -1,4 +1,4 @@
-package com.DAS.AnLa.Entity;
+package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import org.springframework.web.bind.annotation.RequestMapping;
