@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <title>Sign In</title>
+    <title>My Account</title>
     <link href="resources/style.css" rel="stylesheet">
     <script src="resources/script.js"></script>
     <style>
@@ -35,7 +35,7 @@
 
 	<div class="row m-0 p-0">
 		<div class="col-7 d-none d-lg-block"></div>
-		<div class="col-12 col-lg-5"><%@include file="Module/SignIn.jsp"%></div>
+		<div class="col-12 col-lg-5"><%@include file="Module/MyAcc.jsp"%></div>
 	</div>
 	
 	
@@ -43,7 +43,7 @@
 	<div class="toast-container position-fixed top-0 end-0 p-3"  >
 		<div id="Toast" class="toast align-items-center" role="alert">
 			<div class="d-flex">
-				<div class="toast-body text-danger">Username hoặc mật khẩu không chính xác !!!</div>
+				<div class="toast-body text-danger">Không thể cập nhật thông tin tài khoản <br>Vui lòng thử lại sau</div>
 				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
 			</div>
 		</div>

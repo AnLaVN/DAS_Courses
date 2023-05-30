@@ -42,8 +42,8 @@
 					<div class="invalid-feedback">Confirm password invalid</div>
 				</div>
 				<div class="has-validation mb-4">
-					<label for="inpThumbnail" class="form-label">Avatar</label>
-					<input type="file" class="form-control form-control-lg" name="picAvatar" id="inpThumbnail" required>
+					<label for="inpAvatar" class="form-label">Avatar</label>
+					<input type="file" class="form-control form-control-lg" name="picAvatar" id="inpAvatar" required>
 					<div class="invalid-feedback">Avatar invalid</div>
 				</div>
 				<div class="mt-5">

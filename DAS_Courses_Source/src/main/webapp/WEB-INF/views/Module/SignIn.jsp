@@ -9,7 +9,7 @@
 	<div class="card m-auto my-5" style="max-width: 32rem;">
 		<div class="card-header"><h5 class="card-title">Sign In</h5></div>
 		<div class="card-body">
-			<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate ng-init="Validation()" action="${url}SignIn" method="post">
+			<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate action="${url}SignIn" method="post">
 				<div class="form-floating mb-4">
 					<input type="text" class="form-control form-control-lg" id="txtUsernameSI" name="username" placeholder="Username" required>
 					<label for="txtUsernameSI" class="form-label">Username</label>

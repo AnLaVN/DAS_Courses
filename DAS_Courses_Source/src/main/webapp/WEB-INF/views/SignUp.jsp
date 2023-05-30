@@ -43,7 +43,7 @@
 	<div class="toast-container position-fixed top-0 end-0 p-3"  >
 		<div id="Toast" class="toast align-items-center" role="alert">
 			<div class="d-flex">
-				<div class="toast-body text-danger">Username hoặc email đã tồn tại!!!<br>Vui lòng chọn một username hoặc email khác</div>
+				<div class="toast-body text-danger">Username hoặc email đã tồn tại !!!<br>Vui lòng chọn một username hoặc email khác.</div>
 				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
 			</div>
 		</div>
