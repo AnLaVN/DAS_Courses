@@ -99,8 +99,8 @@
 				</div>
 			</div>
 		</div>
-		<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2" role="search" novalidate action="${url}Courses" method="get">
-			<input class="form-control me-2" type="search" name="search" placeholder='Search' required>
+		<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2" role="search" novalidate action="${url}Courses" method="post">
+			<input class="form-control me-2" type="search" name="txtSearch" placeholder='Search' required>
 			<button class="btn btn-outline-primary" type="submit">Search</button>
 			<i class="bi bi-{{Theme=='dark'?'moon-stars':'sun'}} fs-4 text-light link-info mx-2" ng-click="ChangeTheme()" role="button"></i>
 			<div class="dropdown">
