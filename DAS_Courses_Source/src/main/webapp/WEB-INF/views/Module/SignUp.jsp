@@ -9,7 +9,7 @@
 	<div class="card m-auto my-5" style="max-width: 32rem;">
 		<div class="card-header"><h5 class="card-title">Sign Up</h5></div>
 		<div class="card-body">
-			<form class="mx-1 mx-sm-3 mx-md-4 my-4 needs-validation" novalidate ng-init="Validation()" name="formSU" action="${url}SignUp" method="post">
+			<form class="mx-1 mx-sm-3 mx-md-4 my-4 needs-validation" novalidate name="formSU" action="${url}SignUp" method="post" enctype="multipart/form-data">
 				<div class="form-floating mb-4">
 					<input type="text" class="form-control form-control-lg" id="txtUsernameSU" name="username" placeholder="Username" required>
 					<label for="txtUsernameSU" class="form-label">Username</label>
@@ -43,7 +43,7 @@
 				</div>
 				<div class="has-validation mb-4">
 					<label for="inpThumbnail" class="form-label">Avatar</label>
-					<input type="file" class="form-control form-control-lg" name="avatar" id="inpThumbnail" required>
+					<input type="file" class="form-control form-control-lg" name="picAvatar" id="inpThumbnail" required>
 					<div class="invalid-feedback">Avatar invalid</div>
 				</div>
 				<div class="mt-5">

@@ -80,27 +80,39 @@ public class ALParam {
     }
     
     /**Sử dụng phương thức này để lấy file từ client.
-     * @param pFile Tham số truyền file từ client. File được chứa mặc định tại folder "/UsersFiles/"
+     * @param pFile Tham số truyền file từ client. File được chứa mặc định tại folder "/Image/UsersFiles/"
      * @return File nếu xử lý thành công, ngược lại là null.
      * @throws IOException 
      * @throws IllegalStateException 
      */
     public static File saveFile(MultipartFile pFile) throws IllegalStateException, IOException {
-    	return saveFile(pFile, "/UsersFiles/");
+    	return saveFile(pFile, "/Image/UsersFiles/");
     }
     
     /**Sử dụng phương thức này để lấy file từ client.
      * @param pFile Tham số truyền file từ client.
-     * @param pFolderPath đường dẫn folder dùng để chứa file.
+     * @param pFolderPath đường dẫn folder dùng để chứa file. Tên file mặc định là tên gốc.
      * @return File nếu xử lý thành công, ngược lại là null.
      * @throws IOException 
      * @throws IllegalStateException 
      */
     public static File saveFile(MultipartFile pFile, String pFolderPath) throws IllegalStateException, IOException {
+    	return saveFile(pFile, "/Image/UsersFiles/", pFile.getOriginalFilename());
+    }
+    
+    /**Sử dụng phương thức này để lấy file từ client.
+     * @param pFile Tham số truyền file từ client.
+     * @param pFolderPath đường dẫn folder dùng để chứa file.
+     * @param pFileName tên file sẽ lưu.
+     * @return File nếu xử lý thành công, ngược lại là null.
+     * @throws IOException 
+     * @throws IllegalStateException 
+     */
+    public static File saveFile(MultipartFile pFile, String pFolderPath, String pFileName) throws IllegalStateException, IOException {
     	if(!pFile.isEmpty()) {
             File dir = new File(sc.getRealPath(pFolderPath));
             if(!dir.exists()) dir.mkdir();
-            File photoFile = new File(dir, pFile.getOriginalFilename());
+            File photoFile = new File(dir, pFileName);
             pFile.transferTo(photoFile);
             Log.add("ALParam - Save file successfully as Absolute Path: " + photoFile.getAbsolutePath() + "\n\t\tValid url on HTML tag: " + pFolderPath+pFile.getOriginalFilename());
             return photoFile;

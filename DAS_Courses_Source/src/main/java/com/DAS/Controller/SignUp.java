@@ -1,11 +1,15 @@
 package com.DAS.Controller;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.AnLa.FILE.Log;
 import com.AnLa.HASH.AES;
@@ -13,6 +17,7 @@ import com.AnLa.HASH.SHA256;
 import com.DAS.DAO.SinhvienDAO;
 import com.DAS.Entity.Sinhvien;
 import com.DAS.Tools.ALCookie;
+import com.DAS.Tools.ALParam;
 
 @Controller
 @RequestMapping("/SignUp")
@@ -26,7 +31,7 @@ public class SignUp {
 	}
 	
 	@PostMapping
-	public String SignUpPOST(Sinhvien sv, Model model) {
+	public String SignUpPOST(Sinhvien sv, @RequestParam("picAvatar") MultipartFile avatar, Model model) {
 		sv.setUsername(SHA256.Encrypt(sv.getUsername()));	// Hash username of Sinhvien
 		Log.add("SignUpPOST - Try to sign up with username: " + sv.getUsername());		// Log info 
 		
@@ -38,7 +43,17 @@ public class SignUp {
 		// If Sinhvien doesn't have same username and email
 		if(!isExistsUsername && !isExistsEmail) {
 			sv.setMatkhau(SHA256.Encrypt(sv.getMatkhau()));	// Hash password of Sinhvien
-			sinhvienDao.save(sv);							// Save to database
+			
+			// Save avatar of Sinhvien
+			try {
+				String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", sv.getUsername()+".png").getAbsolutePath(),
+						imPath = abPath.substring(abPath.lastIndexOf("\\Image\\UsersAvatar"));
+				sv.setAvatar(imPath);
+			} catch (IllegalStateException | IOException e) {
+				Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
+			}
+			
+			sinhvienDao.save(sv);							// Save Sinhvien to database
 			ALCookie.add("userSignInCookie", 				// Add cookie for client
 					sv.getUsername() + "~" + AES.Encrypt(	// Add string of hash username and AES encrypt of
 							sv.getMatkhau(), 				// hash password

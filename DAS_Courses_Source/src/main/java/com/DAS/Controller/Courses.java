@@ -18,7 +18,9 @@ public class Courses {
 	
 	@PostMapping
 	public String CoursesPOST(@RequestParam("txtSearch") String search) {
-		if(search.equals("getBackground()")) return "Background";
+		if(search.equals("getBackground()")) return "Background";	// Easter Egg Background
+		
+		
 		return "Courses";
 	}
 	
