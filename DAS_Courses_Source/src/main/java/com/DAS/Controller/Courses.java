@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Courses {
 	
 	@GetMapping
-	public String CoursesOnLoad() {
-		return "";
+	public String CoursesGET() {
+		return "Courses";
 	}
 	
 }
