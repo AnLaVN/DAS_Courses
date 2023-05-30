@@ -1,4 +1,4 @@
-package com.DAS.Entity;
+package com.DAS.AnLa.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.HashSet;

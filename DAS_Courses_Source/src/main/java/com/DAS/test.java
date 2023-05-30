@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.AnLa.HASH.SHA256;
-import com.DAS.DAO.AdminDAO;
-import com.DAS.Entity.Admin;
+import com.DAS.AnLa.DAO.AdminDAO;
+import com.DAS.AnLa.Entity.Admin;
 
 @Controller
 public class test {
@@ -15,11 +15,7 @@ public class test {
 	
 	@RequestMapping("/test")
 	public String test() {
-		String  username = SHA256.Encrypt("BinhAn2003"), 
-				password = SHA256.Encrypt("Admin@123"), 
-				name = "Bình An",
-				email = "anldbps21776@fpt.edu.vn";
-		adminDAO.save(new Admin(username, password, name, email));
+		System.out.println(adminDAO.count());
 		return "test";
 	}
 }
