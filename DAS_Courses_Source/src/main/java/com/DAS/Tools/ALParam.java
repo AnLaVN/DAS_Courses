@@ -19,9 +19,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @Service
 public class ALParam {
 
-    @Autowired
     private static HttpServletRequest req;
-    @Autowired
     private static ServletContext sc;
 
     @Autowired

@@ -11,9 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @Service
 public class ALCookie {
 
-    @Autowired
     private static HttpServletRequest req;
-    @Autowired
     private static HttpServletResponse resp;
     
     @Autowired

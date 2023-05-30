@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 @Service
 public class ALSession {
-    @Autowired
+	
     private static HttpSession session;
     
     @Autowired
