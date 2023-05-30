@@ -17,6 +17,7 @@ import com.AnLa.HASH.SHA256;
 import com.DAS.DAO.SinhvienDAO;
 import com.DAS.Entity.Sinhvien;
 import com.DAS.Tools.ALCookie;
+import com.DAS.Tools.ALSession;
 
 @Controller
 @RequestMapping("/SignIn")
@@ -41,12 +42,16 @@ public class SignIn {
 		
 		// If Sinhvien match username and password
 		if(isVaild) {
-			// Save info of Sinhvien
-			ALCookie.add("userSignInCookie", 				// Add cookie for client
-					sv.getUsername() + "~" + AES.Encrypt(	// Add string of hash username and AES encrypt of
-							sv.getMatkhau(), 				// hash password
-							"DAS"+sv.getUsername()),		// with key is "DAS" add string with hash username
-					isRem.orElse(false) ? 7*24 : 0);		// live in 7 day if client check remmber, else is none
+			// If client click remmber radio
+			if(isRem.orElse(false)) {
+				ALCookie.add("userSignInCookie", 				// Add cookie for client
+						sv.getUsername() + "~" + AES.Encrypt(	// Add string of hash username and AES encrypt of
+								sv.getMatkhau(), 				// hash password
+								"DAS"+sv.getUsername()),		// with key is "DAS" add string with hash username
+						7*24);									// live in 7 day if client check remmber, else is none
+				// Add seesion scope
+				ALSession.setSession("userSV", sinhvienDAO.findById(sv.getUsername()).orElse(new Sinhvien()));
+			}
 			Log.add("SignInPOST - Sign in successfully !");	// Log info
 			return "redirect:/";							// Redirect to Home page
 		}

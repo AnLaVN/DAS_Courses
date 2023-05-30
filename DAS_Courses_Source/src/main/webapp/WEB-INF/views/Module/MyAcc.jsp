@@ -11,15 +11,15 @@
 		<div class="card-body">
 			<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate action="${url}MyAcc" method="post">
 				<div class="form-floating mb-4">
-					<input type="text" class="form-control form-control-lg is-valid" id="txtUsernameMA" name="username" placeholder="Username" value="${sessionScope.user.username}" disabled readonly>
-					<label for="txtUsernameMA" class="form-label">Username</label>
+					<input type="text" class="form-control form-control-lg is-valid" id="txtUsernameMA" name="username" placeholder="Username" value="${sessionScope.userSV.username}" disabled readonly>
+					<label for="txtUsernameMA" class="form-label">ID tài khoản</label>
 				</div>
 				<div class="form-floating mb-4">
-					<input type="email" class="form-control form-control-lg is-valid" id="txtEmailMA" name="email" placeholder="Email" value="${sessionScope.user.email}" disabled readonly>
+					<input type="email" class="form-control form-control-lg is-valid" id="txtEmailMA" name="email" placeholder="Email" value="${sessionScope.userSV.email}" disabled readonly>
 					<label for="txtEmailMA" class="form-label">Email</label>
 				</div>
 				<div class="form-floating mb-4">
-					<input type="text" class="form-control form-control-lg" id="txtFullnameMA" name="ten" placeholder="Fullname" value="${sessionScope.user.fullname}" required>
+					<input type="text" class="form-control form-control-lg" id="txtFullnameMA" name="ten" placeholder="Fullname" value="${sessionScope.userSV.ten}" required>
 					<label for="txtFullnameMA" class="form-label">Fullname</label>
 					<div class="invalid-feedback">Fullname invalid</div>
 				</div>
