@@ -53,7 +53,7 @@ public class SignUp {
 			} catch (IllegalStateException | IOException e) {
 				Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 			}
-			
+			// Save info of Sinhvien
 			sinhvienDao.save(sv);							// Save Sinhvien to database
 			ALCookie.add("userSignInCookie", 				// Add cookie for client
 					sv.getUsername() + "~" + AES.Encrypt(	// Add string of hash username and AES encrypt of

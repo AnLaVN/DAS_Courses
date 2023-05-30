@@ -11,5 +11,7 @@ import java.util.List;
 public interface SinhvienDAO extends JpaRepository<Sinhvien, String>{
 	
 	boolean existsByEmail(String email);
+	
+	boolean existsByUsernameAndMatkhau(String username, String matkhau);
 
 }

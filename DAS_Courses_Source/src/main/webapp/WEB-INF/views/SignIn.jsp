@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <title>Courses</title>
+    <title>Sign In</title>
     <link href="resources/style.css" rel="stylesheet">
     <script src="resources/script.js"></script>
     <style>
@@ -33,14 +33,18 @@
 
 
 
-	<div class="row justify-content-center m-0 my-4">
-		<div ng-repeat="i in [1,2,3,4,5,6,7,8]" class="card m-3 p-0 col-11 col-md-5 col-xl-3" onclick="location.href='/Course/${id}'" style="cursor: pointer;">
-			<div class="card-header">Business_Operations</div>
-			<img class="img-fluid"
-				src="https://marketplace.canva.com/EAFAMirCsX4/2/0/1600w/canva-purple-creative-livestream-youtube-thumbnail-X2eVuOzURSM.jpg">
-			<div class="card-body">
-				<h5 class="card-title fs-6">Tiêu đề khoá học</h5>
-				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+	<div class="row m-0 p-0">
+		<div class="col-7 d-none d-lg-block"></div>
+		<div class="col-12 col-lg-5"><%@include file="Module/SignIn.jsp"%></div>
+	</div>
+	
+	
+	<!-- Toast -->
+	<div class="toast-container position-fixed top-0 end-0 p-3"  >
+		<div id="Toast" class="toast align-items-center" role="alert">
+			<div class="d-flex">
+				<div class="toast-body text-danger">Username hoặc email không chính xác !!!</div>
+				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
 			</div>
 		</div>
 	</div>
@@ -50,5 +54,8 @@
     
     <%@include file="Module/Footer.jsp"%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <c:if test="${Toast}">
+	    <script>new bootstrap.Toast(document.getElementById('Toast')).show()</script>
+	</c:if>
 </body>
 </html>
