@@ -9,13 +9,16 @@
 	<div class="card m-auto my-5" style="max-width: 32rem;">
 		<div class="card-header"><h5 class="card-title">My Account</h5></div>
 		<div class="card-body">
+			<div class="m-0 mb-5 p-0 text-center">
+				<img class="img-fluid w-50" src="${sessionScope.userSV.avatar}">
+			</div>
 			<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate action="${url}MyAcc" method="post">
 				<div class="form-floating mb-4">
-					<input type="text" class="form-control form-control-lg is-valid" id="txtUsernameMA" name="username" placeholder="Username" value="${sessionScope.userSV.username}" disabled readonly>
+					<input type="text" class="form-control form-control-lg is-valid" id="txtUsernameMA" name="username" placeholder="Username" value="${sessionScope.userSV.username}" readonly>
 					<label for="txtUsernameMA" class="form-label">ID tài khoản</label>
 				</div>
 				<div class="form-floating mb-4">
-					<input type="email" class="form-control form-control-lg is-valid" id="txtEmailMA" name="email" placeholder="Email" value="${sessionScope.userSV.email}" disabled readonly>
+					<input type="email" class="form-control form-control-lg is-valid" id="txtEmailMA" name="email" placeholder="Email" value="${sessionScope.userSV.email}" readonly>
 					<label for="txtEmailMA" class="form-label">Email</label>
 				</div>
 				<div class="form-floating mb-4">
@@ -26,7 +29,6 @@
 				<div class="has-validation mb-4">
 					<label for="inpAvatar" class="form-label">Avatar</label>
 					<input type="file" class="form-control form-control-lg" name="picAvatar" id="inpAvatar">
-					<div class="invalid-feedback">Avatar invalid</div>
 				</div>
 				<div class="mt-5">
 					<button type="submit" class="btn btn-lg btn-primary w-100">Update account</button>

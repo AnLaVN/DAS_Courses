@@ -3,13 +3,16 @@
 		<h5 class="card-title">My Account</h5>
 	</div>
 	<div class="card-body">
+		<div class="m-0 mb-5 p-0 text-center">
+			<img class="img-fluid w-50" src="/Image/UsersAvatar/dc54e494980da7869bf74ad0608fda677cfce6ef9bfebe180932982151b53a18.png">
+		</div>
 		<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate ng-init="Validation()" action="${url}MyAccount" method="post">
 			<div class="form-floating mb-4">
-				<input type="text" class="form-control form-control-lg is-valid" id="txtUsernameMA" name="username" placeholder="Username" value="${sessionScope.user.username}" disabled readonly>
+				<input type="text" class="form-control form-control-lg is-valid" id="txtUsernameMA" name="username" placeholder="Username" value="${sessionScope.user.username}" readonly>
 				<label for="txtUsernameMA" class="form-label">Username</label>
 			</div>
 			<div class="form-floating mb-4">
-				<input type="email" class="form-control form-control-lg is-valid" id="txtEmailMA" name="email" placeholder="Email" value="${sessionScope.user.email}" disabled readonly>
+				<input type="email" class="form-control form-control-lg is-valid" id="txtEmailMA" name="email" placeholder="Email" value="${sessionScope.user.email}" readonly>
 				<label for="txtEmailMA" class="form-label">Email</label>
 			</div>
 			<div class="form-floating mb-4">

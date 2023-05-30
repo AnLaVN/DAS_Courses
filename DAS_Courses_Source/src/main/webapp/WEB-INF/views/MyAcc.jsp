@@ -35,7 +35,7 @@
 
 	<div class="row m-0 p-0">
 		<div class="col-7 d-none d-lg-block"></div>
-		<div class="col-12 col-lg-5"><%@include file="Module/MyAcc.jsp"%></div>
+		<div class="col-12 col-lg-5 m-0 p-0"><%@include file="Module/MyAcc.jsp"%></div>
 	</div>
 	
 	
