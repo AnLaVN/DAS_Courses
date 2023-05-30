@@ -42,7 +42,7 @@
 						<li><a class="text-decoration-none text-light fs-6" href="${url}MyAcc"><i class="bi bi-person-gear me-2"></i>My Account</a></li>
 						<li><a class="text-decoration-none text-light fs-6" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Change Password</a></li>
 						<li><a class="text-decoration-none text-light fs-6" href="${url}SignOut"><i class="bi bi-person-exclamation me-2"></i>Sign Out</a></li>
-						<li><a class="text-decoration-none text-light fs-6" href="${url}SignOut"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
+						<li><a class="text-decoration-none text-light fs-6" href="${url}Delete"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
 					</ul>
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 						<li><a class="dropdown-item" href="${url}MyAcc"><i class="bi bi-person-gear me-2"></i>My Account</a></li>
 						<li><a class="dropdown-item" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Change Password</a></li>
 						<li><a class="dropdown-item" href="${url}SignOut"><i class="bi bi-person-exclamation me-2"></i>Sign Out</a></li>
-						<li><a class="dropdown-item" href="${url}SignOut"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
+						<li><a class="dropdown-item" href="${url}Delete"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
 					</ul>
 				</div>
 			</div>
