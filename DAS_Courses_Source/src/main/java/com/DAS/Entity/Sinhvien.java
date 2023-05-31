@@ -1,8 +1,8 @@
 package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -46,15 +46,15 @@ public class Sinhvien{
 	private String email;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "sinhvien")
-	private Set<Danhgia> danhgias = new HashSet<Danhgia>(0);
+	private List<Danhgia> danhgias = new ArrayList<Danhgia>();
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "KHOAHOC_SINHVIEN", schema = "dbo", catalog = "DAS", joinColumns = {
 			@JoinColumn(name = "USERNAME", nullable = false, updatable = false) }, inverseJoinColumns = {
 					@JoinColumn(name = "IDKH", nullable = false, updatable = false) })
-	private Set<Khoahoc> khoahocs = new HashSet<Khoahoc>(0);
+	private List<Khoahoc> khoahocs = new ArrayList<Khoahoc>(0);
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "sinhvien")
-	private Set<Diem> diems = new HashSet<Diem>(0);
+	private List<Diem> diems = new ArrayList<Diem>();
 
 }

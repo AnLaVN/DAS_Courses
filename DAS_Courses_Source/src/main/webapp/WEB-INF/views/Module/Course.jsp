@@ -16,7 +16,7 @@
 				<!-- Float Card -->
 				<div class="sticky-top">
 					<div class="col-11 position-absolute pt-5" style="top: 25%; left: 50%; transform: translateX(-50%)">
-						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" formaction="${url}Course/${Course.idkh}">Tham Gia</button>
+						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
 						<div class="card">
 							<img class="card-img-top" src="${Course.anhmota}">
 							<div class="card-body">
@@ -60,7 +60,7 @@
 		<div class="card">
 			<img class="card-img-top" src="${Course.anhmota}">
 			<div class="card-body">
-				<button type="button" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" formaction="${url}Course/${Course.idkh}">Tham Gia</button>
+				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
 				<h5 class="card-title">${Course.tenkhoahoc}</h5>
 				<p class="card-text">${Course.motangan}</p>
 			</div>

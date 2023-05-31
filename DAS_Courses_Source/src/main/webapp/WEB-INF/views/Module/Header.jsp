@@ -18,6 +18,9 @@
 				<details>
 					<summary class="text-light fs-5"><i class="bi bi-book mx-2"></i>Course</summary>
 					<ul style="list-style-type: none;">
+						<li class="d-flex justify-content-between align-items-center">
+							<a class="text-decoration-none text-light fs-6" href="${url}Courses"><i class="bi bi-stack-overflow me-2"></i>Explore</a>
+						</li>
 						<c:forEach var="phanloai" items="${listPhanloai}" varStatus="loop">
 						<li class="d-flex justify-content-between align-items-center">
 							<a class="text-decoration-none text-light fs-6" href="${url}Courses?type=${phanloai.idpl}">${phanloai.tenpl}</a>
