@@ -35,7 +35,7 @@
 
 	<div class="row justify-content-center m-0 my-4">
 		<c:forEach var="course" items="${CoursesPage.content}" varStatus="loop">
-		<div class="card m-3 p-0 col-11 col-md-5 col-xl-3" onclick="location.href='/Course/${course.idkh}'" style="cursor: pointer;">
+		<div class="card m-3 p-0 col-11 col-md-5 col-xl-3" onclick="location.href='${url}Course/${course.idkh}'" style="cursor: pointer;">
 			<div class="card-header">${course.phanloai.tenpl}</div>
 			<img class="img-fluid" src="${course.anhmota}">
 			<div class="card-body">

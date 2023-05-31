@@ -18,18 +18,12 @@
 				<details>
 					<summary class="text-light fs-5"><i class="bi bi-book mx-2"></i>Course</summary>
 					<ul style="list-style-type: none;">
+						<c:forEach var="phanloai" items="${listPhanloai}" varStatus="loop">
 						<li class="d-flex justify-content-between align-items-center">
-							<a class="text-decoration-none text-light fs-6" href="${url}">Business Operations</a>
-						  	<span class="badge bg-primary rounded-pill">14</span>
+							<a class="text-decoration-none text-light fs-6" href="${url}Courses?type=${phanloai.idpl}">${phanloai.tenpl}</a>
+						  	<span class="badge bg-primary rounded-pill">${phanloai.khoahocs.getSize()}</span>
 						</li>
-						<li class="d-flex justify-content-between align-items-center">
-							<a class="text-decoration-none text-light fs-6" href="${url}">Cloud Computing</a>
-							 	<span class="badge bg-primary rounded-pill">2</span>
-						</li>
-						<li class="d-flex justify-content-between align-items-center">
-							<a class="text-decoration-none text-light fs-6" href="${url}">Other</a>
-							 	<span class="badge bg-primary rounded-pill">1</span>
-						</li>
+						</c:forEach>
 					</ul>
 				</details>
 			</div>
@@ -70,9 +64,9 @@
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-book me-2"></i>Course</button>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-stack-overflow me-2"></i>Explore</a></a></li>
-						<li><a class="dropdown-item" href="${url}Courses">Business Operations <span class="badge bg-primary rounded-pill">14</span></a></li>
-						<li><a class="dropdown-item" href="${url}Courses">Cloud Computing <span class="badge bg-primary rounded-pill">6</span></a></li>
-						<li><a class="dropdown-item" href="${url}Courses">Other <span class="badge bg-primary rounded-pill">13</span></a></li>
+						<c:forEach var="phanloai" items="${listPhanloai}" varStatus="loop">
+						<li><a class="dropdown-item" href="${url}Courses?type=${phanloai.idpl}">${phanloai.tenpl} <span class="badge bg-primary rounded-pill">${phanloai.khoahocs.getSize()}</span></a></li>
+						</c:forEach>
 					</ul>
 				</div>
 			</div>
