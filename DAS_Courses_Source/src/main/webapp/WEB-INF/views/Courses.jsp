@@ -34,16 +34,30 @@
 
 
 	<div class="row justify-content-center m-0 my-4">
-		<div ng-repeat="i in [1,2,3,4,5,6,7,8]" class="card m-3 p-0 col-11 col-md-5 col-xl-3" onclick="location.href='/Course/${id}'" style="cursor: pointer;">
-			<div class="card-header">Business_Operations</div>
+		<c:forEach var="course" items="${CoursesPage.content}" varStatus="loop">
+		<div class="card m-3 p-0 col-11 col-md-5 col-xl-3" onclick="location.href='/Course/${course.idkh}'" style="cursor: pointer;">
+			<div class="card-header">${course.phanloai.tenpl}</div>
 			<img class="img-fluid"
 				src="https://marketplace.canva.com/EAFAMirCsX4/2/0/1600w/canva-purple-creative-livestream-youtube-thumbnail-X2eVuOzURSM.jpg">
 			<div class="card-body">
-				<h5 class="card-title fs-6">Tiêu đề khoá học</h5>
-				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				<h5 class="card-title fs-6">${course.tenkhoahoc}</h5>
+				<p class="card-text">${course.motangan}</p>
 			</div>
 		</div>
+		</c:forEach>
 	</div>
+	
+	
+	<!-- Nav bar -->
+	<nav>
+		<ul class="pagination m-0 p-0 pb-5 justify-content-center">
+			<li class="page-item"><a class="page-link" href="?page=1" onclick="handleClick(this)">&laquo;</a></li>
+			<c:forEach var="i" begin="1" end="${CoursesPage.totalPages}">
+			<li class="page-item ${CurrentPage==i?'active':''}"><a class="page-link" href="?page=${i}" onclick="handleClick(this)">${i}</a>
+			</c:forEach>
+			<li class="page-item"><a class="page-link" href="?page=${CoursesPage.totalPages}" onclick="handleClick(this)">&raquo;</a></li>
+		</ul>
+	</nav>
 
 
 
