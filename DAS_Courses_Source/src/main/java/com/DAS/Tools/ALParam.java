@@ -114,7 +114,7 @@ public class ALParam {
             if(!dir.exists()) dir.mkdir();
             File photoFile = new File(dir, pFileName);
             pFile.transferTo(photoFile);
-            Log.add("ALParam - Save file successfully as Absolute Path: " + photoFile.getAbsolutePath() + "\n\t\tValid url on HTML tag: " + pFolderPath+pFile.getOriginalFilename());
+            Log.add("ALParam - Save file successfully as Absolute Path: " + photoFile.getAbsolutePath());
             return photoFile;
     	}
     	return null;
