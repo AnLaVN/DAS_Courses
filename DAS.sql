@@ -80,7 +80,7 @@ CREATE TABLE CAUHOI(
 );
 
 INSERT INTO SINHVIEN VALUES
-	('13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049','ee3736b04a9127286a69fb06aaaeea2c9fb719063811cba48eaab7e056be9396',N'LÊ THÀNH ĐẠT',NULL,'dtruog51@gmail.com');  --LETHANHDAT2510|25101025
+	('13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049','ee3736b04a9127286a69fb06aaaeea2c9fb719063811cba48eaab7e056be9396',N'LÊ THÀNH ĐẠT','https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-da-dien-fb-hai-32-29-13-54-49.jpg','dtruog51@gmail.com');  --LETHANHDAT2510|25101025
 
 INSERT INTO PHANLOAI VALUES
 	('FE','FRONT END'),
@@ -122,6 +122,9 @@ INSERT INTO KHOAHOC VALUES
 	Bạn sẽ tìm hiểu về các loại cơ sở dữ liệu, như quan hệ và NoSQL, và học cách thiết kế mô hình dữ liệu nhất quán. Bạn sẽ cũng được hướng dẫn về ngôn ngữ truy vấn cơ sở dữ liệu như SQL và công cụ để tối ưu hiệu suất và bảo mật.'
 	,'https://cybersoft.edu.vn/wp-content/uploads/2022/06/dev_illustration.png','DB')
 
+INSERT INTO KHOAHOC_SINHVIEN VALUES
+('13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049','KHFE001')
+
 INSERT INTO TAINGUYEN VALUES
 	('TNFE01',N'Lộ Trình Học Lập Trình Front-End Từ Căn Bản Đến Nâng Cao | BÀI 1','DyXab2jrXhc',N'GIỚI THIỆU CHƯƠNG TRÌNH HỌC','KHFE001'),
 	('TNFE02',N'Tổng quan về thiết kế web và các bước xây dựng | BÀI 2','d07_8oNW9gg',N'TỔNG QUAN VỀ WEB VÀ INTERNET','KHFE001'),
@@ -136,3 +139,29 @@ INSERT INTO CAUHOI VALUES
 	('BEB01',N'Servlet là gì trong lĩnh vực phát triển Back End?',N'Servlet là gì trong lĩnh vực phát triển Back End?',N'Là một loại cơ sở dữ liệu',N'Là một thành phần của Java để xử lý yêu cầu và phản hồi trên phía máy chủ',N'Là một công nghệ để tạo giao diện người dùng động','C','KHBE001'),
 	('BEB02',N'Servlet được viết bằng ngôn ngữ lập trình nào?',N'Java',N'Python',N'PHP',N'C++',N'A','KHBE001'),
 	('BEB03',N'Servlet được sử dụng để thực hiện những tác vụ gì trong phát triển Back End?',N'Tạo và quản lý cơ sở dữ liệu',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ','B','KHBE001')
+
+-- THÊM SINH VIÊN VÀO KHOAHOC-SINHVIEN KHI SINHVIEN ENROLL
+	IF OBJECT_ID('SP_INSERT_KH_SV') IS NOT NULL
+	DROP PROC SP_INSERT_KH_SV
+GO
+	CREATE PROC SP_INSERT_KH_SV(@USERNAME VARCHAR(64),@IDKH VARCHAR(20))
+	AS
+		BEGIN
+				INSERT INTO KHOAHOC_SINHVIEN VALUES (@USERNAME,@IDKH)
+		END
+
+-- TRẢ VỀ TRUE KHI SINH VIÊN ĐÃ ENROLL ÍT NHẤT 1 KHÓA HỌC
+	IF OBJECT_ID('SP_FIND_SV_KH') IS NOT NULL
+    DROP PROC SP_FIND_SV_KH
+GO
+	CREATE PROC SP_FIND_SV_KH (@USERNAME VARCHAR(64), @IDKH VARCHAR(20))
+		AS
+		BEGIN
+				DECLARE @RESULT VARCHAR(5)
+				IF EXISTS (SELECT 1 FROM KHOAHOC_SINHVIEN WHERE USERNAME = @USERNAME AND IDKH = @IDKH)
+					SET @RESULT = 'TRUE'
+				ELSE
+					SET @RESULT = 'FALSE'
+			PRINT 'RESULT: ' + @RESULT
+		END
+EXEC SP_FIND_SV_KH '13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049', 'KHFE001'
