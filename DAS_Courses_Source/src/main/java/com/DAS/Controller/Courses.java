@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,15 +26,14 @@ public class Courses {
 	@Autowired
 	PhanloaiDAO phanloaiDAO;
 	
-	@RequestMapping
+	@GetMapping
 	public String CoursesGET(@RequestParam("page") Optional<Integer> pPage, @RequestParam("type") Optional<String> pType, Model model) {
 		int currentPage = pPage.orElse(1);
-		String currentType = pType.orElse(null);
 		Pageable pageable = PageRequest.of(currentPage - 1, 6);
 		Page<Khoahoc> coursesPage = null;
 		
-		if(currentType == null) coursesPage = khoahocDAO.findAll(pageable);
-		else coursesPage = khoahocDAO.findByPhanloai(phanloaiDAO.findById(currentType).get(), pageable);
+		if(pType.isEmpty()) coursesPage = khoahocDAO.findAll(pageable);
+		else coursesPage = khoahocDAO.findByPhanloai(phanloaiDAO.findById(pType.get()).get(), pageable);
 		
 		model.addAttribute("CoursesPage", coursesPage);
 		model.addAttribute("CurrentPage", currentPage);

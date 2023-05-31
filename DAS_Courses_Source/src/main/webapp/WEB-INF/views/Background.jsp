@@ -12,8 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
     <title>Easter Egg Background</title>
-    <link href="resources/style.css" rel="stylesheet">
-    <script src="resources/script.js"></script>
+    <link href="/resources/style.css" rel="stylesheet">
+    <script src="/resources/script.js"></script>
     <style>
         #BGImage {
             background: url("{{getImageOnTime()}}") no-repeat center center fixed;

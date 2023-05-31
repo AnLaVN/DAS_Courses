@@ -11,9 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <title>Sign In</title>
+    <title>${Course.tenkhoahoc}</title>
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
+    <!-- CSS and JS for Rating -->
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link href="/resources/RatingStyle.css" rel="stylesheet">
+	<script src="/resources/RatingScript.js"></script>
     <style>
         #BGImage {
             background: url("{{getImageOnTime()}}") no-repeat center center fixed;
@@ -25,7 +30,7 @@
     </style>
 </head>
 
-<body id="BGImage" class="d-flex flex-column h-100">
+<body id="BGImage" class="d-flex flex-column">
 	<c:url var="url" value="/"/>
 	
 	<%@include file="Module/Header.jsp"%>
@@ -33,29 +38,12 @@
 
 
 
-	<div class="row m-0 p-0">
-		<div class="col-7 d-none d-lg-block"></div>
-		<div class="col-12 col-lg-5 m-0 p-0"><%@include file="Module/SignIn.jsp"%></div>
-	</div>
-	
-	
-	<!-- Toast -->
-	<div class="toast-container position-fixed top-0 end-0 p-3"  >
-		<div id="Toast" class="toast align-items-center" role="alert">
-			<div class="d-flex">
-				<div class="toast-body text-danger">Username hoặc mật khẩu không chính xác !!!</div>
-				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
-			</div>
-		</div>
-	</div>
+	<%@include file="Module/Course.jsp"%>
 
 
 
     
     <%@include file="Module/Footer.jsp"%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <c:if test="${Toast}">
-	    <script>new bootstrap.Toast(document.getElementById('Toast')).show()</script>
-	</c:if>
 </body>
 </html>
