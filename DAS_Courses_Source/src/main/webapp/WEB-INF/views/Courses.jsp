@@ -37,8 +37,7 @@
 		<c:forEach var="course" items="${CoursesPage.content}" varStatus="loop">
 		<div class="card m-3 p-0 col-11 col-md-5 col-xl-3" onclick="location.href='/Course/${course.idkh}'" style="cursor: pointer;">
 			<div class="card-header">${course.phanloai.tenpl}</div>
-			<img class="img-fluid"
-				src="https://marketplace.canva.com/EAFAMirCsX4/2/0/1600w/canva-purple-creative-livestream-youtube-thumbnail-X2eVuOzURSM.jpg">
+			<img class="img-fluid" src="${course.anhmota}">
 			<div class="card-body">
 				<h5 class="card-title fs-6">${course.tenkhoahoc}</h5>
 				<p class="card-text">${course.motangan}</p>
