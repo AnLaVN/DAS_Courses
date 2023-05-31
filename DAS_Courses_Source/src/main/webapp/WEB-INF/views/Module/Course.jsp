@@ -16,7 +16,7 @@
 				<!-- Float Card -->
 				<div class="sticky-top">
 					<div class="col-11 position-absolute pt-5" style="top: 25%; left: 50%; transform: translateX(-50%)">
-						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
 						<div class="card align-items-center overflow-y-auto" style="max-height: 60vh;">
 							<img class="card-img-top" src="${Course.anhmota}">
 							<div class="card-body">

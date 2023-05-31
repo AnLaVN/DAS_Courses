@@ -140,15 +140,6 @@ INSERT INTO CAUHOI VALUES
 	('BEB02',N'Servlet được viết bằng ngôn ngữ lập trình nào?',N'Java',N'Python',N'PHP',N'C++',N'A','KHBE001'),
 	('BEB03',N'Servlet được sử dụng để thực hiện những tác vụ gì trong phát triển Back End?',N'Tạo và quản lý cơ sở dữ liệu',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ','B','KHBE001')
 
--- THÊM SINH VIÊN VÀO KHOAHOC-SINHVIEN KHI SINHVIEN ENROLL
-	IF OBJECT_ID('SP_INSERT_KH_SV') IS NOT NULL
-	DROP PROC SP_INSERT_KH_SV
-GO
-	CREATE PROC SP_INSERT_KH_SV(@USERNAME VARCHAR(64),@IDKH VARCHAR(20))
-	AS
-		BEGIN
-				INSERT INTO KHOAHOC_SINHVIEN VALUES (@USERNAME,@IDKH)
-		END
 
 -- TRẢ VỀ TRUE KHI SINH VIÊN ĐÃ ENROLL ÍT NHẤT 1 KHÓA HỌC
 IF OBJECT_ID('FN_FIND_SV_KH') IS NOT NULL

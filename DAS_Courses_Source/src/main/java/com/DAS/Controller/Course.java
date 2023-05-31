@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.AnLa.FILE.Log;
 import com.DAS.DAO.KhoahocDAO;
 import com.DAS.DAO.SinhvienDAO;
-import com.DAS.DAO.TainguyenDAO;
 import com.DAS.Entity.Khoahoc;
+import com.DAS.Entity.Sinhvien;
 
 @Controller
 @RequestMapping("/Course")
@@ -23,8 +24,6 @@ public class Course {
 	KhoahocDAO khoahocDAO;
 	@Autowired
 	SinhvienDAO sinhvienDAO;
-	@Autowired
-	TainguyenDAO tainguyenDAO;
 	
 	@GetMapping("/{idkh}")
 	public String CourseGET(@PathVariable("idkh") String idkh, Model model) {
@@ -32,15 +31,19 @@ public class Course {
 		return "Course";
 	}
 	
-	@GetMapping("/{idkh}/join")
-	public String Course(@PathVariable("idkh") String idkh, @RequestParam("idsv") String idsv) {
+	@GetMapping("/{idkh}/Join")
+	public String CourseJOIN(@PathVariable("idkh") String idkh, @RequestParam("idsv") String idsv) {
 		boolean ixExists = sinhvienDAO.isExistsSV_KH(idsv, idkh);
-		if(ixExists) return "redirect:/";
-		
-		System.out.println(idkh);
-		
-		
-		return "Courses";
+		if(!ixExists) {
+			Sinhvien sv = sinhvienDAO.findById(idsv).get();
+			Khoahoc kh  = khoahocDAO.findById(idkh).get();
+			sv.getKhoahocs().add(kh);
+			kh.getSinhviens().add(sv);
+			sinhvienDAO.save(sv);
+			khoahocDAO.save(kh);
+			Log.add("CourseJOIN - Insert username " + idsv + " to " + idkh);
+		}
+		return "redirect:/Course/"+idkh+"/Material";
 	}
 	
 	@GetMapping("/{idkh}/Material")
