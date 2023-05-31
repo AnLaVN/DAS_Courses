@@ -6,7 +6,7 @@
 
 
 	<!-- Description Course  -->
-	<div class="card border-2 border-primary-subtle mx-0 mt-4 mx-md-5 px-0">
+	<div class="card border-2 border-primary-subtle mx-0 my-4 mx-md-5 px-0">
 		<div class="card-header border-primary-subtle h4">${Course.tenkhoahoc}</div>
 		<div class="card-body row mx-0 px-0">
 			<blockquote class="m-0 blockquotecol-12 col-lg-7 col-xl-8 fs-5">
@@ -17,10 +17,9 @@
 				<div class="sticky-top">
 					<div class="col-11 position-absolute pt-5" style="top: 25%; left: 50%; transform: translateX(-50%)">
 						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
-						<div class="card">
+						<div class="card align-items-center overflow-y-auto" style="max-height: 60vh;">
 							<img class="card-img-top" src="${Course.anhmota}">
 							<div class="card-body">
-								<h5 class="card-title">${Course.tenkhoahoc}</h5>
 								<p class="card-text" style="font-size: 1.1vw;">${Course.motangan}</p>
 							</div>
 						</div>
@@ -34,7 +33,7 @@
 	
 	
 	<!-- Lession of Course  -->
-	<div class="mx-0 mt-4 mx-md-5 px-0 row">
+	<div class="mx-0 my-4 mx-md-5 px-0 row">
 		<div class="m-0 p-0 col-lg-7 col-xl-8 accordion" >
 			<div class="accordion-item"  >
 				<div class="accordion-header">
@@ -56,7 +55,7 @@
 		
 	
 	<!-- Default Card -->
-	<div class="mx-0 mt-4 mx-md-5 px-0 d-block d-lg-none">
+	<div class="mx-0 my-4 mx-md-5 px-0 d-block d-lg-none">
 		<div class="card">
 			<img class="card-img-top" src="${Course.anhmota}">
 			<div class="card-body">
@@ -70,7 +69,7 @@
 
 
 	<!-- Ratting Course -->
-	<div class="mx-0 mt-4 mx-md-5 px-0 row">
+	<div class="mx-0 my-4 mx-md-5 px-0 row">
 		<div class="m-0 mb-5 p-0 col-lg-7 col-xl-8 accordion">
 			<div class="accordion-item" ng-init="ViewRatting = false">
 				<div class="accordion-header">
