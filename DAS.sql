@@ -88,7 +88,7 @@ INSERT INTO PHANLOAI VALUES
 	('DB','DATABASE')
 
 INSERT INTO KHOAHOC VALUES
-	('KHFE001','HỌC FRONT END CẤP TỐC'
+	('KHFE001',N'HỌC FRONT END CẤP TỐC'
 	,N'Khóa học Front End là cơ hội tuyệt vời để bạn nắm vững kiến thức và kỹ năng cần thiết để trở thành một nhà phát triển web chuyên nghiệp. 
 	Trải qua khóa học này, bạn sẽ được hướng dẫn từ những khái niệm cơ bản như HTML, CSS cho đến các công nghệ và framework tiên tiến như JavaScript, React và Angular. 
 	Ngoài HTML và CSS, khóa học cũng sẽ giới thiệu cho bạn về JavaScript, một ngôn ngữ lập trình mạnh mẽ trong việc tạo ra những trang web động. 
@@ -97,19 +97,18 @@ INSERT INTO KHOAHOC VALUES
 	Bạn sẽ có thể làm việc trong các công ty phát triển web, công ty thiết kế giao diện hoặc thậm chí tự mình xây dựng và phát triển những trang web độc đáo của riêng mình.'
 	,N'Khóa học Front End sẽ cung cấp cho bạn kiến thức và kỹ năng cần thiết để trở thành một lập trình viên Front End đáng chú ý.
 	Bạn sẽ có thể làm việc trong các công ty phát triển web, công ty thiết kế giao diện hoặc thậm chí tự mình xây dựng và phát triển những trang web độc đáo của riêng mình.'
-	,NULL,'FE'),
-	('KHBE001','HỌC BACK END SIÊU KHÓ VỚI JAVA'
+	,'https://cybersoft.edu.vn/wp-content/uploads/2022/08/chudeFE12.svg','FE'),
+	('KHBE001',N'HỌC BACK END SIÊU KHÓ VỚI JAVA'
 	,N'Khóa học Back End cũng là một khóa học quan trọng và bổ ích cho những người muốn trở thành nhà phát triển web đằng sau màn hình.
 	Trong khóa học này, bạn sẽ tìm hiểu về các ngôn ngữ và công nghệ được sử dụng để xây dựng phần server-side của một trang web. 
 	Ngoài ra, khóa học Back End cũng sẽ giới thiệu cho bạn các khái niệm quan trọng như quản lý phiên, bảo mật dữ liệu, quản lý tài nguyên, và tối ưu hóa hiệu suất.
 	Bạn sẽ học cách xây dựng và triển khai ứng dụng web đáng tin cậy, an toàn và có khả năng mở rộng. 
 	Sau khi hoàn thành khóa học Back End, bạn sẽ có kiến thức và kỹ năng để làm việc với các công ty phát triển phần mềm, công ty dịch vụ web, hoặc thậm chí xây dựng ứng dụng web riêng của mình. 
 	Bạn sẽ có khả năng thiết kế và xây dựng phần Back End mạnh mẽ và linh hoạt, tạo ra những trang web đáp ứng được yêu cầu phức tạp và tương tác với cơ sở dữ liệu và các dịch vụ bên ngoài.'
-	,N'Khóa học Back End là một khóa học quan trọng cho những người muốn trở thành nhà phát triển web chuyên nghiệp. Trong khóa học này, bạn sẽ học về các ngôn ngữ và công nghệ Back End như PHP, Python hoặc JavaScript để xây dựng phần server-side của trang web.
-	Bạn sẽ hiểu cách xử lý yêu cầu từ người dùng, tương tác với cơ sở dữ liệu, và xây dựng các chức năng logic phía server. Khóa học cũng giới thiệu các khái niệm bảo mật dữ liệu, quản lý tài nguyên và tối ưu hiệu suất. Sau khi hoàn thành,
-	bạn sẽ có kiến thức và kỹ năng để làm việc trong lĩnh vực Back End và xây dựng những ứng dụng web đáng tin cậy, an toàn và có khả năng mở rộng.'
-	,NULL,'BE'),
-	('KHDB001','LƯU TRỮ DỮ LIỆU VỚI CƠ SỞ DỮ LIỆU SQL SERVER'
+	,N'Khóa học Back End là một khóa học quan trọng cho những người muốn trở thành nhà phát triển web chuyên nghiệp. 
+	Trong khóa học này, bạn sẽ học về các ngôn ngữ và công nghệ Back End như PHP hoặc JavaScript để xây dựng phần server-side của trang web.'
+	,'https://cybersoft.edu.vn/wp-content/uploads/2022/08/chudeFE5.svg','BE'),
+	('KHDB001',N'LƯU TRỮ DỮ LIỆU VỚI CƠ SỞ DỮ LIỆU SQL SERVER'
 	,N'Khóa học về cơ sở dữ liệu (Database) là một phần quan trọng trong việc trở thành một nhà phát triển hoặc quản trị cơ sở dữ liệu chuyên nghiệp.
 	Trong khóa học này, bạn sẽ học về các khái niệm và công nghệ liên quan đến việc thiết kế, quản lý và truy vấn cơ sở dữ liệu.
 	Đầu tiên, bạn sẽ được giới thiệu với các loại cơ sở dữ liệu phổ biến như quan hệ, đối tượng, NoSQL và đặc điểm của chúng. 
@@ -120,9 +119,8 @@ INSERT INTO KHOAHOC VALUES
 	Bạn sẽ có khả năng thiết kế, quản lý và truy vấn cơ sở dữ liệu một cách hiệu quả, đáp ứng các yêu cầu phức tạp từ các ứng dụng web và hệ thống thông tin.'
 	,N'Khóa học về cơ sở dữ liệu là một phần quan trọng trong việc trở thành một nhà phát triển hoặc quản trị cơ sở dữ liệu chuyên nghiệp.
 	Trong khóa học này, bạn sẽ học về việc thiết kế, quản lý và truy vấn cơ sở dữ liệu. 
-	Bạn sẽ tìm hiểu về các loại cơ sở dữ liệu, như quan hệ và NoSQL, và học cách thiết kế mô hình dữ liệu nhất quán. Bạn sẽ cũng được hướng dẫn về ngôn ngữ truy vấn cơ sở dữ liệu như SQL và công cụ để tối ưu hiệu suất và bảo mật. 
-	Sau khi hoàn thành khóa học, bạn sẽ có kiến thức và kỹ năng để làm việc với các hệ quản trị cơ sở dữ liệu và xử lý dữ liệu một cách hiệu quả và an toàn.'
-	,NULL,'DB')
+	Bạn sẽ tìm hiểu về các loại cơ sở dữ liệu, như quan hệ và NoSQL, và học cách thiết kế mô hình dữ liệu nhất quán. Bạn sẽ cũng được hướng dẫn về ngôn ngữ truy vấn cơ sở dữ liệu như SQL và công cụ để tối ưu hiệu suất và bảo mật.'
+	,'https://cybersoft.edu.vn/wp-content/uploads/2022/06/dev_illustration.png','DB')
 
 INSERT INTO TAINGUYEN VALUES
 	('TNFE01',N'Lộ Trình Học Lập Trình Front-End Từ Căn Bản Đến Nâng Cao | BÀI 1','DyXab2jrXhc',N'GIỚI THIỆU CHƯƠNG TRÌNH HỌC','KHFE001'),
