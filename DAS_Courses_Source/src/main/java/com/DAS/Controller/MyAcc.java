@@ -30,23 +30,20 @@ public class MyAcc {
 	}
 	
 	@PostMapping
-	public String MyAccPOST(Sinhvien sv, @RequestParam("picAvatar") Optional<MultipartFile> avatar) {
+	public String MyAccPOST(Sinhvien sv, @RequestParam("picAvatar") MultipartFile avatar) {
 		Sinhvien currSV = (Sinhvien) ALSession.getSession("userSV");
 		Log.add("MyAccPOST - Try to update account with username: " + sv.getUsername());		// Log info 
 		
-		if(avatar.isPresent()) {
-			// Save avatar of Sinhvien
-			System.out.println("thayava");
-			try {
-				String  abPath = ALParam.saveFile(avatar.get(), "/Image/UsersAvatar/", sv.getUsername()+".png").getAbsolutePath();
-			} catch (IllegalStateException | IOException e) {
-				Log.add("MyAccPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
-			}
+		// Save avatar of Sinhvien
+		try {
+			ALParam.saveFile(avatar, "/Image/UsersAvatar/", sv.getUsername()+".png");
+		} catch (IllegalStateException | IOException e) {
+			Log.add("MyAccPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 		}
 		
-		currSV.setTen(sv.getTen());
-		sinhvienDAO.save(currSV);
-		
+		currSV.setTen(sv.getTen());								// Update ten of Sinhvien
+		sinhvienDAO.save(currSV);								// Save Sinhvien info
+		Log.add("MyAccPOST - Update account successfully !");	// Log info
 		return "redirect:/MyAcc";
 	}
 	

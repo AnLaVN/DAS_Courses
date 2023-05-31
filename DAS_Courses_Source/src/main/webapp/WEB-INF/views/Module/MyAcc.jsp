@@ -12,7 +12,7 @@
 			<div class="m-0 mb-5 p-0 text-center">
 				<img class="img-fluid w-50" src="${sessionScope.userSV.avatar}">
 			</div>
-			<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate action="${url}MyAcc" method="post">
+			<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate action="${url}MyAcc" method="post" enctype="multipart/form-data">
 				<div class="form-floating mb-4">
 					<input type="text" class="form-control form-control-lg is-valid" id="txtUsernameMA" name="username" placeholder="Username" value="${sessionScope.userSV.username}" readonly>
 					<label for="txtUsernameMA" class="form-label">ID tài khoản</label>
