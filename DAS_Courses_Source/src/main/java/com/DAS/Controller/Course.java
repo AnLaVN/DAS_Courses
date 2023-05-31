@@ -27,7 +27,8 @@ public class Course {
 	
 	@GetMapping("/{idkh}")
 	public String CourseGET(@PathVariable("idkh") String idkh, Model model) {
-		model.addAttribute("Course", khoahocDAO.findById(idkh).get());
+		model.addAttribute("Course", khoahocDAO.findById(idkh).orElse(new Khoahoc()));
+		Log.add("CourseGET - View Course " + idkh);
 		return "Course";
 	}
 	
