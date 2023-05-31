@@ -14,14 +14,14 @@ import com.DAS.DAO.PhanloaiDAO;
 import com.DAS.Entity.Khoahoc;
 
 @Controller
-@RequestMapping("/Course")
+@RequestMapping("/Course/{id}")
 public class Course {
 	@Autowired
 	KhoahocDAO khoahocDAO;
 	@Autowired
 	PhanloaiDAO phanloaiDAO;
 	
-	@GetMapping("/{id}")
+	@GetMapping
 	public String CourseGET(@PathVariable("id") String idkh, Model model) {
 		model.addAttribute("Course", khoahocDAO.findById(idkh).orElse(new Khoahoc()));
 		return "Course";
