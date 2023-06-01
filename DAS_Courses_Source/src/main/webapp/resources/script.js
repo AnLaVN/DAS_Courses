@@ -111,7 +111,10 @@ app.controller("MyCtrl", function($scope, $http) {
 			url: window.location.href.split('?')[0],
 			data: "Descrip=" + descrip,
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-		});
+		}).then(
+			function successCallback(){new bootstrap.Toast(document.getElementById('ToastSC')).show()}, 
+			function errorCallback()  {new bootstrap.Toast(document.getElementById('ToastER')).show()}
+    	);
 	}
 
 

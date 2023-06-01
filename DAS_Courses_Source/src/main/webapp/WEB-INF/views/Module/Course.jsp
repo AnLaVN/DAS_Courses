@@ -148,6 +148,30 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
+	
+	<!-- Toast success -->
+	<div class="toast-container position-fixed top-0 end-0 p-3"  >
+		<div id="ToastSC" class="toast align-items-center" role="alert">
+			<div class="d-flex">
+				<div class="toast-body text-success">Bình luận / đánh giá thành công</div>
+				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Toast error -->
+	<div class="toast-container position-fixed top-0 end-0 p-3"  >
+		<div id="ToastER" class="toast align-items-center" role="alert">
+			<div class="d-flex">
+				<div class="toast-body text-danger">Bình luận / đánh giá thất bại</div>
+				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+			</div>
+		</div>
+	</div>
 		
 
 
