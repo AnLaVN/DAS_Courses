@@ -63,11 +63,9 @@ public class Course {
 			sinhvienDAO.save(sv);
 			khoahocDAO.save(kh);
 			// Thông báo qua Log
-			Log.add("CourseJOIN - Insert username " + idsv + " to course " + idkh);
-		}
+			  Log.add("CourseJOIN - Username " + idsv + " join course " + idkh);
+		}else Log.add("CourseJOIN - Username " + idsv + " view course " + idkh);
 		
-		// Thông báo qua Log
-		Log.add("CourseJOIN - Username " + idsv + " visit course " + idkh);
 		return "redirect:/Course/"+idkh+"/Material";
 	}
 	

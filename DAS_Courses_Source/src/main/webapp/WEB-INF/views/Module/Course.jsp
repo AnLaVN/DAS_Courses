@@ -16,7 +16,9 @@
 				<!-- Float Card -->
 				<div class="sticky-top">
 					<div class="col-11 position-absolute pt-5" style="top: 25%; left: 50%; transform: translateX(-50%)">
+						<c:if test="${Course.tainguyens.size() > 0}">
 						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+						</c:if>
 						<div class="card align-items-center overflow-y-auto" style="max-height: 60vh;">
 							<img class="card-img-top" src="${Course.anhmota}">
 							<div class="card-body">
@@ -33,21 +35,27 @@
 	
 	
 	<!-- Lession of Course  -->
+	
 	<div class="mx-0 my-4 mx-md-5 px-0 row">
 		<div class="m-0 p-0 col-lg-7 col-xl-8 accordion" >
-			<div class="accordion-item"  >
-				<div class="accordion-header">
-					<button class="accordion-button alert alert-{{Theme == 'dark' ? 'light' : 'primary'}} fw-bold h5 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#AccorLession">
-					Nội dung khoá học : 
-					</button>
-				</div>
-				<div class="accordion-collapse collapse show" id="AccorLession">
-					<ul class="accordion-body list-group list-group-numbered m-0 p-0">
-						<c:forEach var="tainguyen" items="${Course.tainguyens}" varStatus="loop">
-						<li class="list-group-item list-group-item-action">${tainguyen.tentainguyen}</li>
-						</c:forEach>
-					</ul>
-				</div>
+			<div class="accordion-item">
+				<c:choose>
+					<c:when test="${Course.tainguyens.size() > 0}">
+						<div class="accordion-header">
+							<button class="accordion-button alert alert-{{Theme == 'dark' ? 'light' : 'primary'}} fw-bold h5 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#AccorLession">
+							Nội dung khoá học : 
+							</button>
+						</div>
+						<div class="accordion-collapse collapse show" id="AccorLession">
+							<ul class="accordion-body list-group list-group-numbered m-0 p-0">
+								<c:forEach var="tainguyen" items="${Course.tainguyens}" varStatus="loop">
+								<li class="list-group-item list-group-item-action">${tainguyen.tentainguyen}</li>
+								</c:forEach>
+							</ul>
+						</div>		
+					</c:when>
+					<c:otherwise><div class="accordion-header alert alert-dark fw-bold h5 m-0">Khoá học này chưa có tài nguyên</div></c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</div>
@@ -59,7 +67,9 @@
 		<div class="card">
 			<img class="card-img-top" src="${Course.anhmota}">
 			<div class="card-body">
+				<c:if test="${Course.tainguyens.size() > 0}">
 				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+				</c:if>
 				<h5 class="card-title">${Course.tenkhoahoc}</h5>
 				<p class="card-text">${Course.motangan}</p>
 			</div>
