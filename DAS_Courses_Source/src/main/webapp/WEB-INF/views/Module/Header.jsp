@@ -66,7 +66,7 @@
 				<div class="dropdown">
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-book me-2"></i>Course</button>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-stack-overflow me-2"></i>Explore</a></a></li>
+						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-stack-overflow me-2"></i>Explore</a></li>
 						<c:forEach var="phanloai" items="${listPhanloai}" varStatus="loop">
 						<li><a class="dropdown-item" href="${url}Courses?phanloai=${phanloai.idpl}">${phanloai.tenpl} <span class="badge bg-primary rounded-pill">${phanloai.khoahocs.getSize()}</span></a></li>
 						</c:forEach>

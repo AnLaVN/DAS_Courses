@@ -100,7 +100,7 @@ app.controller("MyCtrl", function($scope, $http) {
                 divMark.style.width = finalMark;
                 divMark.innerHTML = finalMark;
             }
-            console.log('Total mark: ' + finalMark);
+            console.log('Total process: ' + finalMark);
         })
     }
 	

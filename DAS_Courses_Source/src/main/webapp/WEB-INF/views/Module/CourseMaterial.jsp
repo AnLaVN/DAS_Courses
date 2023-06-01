@@ -52,7 +52,7 @@
 			    </script>
 			</c:if>
 			</c:forEach>
-			<button type="button" class="btn btn-lg btn-primary my-5 w-100" onclick="${url}Exam/${Khoahoc.idkh}">Thi lấy chứng chỉ</button>
+			<button type="button" class="btn btn-lg btn-primary my-5 w-100" onclick="location.href='${url}Exam/${Khoahoc.idkh}'">Thi lấy chứng chỉ</button>
 		</div>
 	</div>
 		
