@@ -5,12 +5,12 @@
 
 
 
-	<div class="row justify-content-center m-0 mt-4 mx-xxl-5">
+	<div class="row justify-content-center m-0 mt-4 mx-xxl-5 p-0">
 		<!-- Main video -->
 		<div class="col-12 col-md-8 m-0 p-0 mb-5">
-			<div class="m-0 p-0 mx-2 mx-md-3 card">
+			<div class="m-0 p-0 mx-md-3 card">
 				<div class="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/${Tainguyen.idyoutube}?enablejsapi=1" id="IframeYT" class="rounded-top" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/${Tainguyen.idyoutube}?autoplay=1&enablejsapi=1" id="IframeYT" class="rounded-top" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 				<div class="p-2 m-0 py-2 border rounded-bottom"><!-- Body -->
 					<h5 class="fs-5 fw-bold">${Tainguyen.tentainguyen}</h5>
@@ -27,7 +27,7 @@
 		
 		
 		<!-- Recommend video -->
-		<div class="col-12 col-md-4 m-0 px-2 px-md-3">
+		<div class="col-12 col-md-4 m-0 p-0 px-md-3">
 			<c:forEach var="tainguyen" items="${Khoahoc.tainguyens}" varStatus="loop">
 			<div class="card mb-3 ${Tainguyen.idyoutube == tainguyen.idyoutube ? 'bg-secondary' : ''}" onclick="location.href='${url}Course/${Khoahoc.idkh}/Material?idtn=${tainguyen.idtn}'" style="cursor: pointer;">
 				<div class="row m-0 p-0">
@@ -38,14 +38,25 @@
 						<div class="align-self-start m-0 p-0 text-truncate">${tainguyen.tentainguyen}</div>
 					</div>
 				</div>
-			</div>	
+			</div>
+			
+			<c:if test="${Tainguyen.idyoutube == tainguyen.idyoutube && loop.index < Khoahoc.tainguyens.getSize() - 1}">
+			    <script>
+			        var player;
+			        function onYouTubeIframeAPIReady() {
+			            player = new YT.Player('IframeYT', {
+			                events: { 'onStateChange': function (event){
+			                	if (event.data == YT.PlayerState.ENDED){
+			                		location.href="${url}Course/${Khoahoc.idkh}/Material?idtn=${Khoahoc.tainguyens[loop.index+1].idtn}";
+			        }}}});}
+			    </script>
+			</c:if>
 			</c:forEach>
 			<button type="button" class="btn btn-lg btn-primary my-5 w-100" onclick="${url}Exam/${Khoahoc.idkh}">Thi lấy chứng chỉ</button>
 		</div>
 	</div>
 		
-
-
-
+		
+		
 </body>
 </html>

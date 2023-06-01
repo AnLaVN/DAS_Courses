@@ -16,6 +16,7 @@ import com.DAS.DAO.KhoahocDAO;
 import com.DAS.DAO.SinhvienDAO;
 import com.DAS.Entity.Khoahoc;
 import com.DAS.Entity.Sinhvien;
+import com.DAS.Entity.Tainguyen;
 
 @Controller
 @RequestMapping("/Course")
@@ -42,8 +43,9 @@ public class Course {
 			kh.getSinhviens().add(sv);
 			sinhvienDAO.save(sv);
 			khoahocDAO.save(kh);
-			Log.add("CourseJOIN - Insert username " + idsv + " to " + idkh);
+			Log.add("CourseJOIN - Insert username " + idsv + " to course " + idkh);
 		}
+		Log.add("CourseJOIN - Username " + idsv + " visit course " + idkh);
 		return "redirect:/Course/"+idkh+"/Material";
 	}
 	
@@ -51,10 +53,14 @@ public class Course {
 	public String MaterialGET(@PathVariable("idkh") String idkh, @RequestParam("idtn") Optional<String> idtn, Model model) {
 		Khoahoc khoahoc = khoahocDAO.findById(idkh).get();
 		String currTN = idtn.orElse(khoahoc.getTainguyens().get(0).getIdtn());
-		khoahoc.getTainguyens().forEach((tainguyen) -> {
-			if(tainguyen.getIdtn().equals(currTN)) model.addAttribute("Tainguyen", tainguyen);
-		});
+		for(Tainguyen tainguyen : khoahoc.getTainguyens()) {
+			if(tainguyen.getIdtn().equals(currTN)) {
+				model.addAttribute("Tainguyen", tainguyen);
+				break;
+			}
+		};
 		model.addAttribute("Khoahoc", khoahoc);
+		Log.add("MaterialGET - View material " + currTN + " in course " + idkh);
 		return "CourseMaterial";
 	}
 }

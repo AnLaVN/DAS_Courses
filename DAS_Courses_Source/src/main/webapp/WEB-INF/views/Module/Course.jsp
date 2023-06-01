@@ -59,7 +59,7 @@
 		<div class="card">
 			<img class="card-img-top" src="${Course.anhmota}">
 			<div class="card-body">
-				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
 				<h5 class="card-title">${Course.tenkhoahoc}</h5>
 				<p class="card-text">${Course.motangan}</p>
 			</div>
