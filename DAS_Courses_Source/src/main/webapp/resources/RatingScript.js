@@ -68,5 +68,10 @@ function calculateAverage() {
     $('.rating').each(function () {
         average += $(this).data('vote')
     })
-    console.log(average)
+    $.ajax({
+		type: "POST",
+		url: window.location.href.split('?')[0],
+		data: "Sao=" + average,
+		headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+	});
 }

@@ -1,5 +1,5 @@
 var app = angular.module("MyApp", []);
-app.controller("MyCtrl", function($scope) {
+app.controller("MyCtrl", function($scope, $http) {
 
 
     // Code to change theme of website using:
@@ -103,8 +103,16 @@ app.controller("MyCtrl", function($scope) {
             console.log('Total mark: ' + finalMark);
         })
     }
+	
 
-
+	$scope.Ratting = function(descrip){
+		$http({
+			method: 'POST',
+			url: window.location.href.split('?')[0],
+			data: "Descrip=" + descrip,
+			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		});
+	}
 
 
 });

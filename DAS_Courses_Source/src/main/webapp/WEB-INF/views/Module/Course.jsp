@@ -118,6 +118,13 @@
 					</button>
 				</div>
 				<div class="accordion-collapse collapse m-0" id="{{ViewRatting == false ? 'AccorRating' : ''}}">
+					<div class="form-floating m-2">
+						<textarea class="form-control form-control-lg" id="txtDescription" ng-init="Descrip=''" ng-model="Descrip" placeholder="Mô tả" style="height: 200px"></textarea>
+						<label for="txtDescription">Bình luận</label>
+					</div>
+					<div class="col-12 text-end m-0 p-0 mb-4">
+						<button class="btn btn-lg btn-outline-success m-2" ng-click="Ratting(Descrip)">Submit</button>
+					</div>
 					<c:forEach var="danhgia" items="${Course.danhgias}" varStatus="loop">
 					<div class="card border-info-subtle m-2 mt-3 p-0">
 						<div class="card-header" ng-init="star = ${danhgia.sao}">
