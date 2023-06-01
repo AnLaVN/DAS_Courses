@@ -2,6 +2,11 @@
     background-color: rgb(var(--bs-body-bg-rgb), 0.75);
     backdrop-filter: blur(5px);
 }
+.custom-tooltip {
+  --bs-tooltip-bg: rgb(var(--bs-body-bg-rgb), 0.95);
+   backdrop-filter: blur(5px);
+  --bs-tooltip-color: --bs-body-color;
+}
 div.navbar, footer{
     background-color: #171615;
     z-index: 1025;

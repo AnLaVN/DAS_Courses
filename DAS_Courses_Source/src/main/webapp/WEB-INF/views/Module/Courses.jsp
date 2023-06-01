@@ -6,14 +6,16 @@
 
 	
 	<!-- All Courses -->
-	<div class="row justify-content-center m-0 my-4">
+	<div class="row justify-content-center m-0 my-4 p-0">
 		<c:forEach var="course" items="${CoursesPage.content}" varStatus="loop">
-		<div class="card m-3 p-0 col-11 col-md-5 col-xl-3" onclick="location.href='${url}Course/${course.idkh}'" style="cursor: pointer;">
+		<div class="card m-0 my-3 m-md-3 p-0 col-12 col-md-5 col-xl-3" 
+			onclick="location.href='${url}Course/${course.idkh}'" style="cursor: pointer;"
+			data-bs-toggle="tooltip" data-bs-title="${course.motangan}" data-bs-custom-class="custom-tooltip">
 			<div class="card-header">${course.phanloai.tenpl}</div>
 			<img class="img-fluid" src="${course.anhmota}">
 			<div class="card-body">
 				<h5 class="card-title fs-6">${course.tenkhoahoc}</h5>
-				<p class="card-text">${course.motangan}</p>
+				<p class="card-text d-block d-lg-none">${course.motangan}</p>
 			</div>
 		</div>
 		</c:forEach>
