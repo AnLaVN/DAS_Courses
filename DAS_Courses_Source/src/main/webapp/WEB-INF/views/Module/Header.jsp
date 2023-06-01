@@ -47,8 +47,8 @@
 			<div class="col-auto">
 				<div class="text-light fs-5"><i class="bi bi-workspace me-2"></i>My Course
 					<ul style="list-style-type: none;">
-						<li><a class="text-decoration-none text-light fs-6" href="${url}Explore"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
-						<li><a class="text-decoration-none text-light fs-6" href="${url}Explore"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
+						<li><a class="text-decoration-none text-light fs-6" href="${url}Enrolled"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
+						<li><a class="text-decoration-none text-light fs-6" href="${url}Certificates"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
 					</ul>
 				</div>
 			</div>
@@ -90,8 +90,8 @@
 				<div class="dropdown">
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-workspace me-2"></i>My Course</button>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
-						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
+						<li><a class="dropdown-item" href="${url}Enrolled"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
+						<li><a class="dropdown-item" href="${url}Certificates"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
 					</ul>
 				</div>
 			</div>
