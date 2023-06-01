@@ -11,14 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <title>${Course.tenkhoahoc}</title>
+    <title>Chứng chỉ</title>
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
-    <!-- CSS and JS for Rating -->
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<link href="/resources/RatingStyle.css" rel="stylesheet">
-	<script src="/resources/RatingScript.js"></script>
     <style>
         #BGImage {
             background: url("{{getImageOnTime()}}") no-repeat center center fixed;
@@ -32,26 +27,18 @@
 
 <body id="BGImage" class="d-flex flex-column h-100">
 	<c:url var="url" value="/"/>
-
+	
 	<%@include file="Module/Header.jsp"%>
 
 
 
 
-	<%@include file="Module/Exam.jsp"%>
-
+	<%@include file="Module/Course.jsp"%>
 
 
 
     
+	<%@include file="Module/Footer.jsp"%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-		 window.addEventListener('beforeunload', function (e) {
-            if(document.getElementById("Mark1").innerHTML != "100%") {
-                e.preventDefault();
-                e.returnValue = '';
-            }
-        });
-	</script>
 </body>
 </html>

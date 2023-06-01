@@ -17,19 +17,17 @@ $(function () {
     })
 
     $('.half').click(function () {
-        if (starClicked)    setHalfStarState(this)
+        if (starClicked)    setHalfStarState(this);
         $(this).closest('.rating').find('.js-score').text($(this).data('value'));
         $(this).closest('.rating').data('vote', $(this).data('value'));
-        calculateAverage()
-        // console.log(parseInt($(this).data('value')));
+        calculateAverage();
     })
 
     $('.full').click(function () {
-        if (starClicked)    setFullStarState(this)
+        if (starClicked)    setFullStarState(this);
         $(this).closest('.rating').find('.js-score').text($(this).data('value'));
         $(this).closest('.rating').data('vote', $(this).data('value'));
-        calculateAverage()
-        // console.log(parseInt($(this).data('value')));
+        calculateAverage();
     })
 
     $('.half').hover(function () {
@@ -39,6 +37,24 @@ $(function () {
     $('.full').hover(function () {
         if (!starClicked)   setFullStarState(this)
     })
+    
+    
+    
+    
+    // Load star rating on load page
+	var ratingValue = parseFloat($('.rating').data('vote'));
+	var starsSelected = Math.floor(ratingValue);
+	var hasHalfStar = (ratingValue % 1) !== 0;
+
+	$('.star').each(function (index) {
+		if (index <= starsSelected) {
+			setFullStarState($(this).children('.full'));
+		} else if (index === starsSelected + 1 && hasHalfStar) {
+			setHalfStarState($(this).children('.half'));
+		}
+	});
+
+	$('.rating').find('.js-score').text(ratingValue);
 
 })
 
@@ -64,10 +80,11 @@ function setFullStarState(target) {
 }
 
 function calculateAverage() {
-    var average = 0.
+    var average = 0
     $('.rating').each(function () {
         average += $(this).data('vote')
     })
+    
     $.ajax({
 		type: "POST",
 		url: window.location.href.split('?')[0],

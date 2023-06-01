@@ -79,7 +79,7 @@
 							<div class="my-0 d-none d-sm-block ">Đánh giá</div>
 							<div class="d-sm-none d-block fs-1"><i class="bi bi-stars"></i></div>
 						</div>
-						<div class="col rating rating-disabled" data-vote="0">
+						<div class="col rating" data-vote="${Ratting.sao}">
 							<div class="star hidden my-1">
 								<span class="full" data-value="0"></span>
 								<span class="half" data-value="0"></span>
@@ -119,7 +119,7 @@
 				</div>
 				<div class="accordion-collapse collapse m-0" id="{{ViewRatting == false ? 'AccorRating' : ''}}">
 					<div class="form-floating m-2">
-						<textarea class="form-control form-control-lg" id="txtDescription" ng-init="Descrip=''" ng-model="Descrip" placeholder="Mô tả" style="height: 200px"></textarea>
+						<textarea class="form-control form-control-lg" id="txtDescription" ng-init="Descrip='${Ratting.binhluan}'" ng-model="Descrip" placeholder="Mô tả" style="height: 200px"></textarea>
 						<label for="txtDescription">Bình luận</label>
 					</div>
 					<div class="col-12 text-end m-0 p-0 mb-4">

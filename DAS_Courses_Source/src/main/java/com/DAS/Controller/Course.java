@@ -36,6 +36,7 @@ public class Course {
 	@GetMapping("/{idkh}")
 	public String CourseGET(@PathVariable("idkh") String idkh, Model model) {
 		model.addAttribute("Course", khoahocDAO.findById(idkh).orElse(new Khoahoc()));
+		model.addAttribute("Ratting", danhgiaDAO.findById(new DanhgiaId(((Sinhvien) ALSession.getSession("userSV")).getUsername(), idkh)).orElse(new Danhgia()));
 		Log.add("CourseGET - View Course " + idkh);
 		return "Course";
 	}

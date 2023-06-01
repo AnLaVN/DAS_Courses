@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-.rating-disable .star{
-    pointer-events: none;
-}
 
 .rating {
     text-align: right;
