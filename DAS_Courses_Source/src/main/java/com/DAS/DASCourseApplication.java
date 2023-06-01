@@ -20,8 +20,8 @@ public class DASCourseApplication {
 		String  hashUsername = authentication.readLine(),
 				hashPassword = authentication.readLine(),
 				hashKey = SHA256.Encrypt(authentication.readLine());
-		System.setProperty("spring.datasource.username", AES.Decrypt(hashUsername, hashKey)); 
-		System.setProperty("spring.datasource.password", AES.Decrypt(hashPassword, hashKey)); 
+		System.setProperty("spring.datasource.username", "as");//AES.Decrypt(hashUsername, hashKey)); 
+		System.setProperty("spring.datasource.password", "");//AES.Decrypt(hashPassword, hashKey)); 
 		
 		SpringApplication.run(DASCourseApplication.class, args);
 		

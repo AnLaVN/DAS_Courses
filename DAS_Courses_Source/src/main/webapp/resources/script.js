@@ -1,5 +1,5 @@
 var app = angular.module("MyApp", []);
-app.controller("MyCtrl", function($scope) {
+app.controller("MyCtrl", function($scope, $http) {
 
 
     // Code to change theme of website using:
@@ -100,11 +100,22 @@ app.controller("MyCtrl", function($scope) {
                 divMark.style.width = finalMark;
                 divMark.innerHTML = finalMark;
             }
-            console.log('Total mark: ' + finalMark);
+            console.log('Total process: ' + finalMark);
         })
     }
+	
 
-
+	$scope.Ratting = function(descrip){
+		$http({
+			method: 'POST',
+			url: window.location.href.split('?')[0],
+			data: "Descrip=" + descrip,
+			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		}).then(
+			function successCallback(){new bootstrap.Toast(document.getElementById('ToastSC')).show()}, 
+			function errorCallback()  {new bootstrap.Toast(document.getElementById('ToastER')).show()}
+    	);
+	}
 
 
 });

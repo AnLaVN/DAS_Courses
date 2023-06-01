@@ -16,7 +16,7 @@
 				<!-- Float Card -->
 				<div class="sticky-top">
 					<div class="col-11 position-absolute pt-5" style="top: 25%; left: 50%; transform: translateX(-50%)">
-						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
 						<div class="card align-items-center overflow-y-auto" style="max-height: 60vh;">
 							<img class="card-img-top" src="${Course.anhmota}">
 							<div class="card-body">
@@ -59,7 +59,7 @@
 		<div class="card">
 			<img class="card-img-top" src="${Course.anhmota}">
 			<div class="card-body">
-				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
 				<h5 class="card-title">${Course.tenkhoahoc}</h5>
 				<p class="card-text">${Course.motangan}</p>
 			</div>
@@ -118,6 +118,13 @@
 					</button>
 				</div>
 				<div class="accordion-collapse collapse m-0" id="{{ViewRatting == false ? 'AccorRating' : ''}}">
+					<div class="form-floating m-2">
+						<textarea class="form-control form-control-lg" id="txtDescription" ng-init="Descrip=''" ng-model="Descrip" placeholder="Mô tả" style="height: 200px"></textarea>
+						<label for="txtDescription">Bình luận</label>
+					</div>
+					<div class="col-12 text-end m-0 p-0 mb-4">
+						<button class="btn btn-lg btn-outline-success m-2" ng-click="Ratting(Descrip)">Submit</button>
+					</div>
 					<c:forEach var="danhgia" items="${Course.danhgias}" varStatus="loop">
 					<div class="card border-info-subtle m-2 mt-3 p-0">
 						<div class="card-header" ng-init="star = ${danhgia.sao}">
@@ -138,6 +145,30 @@
 					</div>
 					</c:forEach>
 				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<!-- Toast success -->
+	<div class="toast-container position-fixed top-0 end-0 p-3"  >
+		<div id="ToastSC" class="toast align-items-center" role="alert">
+			<div class="d-flex">
+				<div class="toast-body text-success">Bình luận / đánh giá thành công</div>
+				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Toast error -->
+	<div class="toast-container position-fixed top-0 end-0 p-3"  >
+		<div id="ToastER" class="toast align-items-center" role="alert">
+			<div class="d-flex">
+				<div class="toast-body text-danger">Bình luận / đánh giá thất bại</div>
+				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
 			</div>
 		</div>
 	</div>

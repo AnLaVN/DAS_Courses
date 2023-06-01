@@ -68,5 +68,12 @@ function calculateAverage() {
     $('.rating').each(function () {
         average += $(this).data('vote')
     })
-    console.log(average)
+    $.ajax({
+		type: "POST",
+		url: window.location.href.split('?')[0],
+		data: "Sao=" + average,
+		headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+	})
+	.done(function(){new bootstrap.Toast(document.getElementById('ToastSC')).show()})
+	.fail(function(){new bootstrap.Toast(document.getElementById('ToastER')).show()});
 }

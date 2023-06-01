@@ -23,7 +23,7 @@
 						</li>
 						<c:forEach var="phanloai" items="${listPhanloai}" varStatus="loop">
 						<li class="d-flex justify-content-between align-items-center">
-							<a class="text-decoration-none text-light fs-6" href="${url}Courses?type=${phanloai.idpl}">${phanloai.tenpl}</a>
+							<a class="text-decoration-none text-light fs-6" href="${url}Courses?phanloai=${phanloai.idpl}">${phanloai.tenpl}</a>
 						  	<span class="badge bg-primary rounded-pill">${phanloai.khoahocs.getSize()}</span>
 						</li>
 						</c:forEach>
@@ -47,8 +47,8 @@
 			<div class="col-auto">
 				<div class="text-light fs-5"><i class="bi bi-workspace me-2"></i>My Course
 					<ul style="list-style-type: none;">
-						<li><a class="text-decoration-none text-light fs-6" href="${url}Explore"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
-						<li><a class="text-decoration-none text-light fs-6" href="${url}Explore"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
+						<li><a class="text-decoration-none text-light fs-6" href="${url}Enrolled"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
+						<li><a class="text-decoration-none text-light fs-6" href="${url}Certificates"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
 					</ul>
 				</div>
 			</div>
@@ -66,9 +66,9 @@
 				<div class="dropdown">
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-book me-2"></i>Course</button>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-stack-overflow me-2"></i>Explore</a></a></li>
+						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-stack-overflow me-2"></i>Explore</a></li>
 						<c:forEach var="phanloai" items="${listPhanloai}" varStatus="loop">
-						<li><a class="dropdown-item" href="${url}Courses?type=${phanloai.idpl}">${phanloai.tenpl} <span class="badge bg-primary rounded-pill">${phanloai.khoahocs.getSize()}</span></a></li>
+						<li><a class="dropdown-item" href="${url}Courses?phanloai=${phanloai.idpl}">${phanloai.tenpl} <span class="badge bg-primary rounded-pill">${phanloai.khoahocs.getSize()}</span></a></li>
 						</c:forEach>
 					</ul>
 				</div>
@@ -90,14 +90,14 @@
 				<div class="dropdown">
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-workspace me-2"></i>My Course</button>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
-						<li><a class="dropdown-item" href="${url}Courses"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
+						<li><a class="dropdown-item" href="${url}Enrolled"><i class="bi bi-bookmark-check me-2"></i>Course Enrolled</a></li>
+						<li><a class="dropdown-item" href="${url}Certificates"><i class="bi bi-bookmark-star me-2"></i>My Certificates</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2" role="search" novalidate action="${url}Courses" method="post">
-			<input class="form-control me-2" type="search" name="txtSearch" placeholder='Search' required>
+		<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2" role="search" novalidate action="${url}Courses" method="get">
+			<input class="form-control me-2" type="search" name="search" placeholder='Search' required>
 			<button class="btn btn-outline-primary" type="submit">Search</button>
 			<i class="bi bi-{{Theme=='dark'?'moon-stars':'sun'}} fs-4 text-light link-info mx-2" ng-click="ChangeTheme()" role="button"></i>
 			<div class="dropdown">

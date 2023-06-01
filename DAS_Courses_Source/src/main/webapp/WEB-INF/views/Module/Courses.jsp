@@ -4,7 +4,7 @@
 <body>
 
 
-
+	
 	<!-- All Courses -->
 	<div class="row justify-content-center m-0 my-4">
 		<c:forEach var="course" items="${CoursesPage.content}" varStatus="loop">

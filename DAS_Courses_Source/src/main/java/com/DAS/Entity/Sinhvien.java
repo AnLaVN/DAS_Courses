@@ -49,7 +49,7 @@ public class Sinhvien{
 	private List<Danhgia> danhgias = new ArrayList<Danhgia>();
 	
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "KHOAHOC_SINHVIEN", schema = "dbo", catalog = "DAS", joinColumns = {
+	@JoinTable(name = "KHOAHOC_SINHVIEN", schema = "dbo", catalog = "DASJ5SQL", joinColumns = {
 			@JoinColumn(name = "USERNAME", nullable = false, updatable = false) }, inverseJoinColumns = {
 					@JoinColumn(name = "IDKH", nullable = false, updatable = false) })
 	private List<Khoahoc> khoahocs = new ArrayList<Khoahoc>(0);

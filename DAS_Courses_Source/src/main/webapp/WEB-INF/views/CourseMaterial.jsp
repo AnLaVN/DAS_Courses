@@ -11,7 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <title>Courses</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <title>${Tainguyen.tentainguyen}</title>
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
     <style>
@@ -33,18 +34,12 @@
 
 
 
-
-	<c:choose>
-		<c:when test="${CoursesPage.totalElements > 0}"><%@include file="Module/Courses.jsp"%></c:when>
-		<c:otherwise><p class="h1 text-danger text-center mt-5">KHÔNG TÌM THẤY KHOÁ HỌC NÀO</p></c:otherwise>
-	</c:choose>
-
-	
+	<%@include file="Module/CourseMaterial.jsp"%>
 
 
 
     
-    <%@include file="Module/Footer.jsp"%>
+	<%@include file="Module/Footer.jsp"%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
