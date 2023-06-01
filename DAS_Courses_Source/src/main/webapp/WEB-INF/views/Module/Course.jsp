@@ -127,15 +127,15 @@
 					</div>
 					<c:forEach var="danhgia" items="${Course.danhgias}" varStatus="loop">
 					<div class="card border-info-subtle m-2 mt-3 p-0">
-						<div class="card-header" ng-init="star = ${danhgia.sao}">
+						<div class="card-header" ng-init="star${loop.index} = ${danhgia.sao}">
 							<div class="row">
 								<div class="col">${danhgia.sinhvien.ten}</div>
 								<div class="col-auto" style="color: #ffd700;">
-									<i class="bi bi-star{{star <= 0 ? '' : (star <= 0.5 ? '-half' : '-fill')}}"></i>
-									<i class="bi bi-star{{star <= 1 ? '' : (star <= 1.5 ? '-half' : '-fill')}}"></i>
-									<i class="bi bi-star{{star <= 2 ? '' : (star <= 2.5 ? '-half' : '-fill')}}"></i>
-									<i class="bi bi-star{{star <= 3 ? '' : (star <= 3.5 ? '-half' : '-fill')}}"></i>
-									<i class="bi bi-star{{star <= 4 ? '' : (star <= 4.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star${loop.index} <= 0.0 ? '' : (star${loop.index} <= 0.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star${loop.index} <= 1.0 ? '' : (star${loop.index} <= 1.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star${loop.index} <= 2.0 ? '' : (star${loop.index} <= 2.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star${loop.index} <= 3.0 ? '' : (star${loop.index} <= 3.5 ? '-half' : '-fill')}}"></i>
+									<i class="bi bi-star{{star${loop.index} <= 4.0 ? '' : (star${loop.index} <= 4.5 ? '-half' : '-fill')}}"></i>
 								</div>
 							</div>
 						</div>

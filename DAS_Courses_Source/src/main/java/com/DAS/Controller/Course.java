@@ -41,7 +41,7 @@ public class Course {
 		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();				// Lấy idsv hiện tại
 		Khoahoc course = khoahocDAO.findById(idkh).orElse(new Khoahoc());						// Lấy khoá học theo idkh
 		Danhgia rating = danhgiaDAO.findById(new DanhgiaId(idsv, idkh)).orElse(new Danhgia());	// Lấy đánh giá của sinhvien hiện tại trong khoá học
-		
+
 		// Set dữ liệu qua view
 		model.addAttribute("Course", course);
 		model.addAttribute("Rating", rating);
