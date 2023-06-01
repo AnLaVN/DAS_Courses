@@ -14,7 +14,7 @@
 			<div class="card-header">${course.phanloai.tenpl}</div>
 			<img class="img-fluid" src="${course.anhmota}">
 			<div class="card-body">
-				<h5 class="card-title fs-6">${course.tenkhoahoc}</h5>
+				<h5 class="card-title fs-6 m-0">${course.tenkhoahoc}</h5>
 				<p class="card-text d-block d-lg-none">${course.motangan}</p>
 			</div>
 		</div>
