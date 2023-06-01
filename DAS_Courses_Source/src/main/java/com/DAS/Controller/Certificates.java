@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.AnLa.FILE.Log;
-import com.DAS.DAO.DiemDAO;
 import com.DAS.DAO.KhoahocDAO;
-import com.DAS.Entity.Khoahoc;
+import com.DAS.DAO.SinhvienDAO;
+import com.DAS.Entity.Diem;
 import com.DAS.Entity.Sinhvien;
 import com.DAS.Tools.ALSession;
 
@@ -27,21 +27,26 @@ import com.DAS.Tools.ALSession;
 public class Certificates {
 	@Autowired
 	KhoahocDAO khoahocDAO;
+	@Autowired
+	SinhvienDAO sinhvienDAO;
 
 	@GetMapping
 	public String CertificatesGET(@RequestParam("page") Optional<Integer> pPage, Model model) {
-		int currentPage = pPage.orElse(1);		// Tạo biến current page chứa chỉ số trang hiện tại, mặc định là 1
-		Sinhvien currentSV = (Sinhvien) ALSession.getSession("userSV");				// Tạo biến current sinhvien chứa sinhvien hiện tại trong session
-		List<Khoahoc> listKH = currentSV.getKhoahocs();
-		Pageable pageable = PageRequest.of(currentPage - 1, 6);						// Tạo trang có 6 phần tử
-		Page<Khoahoc> coursesPage = new PageImpl<Khoahoc>(listKH, pageable, listKH.size());
-
+		// Xử lí dữ liệu
+		int currentPage = pPage.orElse(1);		// Lấy chỉ số trang hiện tại, nếu không có gán là 1
+		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();	// Lấy idsv hiện tại
+		List<Diem> listDiem = sinhvienDAO.findById(idsv).get().getDiems();			// Lấy list điểm của sinhvien
 		
+		// Tạo page
+		Pageable pageable = PageRequest.of(currentPage - 1, 6);
+		Page<Diem> CertifiPage = new PageImpl<Diem>(listDiem, pageable, listDiem.size());	
 		
-		model.addAttribute("CoursesPage", coursesPage);
+		// Set dữ liệu qua view
+		model.addAttribute("CertifiPage", CertifiPage);
 		model.addAttribute("CurrentPage", currentPage);
 		
-		Log.add("CertificatesGET - Get " + coursesPage.getTotalElements() + " certificates of " + currentSV.getUsername());
+		// Thông báo qua Log
+		Log.add("CertificatesGET - Get " + CertifiPage.getTotalElements() + " certificates of " + idsv);
 		return "Certificates";
 	}
 }

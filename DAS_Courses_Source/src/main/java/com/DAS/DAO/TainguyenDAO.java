@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.DAS.Entity.Tainguyen;
 
 
-public interface TainguyenDAO extends JpaRepository<Tainguyen, String>{
 
+public interface TainguyenDAO extends JpaRepository<Tainguyen, String>{
+	
 }

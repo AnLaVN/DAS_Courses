@@ -32,8 +32,12 @@
 
 
 
-
-	<%@include file="Module/Course.jsp"%>
+	
+	<c:choose>
+		<c:when test="${CertifiPage.totalElements > 0}"><%@include file="Module/Certificates.jsp"%></c:when>
+		<c:otherwise><p class="h1 text-danger text-center mt-5">KHÔNG TÌM THẤY CHỨNG CHỈ NÀO</p></c:otherwise>
+	</c:choose>
+	
 
 
 
