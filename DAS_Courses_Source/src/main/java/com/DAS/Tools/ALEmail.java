@@ -12,7 +12,7 @@ public class ALEmail {
 			+ "		<div style=\"border-bottom:2px solid rgb(215, 215, 215)\">\r\n"
 			+ "			<a href=\"https://github.com/AnLaVN/DAS_Courses\" style=\"font-size:1.4em;color: #0f4058;text-decoration:none;font-weight:600\">DAS_Course</a>\r\n"
 			+ "		</div>\r\n"
-			+ "		<p style=\"font-size:1.1em\">Hi, USERNAME</p>\r\n"
+			+ "		<p style=\"font-size:1.5em\">Hi, USERNAME</p>\r\n"
 			+ "		<p>CONTENT</p>\r\n"
 			+ "		<h2 style=\"background: #00466a;margin: 0 auto;width: max-content; padding: 0 10px;color: #fff;border-radius: 4px;\">\r\n"
 			+ "			OTPCODE</h2><br>\r\n"
@@ -21,4 +21,13 @@ public class ALEmail {
 			+ "		<p style=\"font-size:0.9em;\">THANK</p>\r\n"
 			+ "	</div>\r\n"
 			+ "</body>";
+	
+	public static String getHTMLString(String text) {
+		String usernameUnicode = "";
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i); int value = c;
+            usernameUnicode += "&#" + value + ";";
+        }
+        return usernameUnicode;
+	}
 }

@@ -1,0 +1,9 @@
+[00:59:39.267]	MyAccPOST - Try to update account with username: f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a
+[00:59:39.268]	SignUpPOST - Exception when try to save file from client !!!
+		Error code: java.lang.RuntimeException: No MultipartFile to save !!!
+[00:59:39.301]	MyAccPOST - Update account successfully !
+[01:01:22.194]	MyAccPOST - Try to update account with username: f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a
+[01:01:22.196]	ALParam - Save file successfully as Absolute Path: C:\Users\Admin\Documents\Java5\My Lab\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a.png
+[01:01:22.201]	MyAccPOST - Update account successfully !
+[01:02:02.563]	ResetPassOTP - Send OTP code for user email: binhan29122003@gmail.com
+[01:02:30.798]	ResetPassPOST - Change password for f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a successfully.

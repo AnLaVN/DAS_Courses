@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import org.springframework.stereotype.Controller;
@@ -17,8 +17,8 @@ public class SignOut {
 		// Xử lí dữ liệu
 		String cookie = ALCookie.get("userSignInCookie");
 		if(cookie != null) {
-			ALCookie.remove("userSignInCookie");
-			ALSession.removeSession("userSV");
+			ALCookie.remove("userSignInCookie");	// Xoá sữ liệu cookie
+			ALSession.removeSession("userSV");		// Xoá dữ liệu session
 			
 			// Thông báo qua Log
 			Log.add("SignOutREQ - Delete cookies of username: " + cookie.substring(0, cookie.indexOf("~")));

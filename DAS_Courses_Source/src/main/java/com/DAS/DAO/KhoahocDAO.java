@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.DAS.Entity.Khoahoc;
 import com.DAS.Entity.Phanloai;
 
-
 public interface KhoahocDAO extends JpaRepository<Khoahoc, String>{
 	
 	Page<Khoahoc> findByPhanloai(Phanloai phanloai, Pageable pageable);
@@ -18,5 +17,4 @@ public interface KhoahocDAO extends JpaRepository<Khoahoc, String>{
 	
 	Khoahoc findByIdkh(String id);
 
-//	Page<Khoahoc> findBySinhviens(Sinhvien sinhviens, Pageable pageable);
 }

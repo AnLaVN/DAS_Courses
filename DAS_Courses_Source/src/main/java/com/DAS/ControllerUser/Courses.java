@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.Optional;
@@ -39,13 +39,13 @@ public class Courses {
 		// Gán page theo điều kiện tìm kiếm
 		if(isNType && isNFind)	coursesPage = khoahocDAO.findAll(pageable);								// KO tìm id phân loại, KO tìm search, tìm tất cả
 		else if(isNFind)		coursesPage = khoahocDAO.findByPhanloai(new Phanloai(cType), pageable);	// Tìm id phân loại, KO tìm search
-		else if(cFind.equals("getBackground()")) return "Background";									// Easter Egg Background
+		else if(cFind.equals("getBackground()")) return "User/Background";									// Easter Egg Background
 		else 					coursesPage = khoahocDAO.findByTenkhoahocLike("%"+cFind+"%", pageable);	// KO tìm id phân loại, tìm search
 		
 		// Set dữ liệu qua view
 		model.addAttribute("CoursesPage", coursesPage);
 		model.addAttribute("CurrentPage", currentPage);
-		return "Courses";
+		return "User/Courses";
 	}
 	
 }

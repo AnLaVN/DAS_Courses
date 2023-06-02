@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class SignUp {
 	
 	@GetMapping
 	public String SignUpGET() {
-		return "SignUp";
+		return "User/SignUp";
 	}
 	
 	@PostMapping
@@ -75,7 +75,7 @@ public class SignUp {
 		// Nược lại nếu trùng username hoặc email
 		Log.add("SignUpPOST - Can not sign up !!!");// Thông báo qua Log
 		model.addAttribute("Toast", true);			// Hiển thị thông báo lỗi
-		return "SignUp";
+		return "User/SignUp";
 	}
 
 }

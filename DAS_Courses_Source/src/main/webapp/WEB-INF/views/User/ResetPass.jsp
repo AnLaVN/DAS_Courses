@@ -45,5 +45,8 @@
     
     <%@include file="Module/Footer.jsp"%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <c:if test="${Toast}">
+	    <script>new bootstrap.Toast(document.getElementById('ToastER')).show()</script>
+	</c:if>
 </body>
 </html>

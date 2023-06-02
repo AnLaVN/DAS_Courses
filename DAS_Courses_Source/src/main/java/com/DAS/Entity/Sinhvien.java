@@ -45,7 +45,7 @@ public class Sinhvien{
 	@Column(name = "EMAIL", unique = true, length = 256)
 	private String email;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "sinhvien")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "sinhvien", orphanRemoval = true)
 	private List<Danhgia> danhgias = new ArrayList<Danhgia>();
 	
 	@ManyToMany(fetch = FetchType.LAZY)
@@ -54,7 +54,7 @@ public class Sinhvien{
 					@JoinColumn(name = "IDKH", nullable = false, updatable = false) })
 	private List<Khoahoc> khoahocs = new ArrayList<Khoahoc>(0);
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "sinhvien")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "sinhvien", orphanRemoval = true)
 	private List<Diem> diems = new ArrayList<Diem>();
 
 }

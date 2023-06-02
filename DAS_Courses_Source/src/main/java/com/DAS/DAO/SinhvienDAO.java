@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.DAS.Entity.Sinhvien;
 
-
 public interface SinhvienDAO extends JpaRepository<Sinhvien, String>{
 	boolean existsByUsername(String username);
 	
@@ -18,5 +17,4 @@ public interface SinhvienDAO extends JpaRepository<Sinhvien, String>{
 	boolean isExistsSV_KH(String username, String idkh);
 	
 	Sinhvien findByEmail(String email);
-	
 }

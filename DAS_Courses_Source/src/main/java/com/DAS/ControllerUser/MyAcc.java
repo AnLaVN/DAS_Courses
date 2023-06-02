@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class MyAcc {
 	
 	@GetMapping
 	public String MyAccGET() {
-		return "MyAcc";
+		return "User/MyAcc";
 	}
 	
 	@PostMapping
@@ -41,7 +41,7 @@ public class MyAcc {
 			String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", idsv+".png").getAbsolutePath(),
 					imPath = abPath.substring(abPath.lastIndexOf("\\Image\\UsersAvatar"));
 			currSV.setAvatar(imPath);
-		} catch (IllegalStateException | IOException e) {
+		} catch (Exception e) {
 			Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 		}
 		

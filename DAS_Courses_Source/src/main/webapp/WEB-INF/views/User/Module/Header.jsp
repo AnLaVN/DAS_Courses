@@ -126,15 +126,13 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 			</div>
 			<form class="m-0 p-0 needs-validation" novalidate action="${url}DeleteAcc" method="post">
-				
 				<div class="modal-body">
-					<p class="text-danger">
-						- Chúng tôi cảnh báo rằng nếu bạn tiếp tục xoá tài khoản, toàn bộ thông tin cá nhân, dữ liệu và quyền truy cập vào các dịch vụ của chúng tôi sẽ bị mất vĩnh viễn. <br>
+					<p class="text-danger fw-bold">
+						- Chúng tôi cảnh báo rằng nếu bạn tiếp tục xoá tài khoản, toàn bộ thông tin cá nhân, dữ liệu và quyền truy cập vào các dịch vụ của chúng tôi sẽ bị mất VĨNH VIỄN.<br>
 						- Xác nhận tài khoản để đảm bảo quyết định này chính xác. <br>
-						- Trong trường hợp xác nhận không đúng, tài khoản sẽ tự động đăng xuất để bảo vệ an toàn thông tin của bạn. <br>
-						- Đáng tiếc là không thể khôi phục tài khoản sau khi đã xoá, mọi thông tin và quyền truy cập sẽ bị mất vĩnh viễn. <br>
-						- Vì vậy, hãy cân nhắc kỹ trước khi tiến hành hành động này và đảm bảo rằng đây là quyết định cuối cùng mà bạn muốn thực hiện.
+						- Trong trường hợp thông tin xác nhận không đúng, tài khoản sẽ tự động đăng xuất để bảo vệ an toàn thông tin của bạn.
 					</p>
+					<p>Vì vậy, hãy cân nhắc kỹ trước khi tiến hành hành động này và đảm bảo rằng đây là quyết định cuối cùng mà bạn muốn thực hiện.</p>
 					<div class="form-floating mb-4">
 						<input type="text" class="form-control form-control-lg" id="txtUsernameSI" name="username" placeholder="Username" required>
 						<label for="txtUsernameSI" class="form-label">Username</label>

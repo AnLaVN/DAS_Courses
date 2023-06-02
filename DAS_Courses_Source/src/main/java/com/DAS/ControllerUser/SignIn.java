@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.Optional;
@@ -27,7 +27,7 @@ public class SignIn {
 	
 	@GetMapping
 	public String SignInGET() {
-		return "SignIn";
+		return "User/SignIn";
 	}
 
 	@PostMapping
@@ -60,7 +60,7 @@ public class SignIn {
 		// Nếu không khớp
 		Log.add("SignInPOST - Can not sign in !!!");		// Thông báo qua Log
 		model.addAttribute("Toast", true);					// Hiển thị thông báo lỗi
-		return "SignIn";
+		return "User/SignIn";
 	}
 
 }

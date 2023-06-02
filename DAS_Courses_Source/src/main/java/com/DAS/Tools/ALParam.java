@@ -116,8 +116,7 @@ public class ALParam {
             pFile.transferTo(photoFile);
             Log.add("ALParam - Save file successfully as Absolute Path: " + photoFile.getAbsolutePath());
             return photoFile;
-    	}
-    	return null;
+    	}else throw new RuntimeException("No MultipartFile to save !!!");
     }
     
 }

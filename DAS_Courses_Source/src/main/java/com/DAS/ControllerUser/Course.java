@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.Optional;
@@ -50,7 +50,7 @@ public class Course {
 		
 		// Thông báo qua Log
 		Log.add("CourseGET - View Course " + idkh + " by " + idsv);
-		return "Course";
+		return "User/Course";
 	}
 	
 	@GetMapping("/{idkh}/Join")
@@ -85,7 +85,7 @@ public class Course {
 		
 		// Thông báo qua Log
 		Log.add("MaterialGET - View material " + currTN + " in course " + idkh);
-		return "CourseMaterial";
+		return "User/CourseMaterial";
 	}
 	
 	@PostMapping("/{idkh}")
@@ -103,6 +103,6 @@ public class Course {
 		// Thông báo qua Log
 		if(sao.isPresent()) Log.add("CoursePOST - Username " + idsv + " voting on course " + idkh + ": " + sao.get());
 		if(des.isPresent()) Log.add("CoursePOST - Username " + idsv + " rating on course " + idkh + ": " + des.get());
-		return "Course";
+		return "User/Course";
 	}
 }

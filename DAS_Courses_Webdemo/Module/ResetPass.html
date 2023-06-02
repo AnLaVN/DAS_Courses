@@ -4,12 +4,14 @@
 	</div>
 	<div class="card-body">
 		<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate ng-init="Validation()" name="formRP" action="${url}ResetPass" method="post">
-			<div class="input-group has-validation mb-4" ng-init="editEmail">
+			<div class="input-group has-validation mb-4" ng-init="editEmail" ng-init="sendEmail">
 				<input type="email" class="form-control form-control-lg {{formRP.txtEmailRP.$valid?'':'is-invalid'}}" ng-model="txtEmailRP" name="txtEmailRP" placeholder="Email" required ng-disabled="editEmail">
-				<button class="btn btn-outline-primary" type="button" ng-click="editEmail = formRP.txtEmailRP.$valid"><i class="bi bi-send-fill"></i></button>
+				<button class="btn btn-outline-primary" type="button" ng-click="editEmail = formRP.txtEmailRP.$valid; editEmail ? sendEmail = true : sendEmail = false" ng-disabled="sendEmail">
+					<div class="spinner-border spinner-border-sm" ng-show="sendEmail"></div>
+					<i class="bi bi-send-fill" ng-hide="sendEmail"></i>
+				</button>
 				<div class="invalid-feedback">Email invaild</div>
 			</div>
-			
 			<div class="form-floating mb-4">
 				<input type="number" class="form-control form-control-lg" id="txtOTP" name="txtOTP" placeholder="OTP" required>
 				<label for="txtOTP" class="form-label">OTP Code</label>

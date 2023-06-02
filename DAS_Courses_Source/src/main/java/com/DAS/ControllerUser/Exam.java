@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.List;
@@ -46,7 +46,7 @@ public class Exam {
 		
 		// Thông báo qua Log
 		Log.add("ExamGET - Exam Course " + idkh + " by " + idsv);
-		return "Exam";
+		return "User/Exam";
 	}
 	
 	@PostMapping("/{idkh}")
