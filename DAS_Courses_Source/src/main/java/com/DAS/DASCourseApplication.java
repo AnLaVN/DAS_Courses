@@ -1,14 +1,30 @@
 package com.DAS;
 //Make by Bình An || AnLaVN || KatoVN
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.AnLa.HASH.AES;
+import com.AnLa.HASH.SHA256;
+import com.AnLa.NET.DocNet;
+
 
 @SpringBootApplication
 public class DASCourseApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		DocNet authentication = new DocNet("https://raw.githubusercontent.com/AnLaVN/DAS_Courses/Releases/AUTHENTICATION.txt");
+		String  hashUsername = authentication.readLine(),
+				hashPassword = authentication.readLine(),
+				hashKey = SHA256.Encrypt(authentication.readLine());
+		System.setProperty("spring.datasource.username", "as");//AES.Decrypt(hashUsername, hashKey)); 
+		System.setProperty("spring.datasource.password", "");//AES.Decrypt(hashPassword, hashKey)); 
+		
 		SpringApplication.run(DASCourseApplication.class, args);
+		
 	}
 
 }

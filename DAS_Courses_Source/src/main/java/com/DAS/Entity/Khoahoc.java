@@ -1,8 +1,8 @@
 package com.DAS.Entity;
 //Make by Bình An || AnLaVN || KatoVN
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,7 +20,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@Table(name = "KHOAHOC", schema = "dbo", catalog = "DAS")
+@Table(name = "KHOAHOC", schema = "dbo", catalog = "DASJ5SQL")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -49,18 +49,18 @@ public class Khoahoc{
 	private String anhmota;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "khoahoc")
-	private Set<Danhgia> danhgias = new HashSet<Danhgia>(0);
+	private List<Danhgia> danhgias = new ArrayList<Danhgia>();
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "khoahoc")
-	private Set<Diem> diems = new HashSet<Diem>(0);
+	private List<Diem> diems = new ArrayList<Diem>();
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "khoahoc")
-	private Set<Tainguyen> tainguyens = new HashSet<Tainguyen>(0);
+	private List<Tainguyen> tainguyens = new ArrayList<Tainguyen>();
 	
 	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "khoahocs")
-	private Set<Sinhvien> sinhviens = new HashSet<Sinhvien>(0);
+	private List<Sinhvien> sinhviens = new ArrayList<Sinhvien>();
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "khoahoc")
-	private Set<Cauhoi> cauhois = new HashSet<Cauhoi>(0);
+	private List<Cauhoi> cauhois = new ArrayList<Cauhoi>();
 
 }
