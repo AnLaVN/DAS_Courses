@@ -66,8 +66,7 @@ public class Exam {
 		}
 		
 		// Lưu dữ liệu vào csdl
-		DiemId id = new DiemId(idsv, idkh);
-		Diem diem = new Diem(id, khoahoc, sv, totalMark);
+		Diem diem = new Diem(new DiemId(idsv, idkh), khoahoc, sv, totalMark);
 		diemDAO.save(diem);
 		sv.getDiems().add(diem);
 		sinhvienDAO.save(sv);
