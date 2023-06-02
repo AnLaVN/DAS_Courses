@@ -20,8 +20,8 @@
 					<label for="txtPass" class="form-label">Password</label>
 					<div class="invalid-feedback">Password invalid</div>
 					<div class="form-check is-valid">
-						<input type="checkbox" class="form-check-input" id="rdoShowPassSI">
-						<label class="form-check-label" for="rdoShowPassSI" ng-click="showPassSI=!showPassSI">Show password</label>
+						<input type="checkbox" class="form-check-input" id="rdoShowPassSI" ng-model="showPassSI">
+						<label class="form-check-label" for="rdoShowPassSI">Show password</label>
 					</div>
 				</div>
 				<div class="form-check mb-4">

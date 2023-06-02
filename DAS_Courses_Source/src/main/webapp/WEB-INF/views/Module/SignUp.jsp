@@ -30,8 +30,8 @@
 					id="txtNPassSU" name="matkhau" placeholder="Password" required ng-model="NPassSU" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/">
 					<label for="txtNPassSU" class="form-label">Password</label>
 					<div class="form-check is-valid">
-						<input type="checkbox" class="form-check-input" id="rdoShowPassSU">
-						<label class="form-check-label" for="rdoShowPassSU" ng-click="showPassSU=!showPassSU">Show password</label>
+						<input type="checkbox" class="form-check-input" id="rdoShowPassSU" ng-model="showPassSU">
+						<label class="form-check-label" for="rdoShowPassSU">Show password</label>
 					</div>
 					<div class="invalid-feedback">Invalid Password</div>
 				</div>

@@ -39,7 +39,7 @@
 						<li><a class="text-decoration-none text-light fs-6" href="${url}MyAcc"><i class="bi bi-person-gear me-2"></i>My Account</a></li>
 						<li><a class="text-decoration-none text-light fs-6" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Change Password</a></li>
 						<li><a class="text-decoration-none text-light fs-6" href="${url}SignOut"><i class="bi bi-person-exclamation me-2"></i>Sign Out</a></li>
-						<li><a class="text-decoration-none text-light fs-6" href="${url}Delete"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
+						<li><a class="text-decoration-none text-light fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
 					</ul>
 				</div>
 			</div>
@@ -82,7 +82,7 @@
 						<li><a class="dropdown-item" href="${url}MyAcc"><i class="bi bi-person-gear me-2"></i>My Account</a></li>
 						<li><a class="dropdown-item" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Change Password</a></li>
 						<li><a class="dropdown-item" href="${url}SignOut"><i class="bi bi-person-exclamation me-2"></i>Sign Out</a></li>
-						<li><a class="dropdown-item" href="${url}Delete"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
+						<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
 					</ul>
 				</div>
 			</div>
@@ -109,6 +109,56 @@
 			<i class="bi bi-globe2 fs-4 text-light link-info" role="button" data-bs-toggle="dropdown"></i>
 		</form>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+
+<!-- Modal Delete Account -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5">XÁC NHẬN XOÁ TÀI KHOẢN ???</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+			<form class="m-0 p-0 needs-validation" novalidate action="${url}DeleteAcc" method="post">
+				
+				<div class="modal-body">
+					<p class="text-danger">
+						- Chúng tôi cảnh báo rằng nếu bạn tiếp tục xoá tài khoản, toàn bộ thông tin cá nhân, dữ liệu và quyền truy cập vào các dịch vụ của chúng tôi sẽ bị mất vĩnh viễn. <br>
+						- Xác nhận tài khoản để đảm bảo quyết định này chính xác. <br>
+						- Trong trường hợp xác nhận không đúng, tài khoản sẽ tự động đăng xuất để bảo vệ an toàn thông tin của bạn. <br>
+						- Đáng tiếc là không thể khôi phục tài khoản sau khi đã xoá, mọi thông tin và quyền truy cập sẽ bị mất vĩnh viễn. <br>
+						- Vì vậy, hãy cân nhắc kỹ trước khi tiến hành hành động này và đảm bảo rằng đây là quyết định cuối cùng mà bạn muốn thực hiện.
+					</p>
+					<div class="form-floating mb-4">
+						<input type="text" class="form-control form-control-lg" id="txtUsernameSI" name="username" placeholder="Username" required>
+						<label for="txtUsernameSI" class="form-label">Username</label>
+						<div class="invalid-feedback">Username invalid</div>
+					</div>
+			        <div class="form-floating mb-4" ng-init="showPassSI">
+						<input type="{{showPassSI?'text':'password'}}" class="form-control form-control-lg" id="txtPass" name="matkhau" placeholder="Password" required>
+						<label for="txtPass" class="form-label">Confirm password</label>
+						<div class="invalid-feedback">Confirm password invalid</div>
+						<div class="form-check is-valid">
+							<input type="checkbox" class="form-check-input" id="rdoShowPassSI" ng-model="showPassSI">
+							<label class="form-check-label" for="rdoShowPassSI">Show password</label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+					<button type="submit" class="btn btn-danger">XOÁ TÀI KHOẢN</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 
 
 
