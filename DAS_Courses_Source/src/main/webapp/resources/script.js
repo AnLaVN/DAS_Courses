@@ -116,6 +116,19 @@ app.controller("MyCtrl", function($scope, $http) {
 			function errorCallback()  {new bootstrap.Toast(document.getElementById('ToastER')).show()}
     	);
 	}
+	
+	
+	$scope.SendMail = function(email){
+		$http({
+			method: 'POST',
+			url: window.location.href.split('?')[0] + "/SendEmail",
+			data: "email=" + email,
+			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		}).then(
+			function successCallback(){new bootstrap.Toast(document.getElementById('ToastSC')).show()}, 
+			function errorCallback()  {new bootstrap.Toast(document.getElementById('ToastER')).show()}
+    	);
+	}
 
 
 });

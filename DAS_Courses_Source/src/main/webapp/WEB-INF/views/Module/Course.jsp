@@ -7,7 +7,13 @@
 
 	<!-- Description Course  -->
 	<div class="card border-2 border-primary-subtle mx-0 my-4 mx-md-5 px-0">
-		<div class="card-header border-primary-subtle h4">${Course.tenkhoahoc}</div>
+		<div class="card-header border-primary-subtle h4">
+			<c:choose>
+				<c:when test="${Course.cauhois.size() > 0}"><i class="bi bi-patch-check-fill me-2 text-success"></i></c:when>
+				<c:otherwise><i class="bi bi-patch-exclamation-fill me-2 text-danger"></i></c:otherwise>
+			</c:choose>
+			${Course.tenkhoahoc}
+		</div>
 		<div class="card-body row mx-0 px-0">
 			<blockquote class="m-0 blockquotecol-12 col-lg-7 col-xl-8 fs-5">
 				<p class="mt-5 fs-6">${Course.mota}</p>
@@ -17,7 +23,7 @@
 				<div class="sticky-top">
 					<div class="col-11 position-absolute pt-5" style="top: 25%; left: 50%; transform: translateX(-50%)">
 						<c:if test="${Course.tainguyens.size() > 0}">
-						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+						<button type="button" class="btn btn-lg btn-outline-primary mt-4 mb-3 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join'">Tham Gia</button>
 						</c:if>
 						<div class="card align-items-center overflow-y-auto" style="max-height: 60vh;">
 							<img class="card-img-top" src="${Course.anhmota}">
@@ -68,7 +74,7 @@
 			<img class="card-img-top" src="${Course.anhmota}">
 			<div class="card-body">
 				<c:if test="${Course.tainguyens.size() > 0}">
-				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join?idsv=${sessionScope.userSV.username}'">Tham Gia</button>
+				<button type="submit" class="btn btn-lg btn-outline-primary m-0 my-3 mb-5 w-100" onclick="location.href='${url}Course/${Course.idkh}/Join'">Tham Gia</button>
 				</c:if>
 				<h5 class="card-title">${Course.tenkhoahoc}</h5>
 				<p class="card-text">${Course.motangan}</p>

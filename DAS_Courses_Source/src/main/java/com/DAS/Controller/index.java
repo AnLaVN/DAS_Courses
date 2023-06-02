@@ -21,17 +21,17 @@ public class index {
 	@GetMapping
 	public String indexGET() {
 		String  cookie = ALCookie.get("userSignInCookie");
-		int iX = cookie.indexOf("~");
-		String	hashUsername = cookie.substring(0, iX),
-				hashPassword = AES.Decrypt(cookie.substring(iX + 1), "DAS"+hashUsername);
 		
-		
-		// Check is Sinhvien exists in database
-		boolean isVaild = sinhvienDAO.existsByUsernameAndMatkhau(hashUsername, hashPassword);
-		
-		if(isVaild) {
-			// Add seesion scope
-			ALSession.setSession("userSV", sinhvienDAO.findById(hashUsername).orElse(new Sinhvien()));
+		if(cookie != null) {
+			int iX = cookie.indexOf("~");
+			String	hashUsername = cookie.substring(0, iX),
+					hashPassword = AES.Decrypt(cookie.substring(iX + 1), "DAS"+hashUsername);
+			
+			boolean isExists = sinhvienDAO.existsByUsernameAndMatkhau(hashUsername, hashPassword);
+			
+			if(isExists) {
+				ALSession.setSession("userSV", sinhvienDAO.findById(hashUsername).orElse(new Sinhvien()));
+			}
 		}
 		
 		return "index";

@@ -30,19 +30,30 @@ public class MyAcc {
 	
 	@PostMapping
 	public String MyAccPOST(Sinhvien sv, @RequestParam("picAvatar") MultipartFile avatar) {
-		Sinhvien currSV = (Sinhvien) ALSession.getSession("userSV");
-		Log.add("MyAccPOST - Try to update account with username: " + sv.getUsername());		// Log info 
+		// Xử lí dữ liệu
+		Sinhvien currSV = (Sinhvien) ALSession.getSession("userSV");	// Lấy sinhvien hiện tại
+		String idsv = currSV.getUsername();								// Lấy idsv hiện tại
 		
-		// Save avatar of Sinhvien
-		try {
-			ALParam.saveFile(avatar, "/Image/UsersAvatar/", sv.getUsername()+".png");
+		// Thông báo qua Log
+		Log.add("MyAccPOST - Try to update account with username: " + currSV.getUsername());
+		
+		try { // Lưu ảnh đại diện của sinhvien
+			String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", idsv+".png").getAbsolutePath(),
+					imPath = abPath.substring(abPath.lastIndexOf("\\Image\\UsersAvatar"));
+			currSV.setAvatar(imPath);
 		} catch (IllegalStateException | IOException e) {
-			Log.add("MyAccPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
+			Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 		}
 		
-		currSV.setTen(sv.getTen());								// Update ten of Sinhvien
-		sinhvienDAO.save(currSV);								// Save Sinhvien info
-		Log.add("MyAccPOST - Update account successfully !");	// Log info
+		// Lưu dữ liệu vào csdl
+		currSV.setTen(sv.getTen());
+		sinhvienDAO.save(currSV);
+		
+		// Add seesion scope
+		ALSession.setSession("userSV", sinhvienDAO.findById(idsv).get());
+		
+		// Thông báo qua Log
+		Log.add("MyAccPOST - Update account successfully !");
 		return "redirect:/MyAcc";
 	}
 	

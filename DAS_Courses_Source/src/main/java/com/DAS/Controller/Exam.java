@@ -35,36 +35,43 @@ public class Exam {
 	
 	@GetMapping("/{idkh}")
 	public String ExamGET(@PathVariable("idkh") String idkh, Model model) {
-		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();
-		Diem diem = diemDAO.findBySinhvienAndKhoahoc(new Sinhvien(idsv), new Khoahoc(idkh));
-		model.addAttribute("Course", khoahocDAO.findById(idkh).orElse(new Khoahoc()));
+		// Xử lí dữ liệu
+		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();// Lấy idsv hiện tại
+		Diem diem = diemDAO.findById(new DiemId(idsv, idkh)).orElse(null);		// Lấy điểm theo idsv và idkh, nếu chưa thi thì gán null
+		Khoahoc course = khoahocDAO.findById(idkh).get();						// Lấy khoá học theo idkh
+
+		// Set dữ liệu qua view
+		model.addAttribute("Course", course);
 		model.addAttribute("Mark", diem != null ? diem.getDiem() : 0.0);
-		Log.add("ExamGET - Exam Course " + idkh);
+		
+		// Thông báo qua Log
+		Log.add("ExamGET - Exam Course " + idkh + " by " + idsv);
 		return "Exam";
 	}
 	
 	@PostMapping("/{idkh}")
 	public String ExamPOST(@PathVariable("idkh") String idkh, Model model) {
-		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();
+		// Xử lí dữ liệu
+		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();// Lấy idsv hiện tại
+		Sinhvien sv = sinhvienDAO.findById(idsv).get();							// Lấy sinhvien theo idsv
+		Khoahoc khoahoc = khoahocDAO.findById(idkh).get();						// Lấy khoá học theo idkh
+		List<Cauhoi> listCauhoi = khoahoc.getCauhois();							// Lấy list câu hỏi của khoá học
+		int size = listCauhoi.size();											// Lấy kích thước của bộ câu hỏi
+		double  mark = 100.0 / size,											// Tính điểm trung bình từng cầu
+				totalMark = 0.0;												// Biến chứa tổng điểm.
 		
-		Sinhvien sv = sinhvienDAO.findById(idsv).get();
-		Khoahoc khoahoc = khoahocDAO.findById(idkh).orElse(new Khoahoc());
-		List<Cauhoi> listCauhoi = khoahoc.getCauhois();
-		int size = listCauhoi.size();
-		double  mark = 100.0 / size,
-				totalMark = 0.0;
-		
-		for(int i = 0 ; i < size ; i++) {
+		for(int i = 0 ; i < size ; i++) {	// Duyệt tất cả câu hỏi, nếu trùng đáp án thì lấy điểm trung bình cộng dồn vào tổng điềm
 			boolean isMatch = ALParam.getString("AnswerOfSentence"+i).equalsIgnoreCase(listCauhoi.get(i).getDapandung());
 			if(isMatch) totalMark += mark;
 		}
 		
-		DiemId id = new DiemId(idsv, idkh);
-		Diem diem = new Diem(id, khoahoc, sv, totalMark);
+		// Lưu dữ liệu vào csdl
+		Diem diem = new Diem(new DiemId(idsv, idkh), khoahoc, sv, totalMark);
 		diemDAO.save(diem);
 		sv.getDiems().add(diem);
 		sinhvienDAO.save(sv);
 		
+		// Thông báo qua Log
 		Log.add("ExamPOST - Username " + idsv + " submit exam of course " + idkh + " with " + totalMark + " mark");
 		return "redirect:/Exam/"+idkh;
 	}

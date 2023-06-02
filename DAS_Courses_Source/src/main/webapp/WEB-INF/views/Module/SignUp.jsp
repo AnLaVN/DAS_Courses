@@ -16,12 +16,12 @@
 					<div class="invalid-feedback">Username invaild</div>
 				</div>
 				<div class="form-floating mb-4">
-					<input type="text" class="form-control form-control-lg" id="txtFullnameSU" name="ten" placeholder="Fullname" required>
+					<input type="text" class="form-control form-control-lg" id="txtFullnameSU" name="ten" placeholder="Fullname" required maxlength="128">
 					<label for="txtFullnameSU" class="form-label">Fullname</label>
 					<div class="invalid-feedback">Fullname invalid</div>
 				</div>
 				<div class="form-floating mb-4">
-					<input type="email" class="form-control form-control-lg" id="txtEmailSU" name="email" placeholder="Email" required>
+					<input type="email" class="form-control form-control-lg" id="txtEmailSU" name="email" placeholder="Email" required maxlength="256">
 					<label for="txtEmailSU" class="form-label">Email</label>
 					<div class="invalid-feedback">Email invalid</div>
 				</div>
@@ -30,8 +30,8 @@
 					id="txtNPassSU" name="matkhau" placeholder="Password" required ng-model="NPassSU" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/">
 					<label for="txtNPassSU" class="form-label">Password</label>
 					<div class="form-check is-valid">
-						<input type="checkbox" class="form-check-input" id="rdoShowPassSU">
-						<label class="form-check-label" for="rdoShowPassSU" ng-click="showPassSU=!showPassSU">Show password</label>
+						<input type="checkbox" class="form-check-input" id="rdoShowPassSU" ng-model="showPassSU">
+						<label class="form-check-label" for="rdoShowPassSU">Show password</label>
 					</div>
 					<div class="invalid-feedback">Invalid Password</div>
 				</div>

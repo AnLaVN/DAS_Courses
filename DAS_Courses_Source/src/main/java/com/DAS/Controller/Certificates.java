@@ -35,7 +35,7 @@ public class Certificates {
 		// Xử lí dữ liệu
 		int currentPage = pPage.orElse(1);		// Lấy chỉ số trang hiện tại, nếu không có gán là 1
 		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();	// Lấy idsv hiện tại
-		List<Diem> listDiem = sinhvienDAO.findById(idsv).get().getDiems();			// Lấy list điểm của sinhvien
+		List<Diem> listDiem = sinhvienDAO.findById(idsv).get().getDiems();			// Lấy list điểm của sinhvien theo idsv
 		
 		// Tạo page
 		Pageable pageable = PageRequest.of(currentPage - 1, 6);

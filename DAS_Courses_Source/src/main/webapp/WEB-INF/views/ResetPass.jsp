@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100" ng-app="MyApp" ng-controller="MyCtrl" ng-init="Validation()" data-bs-theme="{{Theme}}">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <title>Chứng chỉ</title>
+    <title>Reset Password</title>
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
     <style>
@@ -32,21 +32,18 @@
 
 
 
+
+	<div class="row m-0 p-0">
+		<div class="col-7 d-none d-lg-block"></div>
+		<div class="col-12 col-lg-5 m-0 p-0"><%@include file="Module/ResetPass.jsp"%></div>
+	</div>
 	
-	<c:choose>
-		<c:when test="${CertifiPage.totalElements > 0}"><%@include file="Module/Certificates.jsp"%></c:when>
-		<c:otherwise><p class="h1 text-danger text-center mt-5">KHÔNG TÌM THẤY CHỨNG CHỈ NÀO</p></c:otherwise>
-	</c:choose>
 	
 
 
 
     
-	<%@include file="Module/Footer.jsp"%>
+    <%@include file="Module/Footer.jsp"%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-	    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-	    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
 </body>
 </html>

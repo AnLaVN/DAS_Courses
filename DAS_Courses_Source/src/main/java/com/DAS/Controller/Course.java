@@ -35,26 +35,29 @@ public class Course {
 	@Autowired
 	TainguyenDAO tainguyenDAO;
 	
+	
+	
 	@GetMapping("/{idkh}")
 	public String CourseGET(@PathVariable("idkh") String idkh, Model model) {
 		// Xử lí dữ liệu
 		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();				// Lấy idsv hiện tại
 		Khoahoc course = khoahocDAO.findById(idkh).orElse(new Khoahoc());						// Lấy khoá học theo idkh
-		Danhgia rating = danhgiaDAO.findById(new DanhgiaId(idsv, idkh)).orElse(new Danhgia());	// Lấy đánh giá của sinhvien hiện tại trong khoá học
+		Danhgia rating = danhgiaDAO.findById(new DanhgiaId(idsv, idkh)).orElse(new Danhgia());	// Lấy đánh giá của sinhvien theo idsv và idkh
 
 		// Set dữ liệu qua view
 		model.addAttribute("Course", course);
 		model.addAttribute("Rating", rating);
 		
 		// Thông báo qua Log
-		Log.add("CourseGET - View Course " + idkh);
+		Log.add("CourseGET - View Course " + idkh + " by " + idsv);
 		return "Course";
 	}
 	
 	@GetMapping("/{idkh}/Join")
-	public String CourseJOIN(@PathVariable("idkh") String idkh, @RequestParam("idsv") String idsv) {
+	public String CourseJOIN(@PathVariable("idkh") String idkh) {
 		// Xử lí dữ liệu
-		boolean ixExists = sinhvienDAO.isExistsSV_KH(idsv, idkh);	// Kiểm tra sinh viên đã tồn tại trong khoá học chưa
+		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();// Lấy idsv hiện tại
+		boolean ixExists = sinhvienDAO.isExistsSV_KH(idsv, idkh);				// Kiểm tra sinh viên đã tồn tại trong khoá học chưa
 		if(!ixExists) {	// Nếu chưa thì thêm vào csdl
 			Sinhvien sv = sinhvienDAO.findById(idsv).get();	
 			Khoahoc kh  = khoahocDAO.findById(idkh).get();
@@ -62,11 +65,12 @@ public class Course {
 			kh.getSinhviens().add(sv);
 			sinhvienDAO.save(sv);
 			khoahocDAO.save(kh);
+			
 			// Thông báo qua Log
 			  Log.add("CourseJOIN - Username " + idsv + " join course " + idkh);
 		}else Log.add("CourseJOIN - Username " + idsv + " view course " + idkh);
 		
-		return "redirect:/Course/"+idkh+"/Material";
+		return "redirect:/Course/" + idkh + "/Material";
 	}
 	
 	@GetMapping("/{idkh}/Material")
@@ -88,13 +92,13 @@ public class Course {
 	public String CoursePOST(@PathVariable("idkh") String idkh, @RequestParam("Sao") Optional<Double> sao, @RequestParam("Descrip") Optional<String> des,  Model model) {
 		// Xử lí dữ liệu
 		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();// Lấy idsv hiện tại
-		Sinhvien sv = sinhvienDAO.findById(idsv).get();							// Lấy sinhvien theo id
+		Sinhvien sv = sinhvienDAO.findById(idsv).get();							// Lấy sinhvien theo idsv
 		DanhgiaId id = new DanhgiaId(idsv, idkh);								// Lấy ID đánh giá theo idsv, idkh
 		Danhgia oldDG = danhgiaDAO.findById(id).orElse(new Danhgia());			// Lấy đánh giá cũ trong csdl
 		Danhgia newDG = new Danhgia(id, new Khoahoc(idkh), sv,					// Ghi đè lại đánh giá mới
 									des.orElse(oldDG.getBinhluan()), 			// Ghi đè bình luận mới, nếu không có thì lấy bình luận cũ
 									sao.orElse(oldDG.getSao()));				// Ghi đè số sao mới, nếu không có thì lấy số sao cũ
-		danhgiaDAO.save(newDG);		// Lưu thay đổi vào csdl
+		danhgiaDAO.save(newDG);													// Lưu thay đổi vào csdl
 		
 		// Thông báo qua Log
 		if(sao.isPresent()) Log.add("CoursePOST - Username " + idsv + " voting on course " + idkh + ": " + sao.get());

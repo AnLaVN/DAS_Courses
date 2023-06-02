@@ -22,7 +22,7 @@
 					<label for="txtEmailMA" class="form-label">Email</label>
 				</div>
 				<div class="form-floating mb-4">
-					<input type="text" class="form-control form-control-lg" id="txtFullnameMA" name="ten" placeholder="Fullname" value="${sessionScope.userSV.ten}" required>
+					<input type="text" class="form-control form-control-lg" id="txtFullnameMA" name="ten" placeholder="Fullname" value="${sessionScope.userSV.ten}" required maxlength="128">
 					<label for="txtFullnameMA" class="form-label">Fullname</label>
 					<div class="invalid-feedback">Fullname invalid</div>
 				</div>
