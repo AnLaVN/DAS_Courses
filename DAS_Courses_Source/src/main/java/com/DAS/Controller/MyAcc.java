@@ -40,7 +40,7 @@ public class MyAcc {
 		try { // Lưu ảnh đại diện của sinhvien
 			String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", idsv+".png").getAbsolutePath(),
 					imPath = abPath.substring(abPath.lastIndexOf("\\Image\\UsersAvatar"));
-			sv.setAvatar(imPath);
+			currSV.setAvatar(imPath);
 		} catch (IllegalStateException | IOException e) {
 			Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 		}
