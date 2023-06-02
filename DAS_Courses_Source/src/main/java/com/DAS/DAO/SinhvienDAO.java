@@ -17,4 +17,6 @@ public interface SinhvienDAO extends JpaRepository<Sinhvien, String>{
 	@Query(value = "SELECT dbo.FN_FIND_SV_KH(?1, ?2)", nativeQuery = true)
 	boolean isExistsSV_KH(String username, String idkh);
 	
+	Sinhvien findByEmail(String email);
+	
 }
