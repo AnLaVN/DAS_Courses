@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.DAS.Entity.Diem;
 import com.DAS.Entity.DiemId;
 
-
 public interface DiemDAO extends JpaRepository<Diem, DiemId>{
 	
 }

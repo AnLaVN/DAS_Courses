@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.DAS.Entity.Cauhoi;
 
-
 public interface CauhoiDAO extends JpaRepository<Cauhoi, String>{
 
 }
