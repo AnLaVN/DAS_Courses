@@ -19,12 +19,13 @@ import com.DAS.DAO.SinhvienDAO;
 import com.DAS.Entity.Sinhvien;
 import com.DAS.Tools.ALCookie;
 import com.DAS.Tools.ALParam;
+import com.DAS.Tools.ALSession;
 
 @Controller
 @RequestMapping("/SignUp")
 public class SignUp {
 	@Autowired
-	SinhvienDAO sinhvienDao;
+	SinhvienDAO sinhvienDAO;
 	
 	@GetMapping
 	public String SignUpGET() {
@@ -43,8 +44,8 @@ public class SignUp {
 		Log.add("SignUpPOST - Try to sign up with username: " + username);
 		
 		// Kiểm tra sinhvien có username và email trong csdl hay không
-		boolean isExistsUsername = sinhvienDao.existsByUsername(username),	// Tìm username có trong csdl hay không
-				isExistsEmail = sinhvienDao.existsByEmail(sv.getEmail());	// Tìm email có trong csdl hay không
+		boolean isExistsUsername = sinhvienDAO.existsByUsername(username),	// Tìm username có trong csdl hay không
+				isExistsEmail = sinhvienDAO.existsByEmail(sv.getEmail());	// Tìm email có trong csdl hay không
 		
 		if(!isExistsUsername && !isExistsEmail) {	// Nếu chưa tồn tại thì lưu vào csdl
 			
@@ -56,13 +57,16 @@ public class SignUp {
 				Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 			}
 
-			sinhvienDao.save(sv);					// Lưu dữ liệu vào csdl
+			sinhvienDAO.save(sv);					// Lưu dữ liệu vào csdl
 			ALCookie.add("userSignInCookie", 		// Thêm cookie vào trình duyệt
 					username + "~" + AES.Encrypt(	// Gồm hash username và mã hoá AES
 						password, 					// của hash mật khẩu
 						"DAS" + username),			// sử dụng key là "DAS" và hash username
 					7*24);							// có thời hạn là 7 ngày
-
+			
+			// Add seesion scope
+			ALSession.setSession("userSV", sinhvienDAO.findById(username).get());
+			
 			// Thông báo qua Log
 			Log.add("SignUpPOST - Sign up successfully !");
 			return "redirect:/";

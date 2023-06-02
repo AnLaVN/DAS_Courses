@@ -32,12 +32,13 @@ public class MyAcc {
 	public String MyAccPOST(Sinhvien sv, @RequestParam("picAvatar") MultipartFile avatar) {
 		// Xử lí dữ liệu
 		Sinhvien currSV = (Sinhvien) ALSession.getSession("userSV");	// Lấy sinhvien hiện tại
+		String idsv = currSV.getUsername();								// Lấy idsv hiện tại
 		
 		// Thông báo qua Log
 		Log.add("MyAccPOST - Try to update account with username: " + currSV.getUsername());
 		
 		try { // Lưu ảnh đại diện của sinhvien
-			String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", currSV.getUsername()+".png").getAbsolutePath(),
+			String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", idsv+".png").getAbsolutePath(),
 					imPath = abPath.substring(abPath.lastIndexOf("\\Image\\UsersAvatar"));
 			sv.setAvatar(imPath);
 		} catch (IllegalStateException | IOException e) {
@@ -47,6 +48,9 @@ public class MyAcc {
 		// Lưu dữ liệu vào csdl
 		currSV.setTen(sv.getTen());
 		sinhvienDAO.save(currSV);
+		
+		// Add seesion scope
+		ALSession.setSession("userSV", sinhvienDAO.findById(idsv).get());
 		
 		// Thông báo qua Log
 		Log.add("MyAccPOST - Update account successfully !");
