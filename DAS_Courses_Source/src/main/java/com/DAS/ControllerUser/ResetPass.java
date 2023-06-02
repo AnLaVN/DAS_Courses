@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class ResetPass {
 	
 	@GetMapping
 	public String ResetPassGET() {
-		return "ResetPass";
+		return "User/ResetPass";
 	}
 	
 	@PostMapping
@@ -47,7 +47,7 @@ public class ResetPass {
 			
 		// Ngược lại thông báo qua Log	
 		}else model.addAttribute("Toast", true);
-		return "ResetPass";
+		return "User/ResetPass";
 	}
 	
 	@PostMapping("/SendEmail")

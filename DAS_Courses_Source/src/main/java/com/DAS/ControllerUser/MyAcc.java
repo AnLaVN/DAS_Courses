@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class MyAcc {
 	
 	@GetMapping
 	public String MyAccGET() {
-		return "MyAcc";
+		return "User/MyAcc";
 	}
 	
 	@PostMapping

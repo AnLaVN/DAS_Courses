@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.List;
@@ -44,7 +44,7 @@ public class Enrolled {
 		
 		// Thông báo qua Log
 		Log.add("EnrolledGET - Get " + coursesPage.getTotalElements() + " courses enrolled of " + idsv);
-		return "Courses";
+		return "User/Courses";
 	}
 	
 }

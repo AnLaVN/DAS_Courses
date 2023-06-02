@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.List;
@@ -47,6 +47,6 @@ public class Certificates {
 		
 		// Thông báo qua Log
 		Log.add("CertificatesGET - Get " + CertifiPage.getTotalElements() + " certificates of " + idsv);
-		return "Certificates";
+		return "User/Certificates";
 	}
 }

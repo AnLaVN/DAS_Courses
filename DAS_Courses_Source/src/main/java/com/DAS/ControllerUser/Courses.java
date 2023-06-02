@@ -1,4 +1,4 @@
-package com.DAS.Controller;
+package com.DAS.ControllerUser;
 //Make by Bình An || AnLaVN || KatoVN
 
 import java.util.Optional;
@@ -45,7 +45,7 @@ public class Courses {
 		// Set dữ liệu qua view
 		model.addAttribute("CoursesPage", coursesPage);
 		model.addAttribute("CurrentPage", currentPage);
-		return "Courses";
+		return "User/Courses";
 	}
 	
 }
