@@ -34,6 +34,7 @@ public class ResetPass {
 		try {
 			String OTP = RandomORG.getString(8, true, true, true);
 			boolean exists = sinhvienDAO.existsByEmail(email);
+			ALEmail
 			System.out.println("Email: " + email + (exists ? "EXISTS" : "NOT EXISTS") + " in database. OTP: " + OTP);
 		} catch (IOException e) {
 			e.printStackTrace();
