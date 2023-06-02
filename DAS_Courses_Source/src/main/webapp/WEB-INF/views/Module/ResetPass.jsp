@@ -10,9 +10,12 @@
 		<div class="card-header"><h5 class="card-title">Reset Password</h5></div>
 		<div class="card-body">
 			<form class="mx-1 mx-sm-3 mx-md-5 my-4 needs-validation" novalidate name="formRP" action="${url}ResetPass" method="post">
-				<div class="input-group has-validation mb-4" ng-init="editEmail">
-					<input type="email" class="form-control form-control-lg {{formRP.txtEmailRP.$valid?'':'is-invalid'}}" name="txtEmailRP" placeholder="Email" required maxlength="256" ng-model="txtEmailRP" ng-disabled="editEmail">
-					<button class="btn btn-outline-primary" type="button" ng-click="editEmail = formRP.txtEmailRP.$valid; editEmail ? SendMail(txtEmailRP) : false"><i class="bi bi-send-fill"></i></button>
+				<div class="input-group has-validation mb-4">
+					<input type="email" class="form-control form-control-lg {{formRP.txtEmailRP.$valid?'':'is-invalid'}}" name="txtEmailRP" placeholder="Email" required maxlength="256" ng-model="txtEmailRP" ng-disabled="sendEmail">
+					<button class="btn btn-outline-primary" type="button" ng-click="sendEmail = formRP.txtEmailRP.$valid; sendEmail ? SendMail(txtEmailRP) : false" ng-disabled="sendEmail">
+						<div class="spinner-border spinner-border-sm" ng-show="sendEmail"></div>
+						<i class="bi bi-send-fill" ng-hide="sendEmail"></i>
+					</button>
 					<div class="invalid-feedback">Email invaild</div>
 				</div>
 				<div class="form-floating mb-4">

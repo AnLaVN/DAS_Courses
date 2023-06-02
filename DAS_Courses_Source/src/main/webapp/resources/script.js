@@ -104,7 +104,7 @@ app.controller("MyCtrl", function($scope, $http) {
         })
     }
 	
-
+	
 	$scope.Ratting = function(descrip){
 		$http({
 			method: 'POST',
@@ -118,6 +118,7 @@ app.controller("MyCtrl", function($scope, $http) {
 	}
 	
 	
+	$scope.sendEmail = false;
 	$scope.SendMail = function(email){
 		$http({
 			method: 'POST',
@@ -125,8 +126,8 @@ app.controller("MyCtrl", function($scope, $http) {
 			data: "email=" + email,
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		}).then(
-			function successCallback(){new bootstrap.Toast(document.getElementById('ToastSC')).show()}, 
-			function errorCallback()  {new bootstrap.Toast(document.getElementById('ToastER')).show()}
+			function successCallback(){new bootstrap.Toast(document.getElementById('ToastSC')).show(); $scope.sendEmail = false;}, 
+			function errorCallback()  {new bootstrap.Toast(document.getElementById('ToastER')).show(); $scope.sendEmail = false;}
     	);
 	}
 

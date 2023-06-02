@@ -26,10 +26,7 @@ public class DASCourseApplication {
 				hashKey = SHA256.Encrypt(authentication.readLine());
 		System.setProperty("spring.datasource.username", "as");//AES.Decrypt(hashUsername, hashKey)); 
 		System.setProperty("spring.datasource.password", "");//AES.Decrypt(hashPassword, hashKey)); 
-		
-		String email = AES.Decrypt(hashEmail, hashKey),
-				pass = AES.Decrypt(hashEPass, hashKey);
-		ALEmail.ZohoMail = new Email(email, pass, "smtp.zoho.com");
+		ALEmail.ZohoMail = new Email(AES.Decrypt(hashEmail, hashKey), AES.Decrypt(hashEPass, hashKey), "smtp.zoho.com");
 		
 //		System.setProperty("spring.mail.username", AES.Decrypt(hashEmail, hashKey));
 //		System.setProperty("spring.mail.password", AES.Decrypt(hashEPass, hashKey));
