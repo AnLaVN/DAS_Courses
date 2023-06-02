@@ -50,7 +50,7 @@
 		<!-- Exam Sentences -->
 		<div class="col-12 col-lg-8 m-0 p-0">
 			<form class="needs-validation" name="ExamForm" novalidate ng-init="Validation()" action="#" method="post">
-				<div class="accordion" id="ExamSentences" style="backdrop-filter: blur(20px);" ng-init="CheckSentence()">
+				<div class="accordion" id="ExamSentences" ng-init="CheckSentence()">
 					<c:forEach var="cauhoi" items="${Course.cauhois}" varStatus="loop">
 					
 					<div class="accordion-item">
@@ -59,7 +59,7 @@
 								Câu hỏi ${loop.index+1}: 
 							</button>
 						</h2>
-						<div id="Sentence${loop.index}" class="accordion-collapse collapse${loop.index==0?' show':''}" data-bs-parent="#ExamSentences">
+						<div id="Sentence${loop.index}" class="accordion-collapse collapse${loop.index==0?' show':''}" data-bs-parent="#ExamSentencesDelete">
 							<div class="accordion-body row m-0 p-0 p-md-2">
 								<div class="col-12 mt-2 mb-3">${cauhoi.cauhoi}</div>
 								

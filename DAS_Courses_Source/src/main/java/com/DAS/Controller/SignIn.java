@@ -32,34 +32,34 @@ public class SignIn {
 
 	@PostMapping
 	public String SignInPOST(Sinhvien sv, @RequestParam("rdoCheck") Optional<Boolean> isRem, Model model) {
-		sv.setUsername(SHA256.Encrypt(sv.getUsername()));	// Hash username os Sinhvien
-		sv.setMatkhau(SHA256.Encrypt(sv.getMatkhau()));		// Hash password of Sinhvien
-		Log.add("SignInPOST - Try to sign in with username: " + sv.getUsername());		// Log info 
+		// Xử lí dữ liệu
+		String  username = SHA256.Encrypt(sv.getUsername()),// Mã hoá username thành hash username
+				password = SHA256.Encrypt(sv.getMatkhau());	// Mã hoá password thành hash password
 		
-		// Check is Sinhvien exists in database
-		boolean isVaild = sinhvienDAO.existsByUsernameAndMatkhau(sv.getUsername(), sv.getMatkhau());
+		// Thông báo qua Log
+		Log.add("SignInPOST - Try to sign in with username: " + username);
 		
-		
-		// If Sinhvien match username and password
-		if(isVaild) {
-			// If client click remmber radio
-			if(isRem.orElse(false)) {
-				ALCookie.add("userSignInCookie", 				// Add cookie for client
-						sv.getUsername() + "~" + AES.Encrypt(	// Add string of hash username and AES encrypt of
-								sv.getMatkhau(), 				// hash password
-								"DAS"+sv.getUsername()),		// with key is "DAS" add string with hash username
-						7*24);									// live in 7 day if client check remmber, else is none
-				// Add seesion scope
-				ALSession.setSession("userSV", sinhvienDAO.findById(sv.getUsername()).orElse(new Sinhvien()));
+		// Kiểm tra sinhvien có khớp username và password trong csdl hay không
+		if(sinhvienDAO.existsByUsernameAndMatkhau(username, password)) {
+			if(isRem.orElse(false)) {	// Nếu sinhvien tích chọn ô remmber me?
+				ALCookie.add("userSignInCookie", 			// Thêm cookie vào trình duyệt
+							username + "~" + AES.Encrypt(	// Gồm hash username và mã hoá AES
+								password, 					// của hash mật khẩu
+								"DAS" + username),			// sử dụng key là "DAS" và hash username
+							7*24);							// có thời hạn là 7 ngày
 			}
-			Log.add("SignInPOST - Sign in successfully !");	// Log info
-			return "redirect:/";							// Redirect to Home page
+			
+			// Add seesion scope
+			ALSession.setSession("userSV", sinhvienDAO.findById(username).get());
+			
+			// Thông báo qua Log
+			Log.add("SignInPOST - Sign in successfully !");
+			return "redirect:/";
 		}
 		
-		
-		// Else
-		Log.add("SignInPOST - Can not sign in !!!");		// Log info
-		model.addAttribute("Toast", true);					// Display toast notification the error
+		// Nếu không khớp
+		Log.add("SignInPOST - Can not sign in !!!");		// Thông báo qua Log
+		model.addAttribute("Toast", true);					// Hiển thị thông báo lỗi
 		return "SignIn";
 	}
 

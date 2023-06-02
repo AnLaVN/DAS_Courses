@@ -11,7 +11,13 @@
 		<div class="card m-0 my-3 m-md-3 p-0 col-12 col-md-5 col-xl-3" 
 			onclick="location.href='${url}Course/${course.idkh}'" style="cursor: pointer;"
 			data-bs-toggle="tooltip" data-bs-title="${course.motangan}" data-bs-custom-class="custom-tooltip">
-			<div class="card-header">${course.phanloai.tenpl}</div>
+			<div class="card-header">
+				<c:choose>
+					<c:when test="${course.cauhois.size() > 0}"><i class="bi bi-patch-check-fill me-2 text-success"></i></c:when>
+					<c:otherwise><i class="bi bi-patch-exclamation-fill me-2 text-danger"></i></c:otherwise>
+				</c:choose>
+				${course.phanloai.tenpl}
+			</div>
 			<img class="img-fluid" src="${course.anhmota}">
 			<div class="card-body">
 				<h5 class="card-title fs-6 m-0">${course.tenkhoahoc}</h5>

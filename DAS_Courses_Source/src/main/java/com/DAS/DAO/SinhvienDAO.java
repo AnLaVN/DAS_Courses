@@ -8,6 +8,7 @@ import com.DAS.Entity.Sinhvien;
 
 
 public interface SinhvienDAO extends JpaRepository<Sinhvien, String>{
+	boolean existsByUsername(String username);
 	
 	boolean existsByEmail(String email);
 	

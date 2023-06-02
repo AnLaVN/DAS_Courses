@@ -33,41 +33,44 @@ public class SignUp {
 	
 	@PostMapping
 	public String SignUpPOST(Sinhvien sv, @RequestParam("picAvatar") MultipartFile avatar, Model model) {
-		sv.setUsername(SHA256.Encrypt(sv.getUsername()));	// Hash username of Sinhvien
-		Log.add("SignUpPOST - Try to sign up with username: " + sv.getUsername());		// Log info 
+		// Xử lí dữ liệu
+		String  username = SHA256.Encrypt(sv.getUsername()),// Mã hoá username thành hash username
+				password = SHA256.Encrypt(sv.getMatkhau());	// Mã hoá password thành hash password
+		sv.setUsername(username);							// Lưu username đã mã hoá
+		sv.setMatkhau(password);							// Lưu password đã mã hoá
 		
-		// Check is Sinhvien exists in database
-		boolean isExistsUsername = sinhvienDao.findById(sv.getUsername()).isPresent(),	// Find if exists username
-				isExistsEmail = sinhvienDao.existsByEmail(sv.getEmail());				// Find if exists email
+		// Thông báo qua Log
+		Log.add("SignUpPOST - Try to sign up with username: " + username);
 		
+		// Kiểm tra sinhvien có username và email trong csdl hay không
+		boolean isExistsUsername = sinhvienDao.existsByUsername(username),	// Tìm username có trong csdl hay không
+				isExistsEmail = sinhvienDao.existsByEmail(sv.getEmail());	// Tìm email có trong csdl hay không
 		
-		// If Sinhvien doesn't have same username and email
-		if(!isExistsUsername && !isExistsEmail) {
-			sv.setMatkhau(SHA256.Encrypt(sv.getMatkhau()));	// Hash password of Sinhvien
+		if(!isExistsUsername && !isExistsEmail) {	// Nếu chưa tồn tại thì lưu vào csdl
 			
-			// Save avatar of Sinhvien
-			try {
-				String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", sv.getUsername()+".png").getAbsolutePath(),
+			try { // Lưu ảnh đại diện của sinhvien
+				String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", username+".png").getAbsolutePath(),
 						imPath = abPath.substring(abPath.lastIndexOf("\\Image\\UsersAvatar"));
 				sv.setAvatar(imPath);
 			} catch (IllegalStateException | IOException e) {
 				Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 			}
-			// Save info of Sinhvien
-			sinhvienDao.save(sv);							// Save Sinhvien to database
-			ALCookie.add("userSignInCookie", 				// Add cookie for client
-					sv.getUsername() + "~" + AES.Encrypt(	// Add string of hash username and AES encrypt of
-							sv.getMatkhau(), 				// hash password
-							"DAS"+sv.getUsername()),		// with key is "DAS" add string with hash username
-					7*24);									// live in 7 day
-			Log.add("SignUpPOST - Sign up successfully !");	// Log info
-			return "redirect:/";							// Redirect to Home page
+
+			sinhvienDao.save(sv);					// Lưu dữ liệu vào csdl
+			ALCookie.add("userSignInCookie", 		// Thêm cookie vào trình duyệt
+					username + "~" + AES.Encrypt(	// Gồm hash username và mã hoá AES
+						password, 					// của hash mật khẩu
+						"DAS" + username),			// sử dụng key là "DAS" và hash username
+					7*24);							// có thời hạn là 7 ngày
+
+			// Thông báo qua Log
+			Log.add("SignUpPOST - Sign up successfully !");
+			return "redirect:/";
 		}
 		
-		
-		// Else
-		Log.add("SignUpPOST - Can not sign up !!!");		// Log info
-		model.addAttribute("Toast", true);					// Display toast notification the error
+		// Nược lại nếu trùng username hoặc email
+		Log.add("SignUpPOST - Can not sign up !!!");// Thông báo qua Log
+		model.addAttribute("Toast", true);			// Hiển thị thông báo lỗi
 		return "SignUp";
 	}
 

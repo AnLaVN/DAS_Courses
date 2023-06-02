@@ -40,7 +40,7 @@
 				</div>
 			</div>
 			
-			<c:if test="${Tainguyen.idyoutube == tainguyen.idyoutube && loop.index < Khoahoc.tainguyens.getSize() - 1}">
+			<c:if test="${Tainguyen.idyoutube == tainguyen.idyoutube && loop.index < Khoahoc.tainguyens.size() - 1}">
 			    <script>
 			        var player;
 			        function onYouTubeIframeAPIReady() {
@@ -52,7 +52,14 @@
 			    </script>
 			</c:if>
 			</c:forEach>
-			<button type="button" class="btn btn-lg btn-primary my-5 w-100" onclick="location.href='${url}Exam/${Khoahoc.idkh}'">Thi lấy chứng chỉ</button>
+			<c:choose>
+				<c:when test="${Khoahoc.cauhois.size() > 0}">
+					<button type="button" class="btn btn-lg btn-primary my-5 w-100" onclick="location.href='${url}Exam/${Khoahoc.idkh}'">Thi lấy chứng chỉ</button>
+				</c:when>
+				<c:otherwise>
+					<button type="button" class="btn btn-lg btn-danger my-5 w-100" disabled>Khoá học không có chứng chỉ</button>
+				</c:otherwise>
+			</c:choose>
 		</div>
 	</div>
 		

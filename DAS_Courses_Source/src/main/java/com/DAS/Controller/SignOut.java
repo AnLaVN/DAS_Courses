@@ -13,8 +13,11 @@ public class SignOut {
 	
 	@RequestMapping
 	public String SignOutREQ() {
+		// Xử lí dữ liệu
 		String cookie = ALCookie.get("userSignInCookie");
 		ALCookie.remove("userSignInCookie");
+		
+		// Thông báo qua Log
 		Log.add("SignOutREQ - Delete cookies of username: " + cookie.substring(0, cookie.indexOf("~")));
 		return "redirect:/";
 	}
