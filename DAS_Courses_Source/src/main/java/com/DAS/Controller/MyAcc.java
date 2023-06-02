@@ -37,9 +37,11 @@ public class MyAcc {
 		Log.add("MyAccPOST - Try to update account with username: " + currSV.getUsername());
 		
 		try { // Lưu ảnh đại diện của sinhvien
-			ALParam.saveFile(avatar, "/Image/UsersAvatar/", currSV.getUsername()+".png");
+			String  abPath = ALParam.saveFile(avatar, "/Image/UsersAvatar/", currSV.getUsername()+".png").getAbsolutePath(),
+					imPath = abPath.substring(abPath.lastIndexOf("\\Image\\UsersAvatar"));
+			sv.setAvatar(imPath);
 		} catch (IllegalStateException | IOException e) {
-			Log.add("MyAccPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
+			Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 		}
 		
 		// Lưu dữ liệu vào csdl

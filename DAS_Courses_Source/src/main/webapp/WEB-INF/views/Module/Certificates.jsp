@@ -11,7 +11,9 @@
 		<div class="card card m-3 p-0 col-12 col-md-5 col-xl-3"
 			onclick="location.href='${url}Exam/${diem.khoahoc.idkh}'" style="cursor: pointer;"
 			data-bs-toggle="tooltip" data-bs-title="${diem.khoahoc.motangan}" data-bs-custom-class="custom-tooltip">
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary d-md-block d-none">${diem.diem}%</span>
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary d-md-block d-none">
+				<fmt:formatNumber type="number" value="${diem.diem}"/>%
+			</span>
 			<img class="card-img-top" src="${diem.khoahoc.anhmota}">
 			<div class="card-body d-md-block d-none card-img-overlay">
 				<h4 class="card-title m-0">${diem.sinhvien.ten}</h4>
@@ -21,7 +23,9 @@
 				<p class="card-text">${diem.khoahoc.motangan}</p>
 				<h6 class="card-subtitle mb-2 text-body-secondary">Tiến độ bài thi / điểm đạt được</h6>
 				<div class="progress" role="progressbar">
-					<div class="progress-bar" style="width: ${diem.diem}%">${diem.diem}%</div>
+					<div class="progress-bar" style="width: ${diem.diem}%">
+						<fmt:formatNumber type="number" value="${diem.diem}"/>%
+					</div>
 				</div>
 			</div>
 		</div>
