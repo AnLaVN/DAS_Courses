@@ -19,6 +19,7 @@ import com.AnLa.NET.RandomORG;
 import com.DAS.DAO.SinhvienDAO;
 import com.DAS.Entity.Sinhvien;
 import com.DAS.Tools.ALEmail;
+import com.DAS.Tools.ALSession;
 
 @Controller
 @RequestMapping("/ResetPass")
@@ -40,6 +41,7 @@ public class ResetPass {
 			Sinhvien sv = sinhvienDAO.findByEmail(email);	// Lấy thông tin sinhvien theo email
 			sv.setMatkhau(SHA256.Encrypt(pPassword));		// Lưu mật khẩu mới đã hash
 			sinhvienDAO.save(sv);							// Lưu thông tin vào csdl
+			ALSession.removeSession("userSV");				// Xoá dữ liệu session
 			
 			// Thông báo qua Log
 			Log.add("ResetPassPOST - Change password for " + sv.getUsername() + " successfully.");
@@ -47,11 +49,13 @@ public class ResetPass {
 			
 		// Ngược lại thông báo qua Log	
 		}else model.addAttribute("Toast", true);
+		OTP = ""; email = "";								// Reset OTP và email
 		return "User/ResetPass";
 	}
 	
 	@PostMapping("/SendEmail")
 	public String ResetPassOTP(@RequestParam("email") String pEmail) {
+		OTP = ""; email = "";								// Reset OTP và email
 		try {
 			if(sinhvienDAO.existsByEmail(pEmail)) {			// Nếu địa chỉ email tồn tại trong csdl
 				// Xử lí dữ liệu

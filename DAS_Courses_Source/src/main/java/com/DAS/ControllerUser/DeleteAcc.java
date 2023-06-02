@@ -31,13 +31,9 @@ public class DeleteAcc {
 			sinhvienDAO.deleteById(idsv);												// Xoá thông tin khỏi csdl
 			
 			// Thông báo qua Log
-			Log.add("DeleteAccPOST - Delete all information of username " + idsv);
-			return "redirect:/";
-		}else{
-			
-			// Thông báo qua Log
-			Log.add("DeleteAccPOST - Incorrect username or password of: " + idsv);
-			return "redirect:/SignOut";
-		}
+			  Log.add("DeleteAccPOST - Delete all information of username " + idsv);
+		}else Log.add("DeleteAccPOST - Incorrect username or password of: " + idsv);
+		
+		return "redirect:/SignOut";
 	}
 }
