@@ -28,8 +28,8 @@
 					id="txtNPassRP" name="txtNPassRP" placeholder="Pass" required ng-model="NPassRP" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/">
 					<label for="txtNPassRP" class="form-label">New Password</label>
 					<div class="form-check is-valid">
-						<input type="checkbox" class="form-check-input" id="rdoShowPassRP">
-						<label class="form-check-label" for="rdoShowPassRP" ng-click="showPassRP=!showPassRP">Show Password</label>
+						<input type="checkbox" class="form-check-input" id="rdoShowPassRP" ng-model="showPassRP">
+						<label class="form-check-label" for="rdoShowPassRP">Show Password</label>
 					</div>
 					<div class="invalid-feedback">Password Invalid</div>
 				</div>
