@@ -15,14 +15,13 @@ public class SignOut {
 	@RequestMapping
 	public String SignOutREQ() {
 		// Xử lí dữ liệu
-		String cookie = ALCookie.get("userSignInCookie");
-		if(cookie != null) {
-			ALCookie.remove("userSignInCookie");	// Xoá sữ liệu cookie
-			ALSession.removeSession("userSV");		// Xoá dữ liệu session
-			
-			// Thông báo qua Log
-			Log.add("SignOutREQ - Delete cookies of username: " + cookie.substring(0, cookie.indexOf("~")));
+		ALSession.removeSession("userSV");		// Xoá dữ liệu session
+		if(ALCookie.get("userSignInCookie") != null) {
+			ALCookie.remove("userSignInCookie");// Xoá dữ liệu cookie
 		}
+		
+		// Thông báo qua Log
+		Log.add("SignOutREQ - Sign Out successfully.");
 		return "redirect:/";
 	}
 }
