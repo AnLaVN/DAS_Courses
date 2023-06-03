@@ -42,6 +42,7 @@ public class ResetPass {
 			sv.setMatkhau(SHA256.Encrypt(pPassword));		// Lưu mật khẩu mới đã hash
 			sinhvienDAO.save(sv);							// Lưu thông tin vào csdl
 			ALSession.removeSession("userSV");				// Xoá dữ liệu session
+			OTP = ""; email = "";							// Reset OTP và email
 			
 			// Thông báo qua Log
 			Log.add("ResetPassPOST - Change password for " + sv.getUsername() + " successfully.");
