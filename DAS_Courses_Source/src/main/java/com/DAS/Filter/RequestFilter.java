@@ -1,4 +1,5 @@
 package com.DAS.Filter;
+//Make By Bình An || AnLaVN || KatoVN
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,5 @@ public class RequestFilter implements WebMvcConfigurer{
 				.addPathPatterns("/**")
 				.excludePathPatterns("/SignIn", "/SignUp", "/SignOut", "/ResetPass", "/resources/**", "/Image/**");
 	}
-	
 	
 }
