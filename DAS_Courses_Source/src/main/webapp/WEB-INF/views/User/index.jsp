@@ -25,7 +25,7 @@
     </style>
 </head>
 
-<body id="BGImage" class="d-flex flex-column h-100">
+<body id="${WebView == 'HOME' ? '' : 'BGImage'}" class="d-flex flex-column h-100">
 	<c:url var="url" value="/"/>
 	
 	<%@include file="Module/Header.jsp"%>
@@ -33,7 +33,10 @@
 
 
 
-
+	<c:choose>
+		<c:when test="${WebView == 'SERVICE'}"><%@include file="Module/SERVICE.jsp"%></c:when>
+		<c:otherwise><%@include file="Module/HOME.jsp"%></c:otherwise>
+	</c:choose>
 
 
 

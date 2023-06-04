@@ -1,4 +1,4 @@
-package com.DAS.Filter;
+package com.DAS.Service;
 //Make By Bình An || AnLaVN || KatoVN
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class RequestFilter implements WebMvcConfigurer{
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(auth)
 				.addPathPatterns("/**")
-				.excludePathPatterns("/SignIn", "/SignUp", "/SignOut", "/ResetPass", "/resources/**", "/Image/**");
+				.excludePathPatterns("/", "/SERVICE", "/SignIn", "/SignUp", "/SignOut", "/ResetPass", "/resources/**", "/Image/**");
 	}
 	
 }

@@ -32,7 +32,11 @@
 			</div>
 			<hr class="border border-secondary border-1 opacity-75">
 			<div class="col-auto">
-				<div class="text-light fs-5"><i class="bi bi-person me-2"></i>Username
+				<div class="text-light fs-5"><i class="bi bi-person me-2"></i>
+					<c:choose>
+						<c:when test="${!empty sessionScope.userSV}">${sessionScope.userSV.ten}</c:when>
+						<c:otherwise>Tài khoản</c:otherwise>
+					</c:choose>
 					<ul style="list-style-type: none;">
 						<li><a class="text-decoration-none text-light fs-6" href="${url}SignIn"><i class="bi bi-person-check me-2"></i>Sign In</a></li>
 						<li><a class="text-decoration-none text-light fs-6" href="${url}SignUp"><i class="bi bi-person-add me-2"></i>Sign Up</a></li>
@@ -75,7 +79,12 @@
 			</div>
 			<div class="col-auto mx-xl-2 m-0">
 				<div class="dropdown">
-					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-person me-2"></i>Username</button>
+					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-person me-2"></i>
+						<c:choose>
+							<c:when test="${!empty sessionScope.userSV}">${sessionScope.userSV.ten}</c:when>
+							<c:otherwise>Tài khoản</c:otherwise>
+						</c:choose>
+					</button>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="${url}SignIn"><i class="bi bi-person-check me-2"></i>Sign In</a></li>
 						<li><a class="dropdown-item" href="${url}SignUp"><i class="bi bi-person-add me-2"></i>Sign Up</a></li>

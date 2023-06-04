@@ -1,4 +1,4 @@
-package com.DAS.Filter;
+package com.DAS.Service;
 //Make By Bình An || AnLaVN || KatoVN
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.AnLa.FILE.Log;
 import com.AnLa.HASH.AES;
 import com.DAS.DAO.SinhvienDAO;
-import com.DAS.Entity.Sinhvien;
 import com.DAS.Tools.ALCookie;
 import com.DAS.Tools.ALSession;
 
@@ -23,23 +22,28 @@ public class Authentication implements HandlerInterceptor{
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-		
+		// Xử lí dữ liệu
 		String  cookie = ALCookie.get("userSignInCookie");
-		if(cookie != null) {
-			int iX = cookie.indexOf("~");
-			String	hashUsername = cookie.substring(0, iX),
-					hashPassword = AES.Decrypt(cookie.substring(iX + 1), "DAS"+hashUsername);
-			
-			if(sinhvienDAO.existsByUsernameAndMatkhau(hashUsername, hashPassword)) {
-				ALSession.setSession("userSV", sinhvienDAO.findById(hashUsername).orElse(new Sinhvien()));
-				Log.add("Authentication - Auto SignIn with cookies for username " + hashUsername);
-				return true;
-			}
-		}else if(request.getSession().getAttribute("userSV") == null) {
-			response.sendRedirect("/SignIn");
-			return false;
+		
+		if(request.getSession().getAttribute("userSV") != null)  return true;	// Nếu có seesion thì cho đi tiếp
+		else if(cookie != null) {												// Ngược lại kiểm tra cookie
+			try {
+				int iX = cookie.indexOf("~");									// Lấy vị trí dấu phân cách
+				String	hashUsername = cookie.substring(0, iX),					// Lấy hash username trong cookie và hash password
+						hashPassword = AES.Decrypt(cookie.substring(iX + 1), "DAS" + hashUsername);
+				
+				if(sinhvienDAO.existsByUsernameAndMatkhau(hashUsername, hashPassword)) {	// Kiểm tra có tồn tại trong csdl hay không
+					ALSession.setSession("userSV",sinhvienDAO.findById(hashUsername).get());// Nếu có gán sinhvien vào session và cho đi tiếp
+					
+					// Thông báo qua Log
+					Log.add("Authentication - Auto SignIn with cookies for username " + hashUsername);
+					return true;
+				}
+			}catch (Exception e) {Log.add("Authentication - Can not get cookie information of client !!!");}
 		}
-		return true;
+		
+		response.sendRedirect("/SignIn");		// Không thoả bất kì trường hợp nào thì chuyển hướng về trang đăng nhập
+		return false;
 	}
 
 	@Override
