@@ -13,8 +13,9 @@
 		</div>
 		<div class="offcanvas-body">
 			<div class="col-auto"><a class="text-decoration-none text-light fs-5" href="${url}"><i class="bi bi-house me-2"></i>Home</a></div>
+			<c:if test="${isUserSV}">
 			<hr class="border border-secondary border-1 opacity-75">
-			<div class="col-auto">
+		   	<div class="col-auto">
 				<details>
 					<summary class="text-light fs-5"><i class="bi bi-book mx-2"></i>Course</summary>
 					<ul style="list-style-type: none;">
@@ -30,23 +31,27 @@
 					</ul>
 				</details>
 			</div>
+			</c:if>
 			<hr class="border border-secondary border-1 opacity-75">
 			<div class="col-auto">
 				<div class="text-light fs-5"><i class="bi bi-person me-2"></i>
 					<c:choose>
-						<c:when test="${!empty sessionScope.userSV}">${sessionScope.userSV.ten}</c:when>
+						<c:when test="${isUserSV}">${sessionScope.userSV.ten}</c:when>
 						<c:otherwise>Tài khoản</c:otherwise>
 					</c:choose>
 					<ul style="list-style-type: none;">
 						<li><a class="text-decoration-none text-light fs-6" href="${url}SignIn"><i class="bi bi-person-check me-2"></i>Sign In</a></li>
 						<li><a class="text-decoration-none text-light fs-6" href="${url}SignUp"><i class="bi bi-person-add me-2"></i>Sign Up</a></li>
+						<li><a class="text-decoration-none text-light fs-6" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Reset Password</a></li>
+						<c:if test="${isUserSV}">
 						<li><a class="text-decoration-none text-light fs-6" href="${url}MyAcc"><i class="bi bi-person-gear me-2"></i>My Account</a></li>
-						<li><a class="text-decoration-none text-light fs-6" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Change Password</a></li>
 						<li><a class="text-decoration-none text-light fs-6" href="${url}SignOut"><i class="bi bi-person-exclamation me-2"></i>Sign Out</a></li>
 						<li><a class="text-decoration-none text-light fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
+						</c:if>
 					</ul>
 				</div>
 			</div>
+			<c:if test="${isUserSV}">
 			<hr class="border border-secondary border-1 opacity-75">
 			<div class="col-auto">
 				<div class="text-light fs-5"><i class="bi bi-workspace me-2"></i>My Course
@@ -56,6 +61,7 @@
 					</ul>
 				</div>
 			</div>
+			</c:if>
 		</div>
 	</div>
 	
@@ -66,6 +72,7 @@
 		<a class="col-1 navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#MenuSlide"><span class="navbar-toggler-icon"></span></a>
 		<div class="col-md-6 col-xl-6 collapse navbar-collapse p-0" id="NavMC">
 			<div class="col-2 col-xl-1 mx-xl-2 m-0"><a class="text-decoration-none text-light link-info navitem" href="${url}"><img src="/Image/Text.png" class="img-fluid"></a></div>
+			<c:if test="${isUserSV}">
 			<div class="col-auto mx-xl-2 m-0">
 				<div class="dropdown">
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-book me-2"></i>Course</button>
@@ -77,24 +84,29 @@
 					</ul>
 				</div>
 			</div>
+			</c:if>
+			
 			<div class="col-auto mx-xl-2 m-0">
 				<div class="dropdown">
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-person me-2"></i>
 						<c:choose>
-							<c:when test="${!empty sessionScope.userSV}">${sessionScope.userSV.ten}</c:when>
+							<c:when test="${isUserSV}">${sessionScope.userSV.ten}</c:when>
 							<c:otherwise>Tài khoản</c:otherwise>
 						</c:choose>
 					</button>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="${url}SignIn"><i class="bi bi-person-check me-2"></i>Sign In</a></li>
 						<li><a class="dropdown-item" href="${url}SignUp"><i class="bi bi-person-add me-2"></i>Sign Up</a></li>
+						<li><a class="dropdown-item" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Reset Password</a></li>
+						<c:if test="${isUserSV}">
 						<li><a class="dropdown-item" href="${url}MyAcc"><i class="bi bi-person-gear me-2"></i>My Account</a></li>
-						<li><a class="dropdown-item" href="${url}ResetPass"><i class="bi bi-person-lock me-2"></i>Change Password</a></li>
 						<li><a class="dropdown-item" href="${url}SignOut"><i class="bi bi-person-exclamation me-2"></i>Sign Out</a></li>
 						<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-slash me-2"></i>Delete Account</a></li>
+						</c:if>
 					</ul>
 				</div>
 			</div>
+			<c:if test="${isUserSV}">
 			<div class="col-auto mx-xl-2 m-0">
 				<div class="dropdown">
 					<button class="btn dropdown-toggle text-light py-0 navitem" data-bs-toggle="dropdown"><i class="bi bi-workspace me-2"></i>My Course</button>
@@ -104,10 +116,14 @@
 					</ul>
 				</div>
 			</div>
+			</c:if>
+			
 		</div>
-		<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2" role="search" novalidate action="${url}Courses" method="get">
+		<form class="col col-lg-6 col-xxl-4 d-flex p-0 dropstart needs-validation px-2 justify-content-end" role="search" novalidate action="${url}Courses" method="get">
+			<c:if test="${isUserSV}">
 			<input class="form-control me-2" type="search" name="search" placeholder='Search' required>
 			<button class="btn btn-outline-primary" type="submit">Search</button>
+			</c:if>
 			<i class="bi bi-{{Theme=='dark'?'moon-stars':'sun'}} fs-4 text-light link-info mx-2" ng-click="ChangeTheme()" role="button"></i>
 			<div class="dropdown">
 				<ul class="dropdown-menu">
