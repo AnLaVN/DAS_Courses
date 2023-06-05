@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100" ng-app="MyApp" ng-controller="MyCtrl" ng-init="Validation()" data-bs-theme="{{Theme}}">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 <head>
     <meta charset="UTF-8">
@@ -43,7 +44,7 @@
 	<div class="toast-container position-fixed top-0 end-0 p-3"  >
 		<div id="Toast" class="toast align-items-center" role="alert">
 			<div class="d-flex">
-				<div class="toast-body text-danger">Username hoặc email đã tồn tại !!!<br>Vui lòng chọn một username hoặc email khác.</div>
+				<div class="toast-body text-danger"><spring:message code="user.signup.toast_1"/><br><spring:message code="user.signup.toast_2"/></div>
 				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
 			</div>
 		</div>

@@ -1,0 +1,72 @@
+[20:39:09.971]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:09.987]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:10.160]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:10.175]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:25.945]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:26.466]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:26.477]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:26.484]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:39:26.496]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:05.206]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:05.316]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:32.560]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:32.576]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:36.318]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:36.334]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:40.998]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:41.029]	SignInPOST - Sign in successfully !
+[20:40:41.061]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:41.343]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:41.359]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:46.211]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:46.242]	EnrolledGET - Get 3 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:46.525]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:46.525]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:50.385]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:50.417]	CertificatesGET - Get 0 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:50.684]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:50.684]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:58.366]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:40:58.382]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:01.881]	SignOutREQ - Sign Out successfully.
+[20:41:39.695]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:39.711]	SignInPOST - Sign in successfully !
+[20:41:39.742]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:39.899]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:39.899]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:41.469]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:42.787]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:42.825]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:43.054]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:43.070]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:50.357]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:50.388]	CourseGET - View Course KHBE002 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:50.513]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:41:50.529]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:26.536]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:26.551]	CourseGET - View Course KHDA001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:30.821]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:30.899]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHDA001
+[20:42:30.915]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:30.931]	MaterialGET - View material TNDA01 in course KHDA001
+[20:42:31.339]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:31.354]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:47.465]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:47.480]	MaterialGET - View material TNDA02 in course KHDA001
+[20:42:47.700]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:47.716]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:54.837]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:54.995]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:42:54.999]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:08.343]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:08.453]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:08.468]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:10.525]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:10.651]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:10.666]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:14.007]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:14.132]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:14.146]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:16.910]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:43:25.107]	SignOutREQ - Sign Out successfully.
+[20:43:40.733]	SignOutREQ - Sign Out successfully.

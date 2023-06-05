@@ -1,0 +1,146 @@
+[00:59:10.646]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[00:59:10.696]	SignInPOST - Sign in successfully !
+[00:59:55.077]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[00:59:55.091]	SignInPOST - Sign in successfully !
+[01:00:18.439]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:00:18.442]	SignInPOST - Sign in successfully !
+[01:00:25.631]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:00:25.688]	SignInPOST - Sign in successfully !
+[01:01:16.133]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:01:34.786]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:01:34.797]	SignInPOST - Sign in successfully !
+[01:01:37.217]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:01:37.249]	SignInPOST - Sign in successfully !
+[01:01:39.388]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:02:48.872]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:02:48.882]	SignInPOST - Sign in successfully !
+[01:03:42.422]	CourseGET - View Course KHFE002
+[01:03:45.546]	CourseGET - View Course {{getImageOnTime()}}
+[01:03:53.073]	CourseGET - View Course KHFE002
+[01:03:56.673]	CourseGET - View Course KHBE001
+[01:03:56.764]	CourseGET - View Course {{getImageOnTime()}}
+[01:05:18.614]	CoursePOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 rating on course KHBE001: Em đã học hết khóa và cảm thấy mình giống một kỹ sư AI thực thụ 😎😎😎😎
+[01:05:23.165]	CourseGET - View Course KHBE001
+[01:05:23.377]	CourseGET - View Course {{getImageOnTime()}}
+[01:05:30.315]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[01:05:30.340]	MaterialGET - View material TNBE01 in course KHBE001
+[01:05:34.387]	ExamGET - Exam Course KHBE001
+[01:05:34.908]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:06:36.274]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHBE001 with 100.0 mark
+[01:06:36.422]	ExamGET - Exam Course KHBE001
+[01:06:36.668]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:06:52.106]	EnrolledGET - Get 3 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:06:57.997]	CertificatesGET - Get 1 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:07:25.793]	CourseGET - View Course KHGIT001
+[01:07:25.893]	CourseGET - View Course {{getImageOnTime()}}
+[01:07:52.050]	CourseGET - View Course KHBE001
+[01:07:55.104]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[01:07:55.117]	MaterialGET - View material TNBE01 in course KHBE001
+[01:08:00.211]	MaterialGET - View material TNBE02 in course KHBE001
+[01:08:24.538]	ExamGET - Exam Course KHBE001
+[01:08:24.769]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:08:39.867]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHBE001 with 0.0 mark
+[01:08:39.900]	ExamGET - Exam Course KHBE001
+[01:08:40.037]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:08:52.952]	CourseGET - View Course KHBE001
+[01:08:55.907]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[01:08:55.920]	MaterialGET - View material TNBE01 in course KHBE001
+[01:08:59.235]	ExamGET - Exam Course KHBE001
+[01:08:59.344]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:08.024]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHBE001 with 0.0 mark
+[01:09:08.039]	ExamGET - Exam Course KHBE001
+[01:09:08.166]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:13.735]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHBE001 with 33.333333333333336 mark
+[01:09:13.743]	ExamGET - Exam Course KHBE001
+[01:09:23.623]	CertificatesGET - Get 1 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:09:26.117]	EnrolledGET - Get 3 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:09:28.619]	CourseGET - View Course KHDA001
+[01:09:30.821]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHDA001
+[01:09:30.847]	MaterialGET - View material TNDA01 in course KHDA001
+[01:09:32.185]	ExamGET - Exam Course KHDA001
+[01:09:32.523]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:33.765]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:33.803]	ExamGET - Exam Course KHDA001
+[01:09:33.902]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:34.920]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:34.933]	ExamGET - Exam Course KHDA001
+[01:09:35.489]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:35.505]	ExamGET - Exam Course KHDA001
+[01:09:35.564]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:35.769]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:35.795]	ExamGET - Exam Course KHDA001
+[01:09:36.029]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:36.040]	ExamGET - Exam Course KHDA001
+[01:09:36.131]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:36.317]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:36.367]	ExamGET - Exam Course KHDA001
+[01:09:36.452]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:36.588]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:36.619]	ExamGET - Exam Course KHDA001
+[01:09:36.693]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:37.026]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:37.033]	ExamGET - Exam Course KHDA001
+[01:09:37.114]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:37.293]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:37.320]	ExamGET - Exam Course KHDA001
+[01:09:37.416]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:38.100]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:38.128]	ExamGET - Exam Course KHDA001
+[01:09:38.540]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:38.560]	ExamGET - Exam Course KHDA001
+[01:09:38.800]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:38.819]	ExamGET - Exam Course KHDA001
+[01:09:38.878]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:39.062]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:09:39.081]	ExamGET - Exam Course KHDA001
+[01:09:39.148]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:09:51.623]	CourseGET - View Course KHDA002
+[01:09:56.680]	CourseGET - View Course KHDA001
+[01:09:56.744]	CourseGET - View Course {{getImageOnTime()}}
+[01:09:58.591]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHDA001
+[01:09:58.606]	MaterialGET - View material TNDA01 in course KHDA001
+[01:10:11.492]	MaterialGET - View material TNDA03 in course KHDA001
+[01:10:15.090]	MaterialGET - View material TNDA05 in course KHDA001
+[01:10:18.421]	ExamGET - Exam Course KHDA001
+[01:10:18.689]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:10:21.084]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:10:21.103]	ExamGET - Exam Course KHDA001
+[01:10:21.930]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHDA001 with 0.0 mark
+[01:10:21.938]	ExamGET - Exam Course KHDA001
+[01:10:22.024]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:13:31.540]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[01:13:31.545]	SignInPOST - Sign in successfully !
+[01:14:45.550]	CourseGET - View Course KHGIT001
+[01:14:45.621]	CourseGET - View Course {{getImageOnTime()}}
+[01:14:50.242]	CourseGET - View Course KHDA001
+[01:14:50.316]	CourseGET - View Course {{getImageOnTime()}}
+[01:14:51.565]	CourseGET - View Course KHDA001
+[01:14:51.615]	CourseGET - View Course {{getImageOnTime()}}
+[01:14:53.817]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHDA001
+[01:14:53.830]	MaterialGET - View material TNDA01 in course KHDA001
+[01:15:02.221]	CourseGET - View Course KHDB001
+[01:15:03.346]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 join course KHDB001
+[01:15:03.371]	MaterialGET - View material TNDB01 in course KHDB001
+[01:15:04.845]	ExamGET - Exam Course KHDB001
+[01:16:11.723]	SignInPOST - Try to sign in with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[01:16:11.730]	SignInPOST - Sign in successfully !
+[01:16:26.205]	CourseGET - View Course KHBE001
+[01:16:27.945]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[01:16:27.964]	MaterialGET - View material TNBE01 in course KHBE001
+[01:16:29.753]	ExamGET - Exam Course KHBE001
+[01:16:29.852]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:16:35.113]	ExamPOST - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e submit exam of course KHBE001 with 33.333333333333336 mark
+[01:16:35.139]	ExamGET - Exam Course KHBE001
+[01:16:47.609]	ExamPOST - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e submit exam of course KHBE001 with 100.0 mark
+[01:16:47.619]	ExamGET - Exam Course KHBE001
+[01:16:51.320]	EnrolledGET - Get 3 courses enrolled of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[01:16:53.835]	CertificatesGET - Get 1 certificates of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[01:17:00.182]	ExamGET - Exam Course KHBE001
+[01:17:06.742]	EnrolledGET - Get 3 courses enrolled of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[01:17:08.674]	CourseGET - View Course KHBE001
+[01:17:10.207]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[01:17:10.244]	MaterialGET - View material TNBE01 in course KHBE001
+[01:17:11.987]	ExamGET - Exam Course KHBE001
+[01:17:12.241]	ExamGET - Exam Course {{getImageOnTime()}}
+[01:37:37.240]	CourseGET - View Course KHDA001
+[01:37:37.484]	CourseGET - View Course {{getImageOnTime()}}

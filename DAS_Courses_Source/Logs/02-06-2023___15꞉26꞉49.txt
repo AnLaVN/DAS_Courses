@@ -1,0 +1,33 @@
+[15:26:49.804]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:26:49.848]	SignInPOST - Sign in successfully !
+[15:27:01.987]	MyAccPOST - Try to update account with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:27:01.993]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049.png
+[15:27:02.031]	MyAccPOST - Update account successfully !
+[15:27:25.061]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:27:25.073]	SignInPOST - Sign in successfully !
+[15:28:20.151]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:28:43.849]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:28:43.866]	SignInPOST - Sign in successfully !
+[15:28:46.795]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:28:59.551]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:28:59.559]	SignInPOST - Sign in successfully !
+[15:29:18.876]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:29:18.886]	SignInPOST - Sign in successfully !
+[15:29:48.578]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:29:51.660]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:36:38.732]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:36:38.741]	SignInPOST - Sign in successfully !
+[15:36:48.616]	MyAccPOST - Try to update account with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:36:48.618]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049.png
+[15:36:48.629]	MyAccPOST - Update account successfully !
+[15:37:25.814]	MyAccPOST - Try to update account with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:37:25.817]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049.png
+[15:37:25.826]	MyAccPOST - Update account successfully !
+[15:38:38.578]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:38:38.592]	SignInPOST - Sign in successfully !
+[15:38:50.448]	MyAccPOST - Try to update account with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:38:50.452]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049.png
+[15:38:50.491]	MyAccPOST - Update account successfully !
+[15:39:39.018]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:40:04.142]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:40:04.151]	SignInPOST - Sign in successfully !

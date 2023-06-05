@@ -1,0 +1,27 @@
+[19:48:00.868]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:48:01.044]	SignInPOST - Sign in successfully !
+[19:48:33.024]	ResetPassOTP - Send OTP code for user email: dtruog51@gmail.com
+[19:49:27.378]	ResetPassPOST - Change password for 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 successfully.
+[19:49:39.180]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:49:39.188]	SignInPOST - Sign in successfully !
+[19:49:50.537]	MyAccPOST - Try to update account with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:49:50.545]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049.png
+[19:49:50.585]	MyAccPOST - Update account successfully !
+[19:50:00.665]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:50:04.784]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:50:08.378]	SignOutREQ - Sign Out successfully.
+[19:50:43.277]	ResetPassOTP - Send OTP code for user email: dtruog51@gmail.com
+[19:51:37.053]	ResetPassPOST - Change password for 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 successfully.
+[19:52:08.091]	ResetPassPOST - Change password for 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 successfully.
+[19:52:42.216]	DeleteAccPOST - Delete all information of username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:52:42.241]	SignOutREQ - Sign Out successfully.
+[19:52:56.878]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:52:56.878]	SignInPOST - Can not sign in !!!
+[19:54:25.105]	DeleteAccPOST - Incorrect username or password of: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:54:25.131]	SignOutREQ - Sign Out successfully.
+[20:01:28.558]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:01:28.579]	SignInPOST - Sign in successfully !
+[20:01:35.845]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:01:36.175]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[20:04:09.557]	ResetPassOTP - Send OTP code for user email: dtruog51@gmail.com
+[20:04:33.024]	ResetPassOTP - Send OTP code for user email: dtruog51@gmail.com

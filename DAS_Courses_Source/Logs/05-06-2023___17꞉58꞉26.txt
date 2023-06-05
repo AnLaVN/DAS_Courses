@@ -1,0 +1,37 @@
+[17:58:26.132]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:58:40.849]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:58:40.866]	SignInPOST - Sign in successfully !
+[17:58:49.124]	EnrolledGET - Get 3 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:58:50.730]	CertificatesGET - Get 1 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:23:51.782]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:23:52.194]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:24:03.375]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[18:24:03.446]	MaterialGET - View material TNBE01 in course KHBE001
+[18:35:42.314]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:36:24.326]	CoursePOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 voting on course KHBE001: 0.0
+[18:36:26.599]	CoursePOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 rating on course KHBE001: Em đã học hết khóa và cảm thấy mình giống một kỹ sư AI thực thụ 😎😎😎😎
+[18:36:27.515]	CoursePOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 voting on course KHBE001: 4.5
+[18:41:11.498]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[18:41:11.556]	MaterialGET - View material TNBE01 in course KHBE001
+[18:41:15.307]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:41:20.961]	CourseGET - View Course KHDB001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:41:26.637]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 join course KHDB001
+[18:41:26.657]	MaterialGET - View material TNDB01 in course KHDB001
+[18:41:31.564]	CourseGET - View Course KHDA001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:41:34.878]	CourseGET - View Course KHDB001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:41:34.982]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:41:36.298]	CourseGET - View Course KHFE002 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:43:14.516]	CourseGET - View Course KHDA001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:43:14.625]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:43:15.520]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHDA001
+[18:43:15.539]	MaterialGET - View material TNDA01 in course KHDA001
+[18:45:54.739]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:45:54.971]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:45:56.199]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[18:45:56.214]	MaterialGET - View material TNBE01 in course KHBE001
+[18:45:57.663]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:47:43.060]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:47:52.045]	CourseGET - View Course KHFE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[18:47:53.279]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHFE001
+[18:47:53.296]	MaterialGET - View material TNFE01 in course KHFE001
+[18:47:54.566]	ExamGET - Exam Course KHFE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049

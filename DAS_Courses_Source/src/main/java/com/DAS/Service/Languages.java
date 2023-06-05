@@ -18,7 +18,17 @@ public class Languages implements WebMvcConfigurer {
 	@Bean("messageSource")
 	public MessageSource getMessageSource() {
 		ReloadableResourceBundleMessageSource ms = new ReloadableResourceBundleMessageSource();
-		ms.setBasename("classpath:/languages/header");
+		ms.setBasenames("classpath:/languages/Certificate",
+						"classpath:/languages/Course",
+						"classpath:/languages/Footer",
+						"classpath:/languages/GetBackground",
+						"classpath:/languages/Header",
+						"classpath:/languages/Home",
+						"classpath:/languages/MyAcc",
+						"classpath:/languages/ResetPass",
+						"classpath:/languages/Service",
+						"classpath:/languages/SignIn",
+						"classpath:/languages/SignUp");
 		ms.setDefaultEncoding("UTF-8");
 		return ms;
 	}

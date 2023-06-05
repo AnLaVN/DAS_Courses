@@ -1,0 +1,85 @@
+[14:55:13.803]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:55:13.853]	SignInPOST - Sign in successfully !
+[14:55:17.097]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:55:21.356]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:04.321]	ExamGET - Exam Course KHDA001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:08.463]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:16.961]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHBE001 with 66.66666666666667 mark
+[14:56:17.005]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:24.691]	ExamPOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 submit exam of course KHBE001 with 100.0 mark
+[14:56:24.715]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:27.804]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:29.243]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:58.531]	CourseGET - View Course KHDA002 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:56:58.743]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:57:02.314]	CourseGET - View Course KHDA002 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:57:02.457]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:57:06.994]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:57:16.198]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:57:20.722]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:57:22.459]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:57:23.522]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[14:58:15.476]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:06:15.195]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:06:15.205]	SignInPOST - Sign in successfully !
+[15:07:10.715]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:07:10.723]	SignInPOST - Sign in successfully !
+[15:07:28.564]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:07:28.573]	SignInPOST - Sign in successfully !
+[15:07:53.212]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:07:53.221]	SignInPOST - Sign in successfully !
+[15:08:27.792]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:08:27.797]	SignInPOST - Sign in successfully !
+[15:08:38.441]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:08:48.965]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:09:00.213]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:09:00.224]	SignInPOST - Sign in successfully !
+[15:09:03.077]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:09:25.997]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:09:26.011]	SignInPOST - Sign in successfully !
+[15:09:39.791]	SignOutREQ - Delete cookies of username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[15:10:09.601]	CertificatesGET - Get 1 certificates of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[15:10:43.024]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:10:43.036]	SignInPOST - Sign in successfully !
+[15:10:45.523]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:10:50.285]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:11:14.689]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:13:02.196]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:13:02.276]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:13:04.627]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[15:13:04.640]	MaterialGET - View material TNBE01 in course KHBE001
+[15:13:08.406]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:13:29.803]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:13:36.126]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:13:39.278]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:14:38.795]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:14:40.269]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:15:52.288]	MyAccPOST - Try to update account with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:15:52.292]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049.png
+[15:15:52.304]	MyAccPOST - Update account successfully !
+[15:17:01.414]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:17:19.546]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:17:19.611]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:17:34.471]	CourseGET - View Course KHDA002 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:17:34.525]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:17:36.061]	CourseGET - View Course KHDA001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:17:36.109]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:17:57.947]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHDA001
+[15:17:57.962]	MaterialGET - View material TNDA01 in course KHDA001
+[15:18:34.468]	MaterialGET - View material TNDA02 in course KHDA001
+[15:18:58.163]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:18:59.826]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:20:25.739]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:20:25.769]	SignInPOST - Sign in successfully !
+[15:20:36.987]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:20:52.812]	MyAccPOST - Try to update account with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:20:52.814]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049.png
+[15:20:52.820]	MyAccPOST - Update account successfully !
+[15:21:09.242]	SignOutREQ - Delete cookies of username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:21:55.504]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:21:55.514]	SignInPOST - Sign in successfully !
+[15:22:43.255]	CertificatesGET - Get 2 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:22:51.109]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:22:51.280]	CourseGET - View Course {{getImageOnTime()}} by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[15:23:58.065]	CoursePOST - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 rating on course KHBE001: Em đã học hết khóa và cảm thấy mình giống một kỹ sư AI thực thụ 😎😎🦄🦄
+[15:24:00.948]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049

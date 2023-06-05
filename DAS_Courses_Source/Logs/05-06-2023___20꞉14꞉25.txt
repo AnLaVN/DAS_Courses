@@ -1,0 +1,84 @@
+[20:14:25.345]	SignInPOST - Try to sign in with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:14:25.492]	SignInPOST - Sign in successfully !
+[20:14:34.066]	CourseGET - View Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:14:34.558]	CourseGET - View Course {{getImageOnTime()}} by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:14:39.529]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[20:14:39.564]	MaterialGET - View material TNBE01 in course KHBE001
+[20:14:51.775]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:15:18.021]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:15:25.982]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:16:23.197]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:17:51.771]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:19:53.424]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:22:20.169]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:23:42.614]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:30:54.848]	SignInPOST - Try to sign in with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:30:54.923]	SignInPOST - Can not sign in !!!
+[20:31:01.512]	SignInPOST - Try to sign in with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:31:01.528]	SignInPOST - Sign in successfully !
+[20:31:15.753]	CourseGET - View Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:31:16.095]	CourseGET - View Course {{getImageOnTime()}} by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:31:17.875]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[20:31:17.890]	MaterialGET - View material TNBE01 in course KHBE001
+[20:31:19.387]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:32:23.664]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:32:24.124]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:32:24.267]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:32:32.812]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:33:03.681]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:16.203]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:39.812]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:41.547]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:53.401]	CourseGET - View Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:53.558]	CourseGET - View Course {{getImageOnTime()}} by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:55.149]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[20:34:55.186]	MaterialGET - View material TNBE01 in course KHBE001
+[20:34:56.602]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:59.106]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:35:19.823]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:37:23.952]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:40:17.386]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:40:17.943]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:40:18.318]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:43:00.738]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:43:02.411]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:43:09.519]	CourseGET - View Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:43:09.610]	CourseGET - View Course {{getImageOnTime()}} by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:43:11.472]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[20:43:11.490]	MaterialGET - View material TNBE01 in course KHBE001
+[20:43:13.134]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:43:24.979]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:44:45.065]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:47:34.389]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:47:36.663]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:47:36.673]	MyAccPOST - Try to update account with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:47:36.674]	SignUpPOST - Exception when try to save file from client !!!
+		Error code: java.lang.RuntimeException: No MultipartFile to save !!!
+[20:47:36.718]	MyAccPOST - Update account successfully !
+[20:47:40.272]	MyAccPOST - Try to update account with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:47:40.273]	SignUpPOST - Exception when try to save file from client !!!
+		Error code: java.lang.RuntimeException: No MultipartFile to save !!!
+[20:47:40.309]	MyAccPOST - Update account successfully !
+[20:47:45.073]	MyAccPOST - Try to update account with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:47:45.073]	SignUpPOST - Exception when try to save file from client !!!
+		Error code: java.lang.RuntimeException: No MultipartFile to save !!!
+[20:47:45.083]	MyAccPOST - Update account successfully !
+[20:47:48.032]	MyAccPOST - Try to update account with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:47:48.032]	SignUpPOST - Exception when try to save file from client !!!
+		Error code: java.lang.RuntimeException: No MultipartFile to save !!!
+[20:47:48.045]	MyAccPOST - Update account successfully !
+[20:50:51.916]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:51:54.994]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:52:04.931]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:56:04.225]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:57:30.892]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:58:40.043]	ResetPassOTP - Send OTP code for user email: dtruog51@gmail.com
+[20:59:23.038]	CourseGET - View Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:59:23.272]	CourseGET - View Course {{getImageOnTime()}} by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:59:24.427]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[20:59:24.441]	MaterialGET - View material TNBE01 in course KHBE001
+[20:59:25.907]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:59:33.685]	ExamPOST - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e submit exam of course KHBE001 with 33.333333333333336 mark
+[20:59:33.700]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[21:11:09.240]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[21:38:55.378]	Authentication - Auto SignIn with cookies for username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
