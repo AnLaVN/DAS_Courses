@@ -1,9 +1,0 @@
-[00:55:11.958]	SignInPOST - Try to sign in with username: f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a
-[00:55:11.975]	SignInPOST - Can not sign in !!!
-[00:55:25.233]	SignUpPOST - Try to sign up with username: f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a
-[00:55:25.241]	ALParam - Save file successfully as Absolute Path: C:\Users\Admin\Documents\Java5\My Lab\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a.png
-[00:55:25.284]	SignUpPOST - Sign up successfully !
-[00:55:30.490]	SignOutREQ - Delete cookies of username: f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a
-[00:55:38.000]	SignInPOST - Try to sign in with username: f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a
-[00:55:38.005]	SignInPOST - Sign in successfully !
-[00:55:50.398]	MyAccPOST - Try to update account with username: f7272060b3487bbe2764ba293c2153e9e9c60b151332a54cefbff8dde9e2340a

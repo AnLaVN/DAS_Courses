@@ -49,6 +49,7 @@
 				<div class="mt-5">
 					<button type="submit" class="btn btn-lg btn-primary w-100">Sign Up</button>
 				</div>
+				<p><small>Bằng việc đăng ký tài khoản, bạn đã đồng ý với <a href="${url}SERVICE">Điều khoản Dịch vụ</a></small></p>
 			</form>
 		</div>
 	</div>
