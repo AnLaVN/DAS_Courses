@@ -1,7 +1,0 @@
-[18:59:48.803]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[19:01:27.786]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[19:01:27.814]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[19:04:58.610]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[19:16:17.327]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[19:16:17.372]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[19:18:32.319]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
