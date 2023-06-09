@@ -139,21 +139,6 @@
 
 
 
-	<!-- Toast -->
-	<div class="toast-container position-fixed bottom-0 end-0 p-3">
-		<div id="Toast" class="toast align-items-center" role="alert">
-			<div class="d-flex">
-				<div class="toast-body text-danger fw-bold fs-6">
-					<spring:message code="user.course.exam.toast" />
-				</div>
-				<button type="button" class="btn-close me-2 m-auto"
-					data-bs-dismiss="toast"></button>
-			</div>
-		</div>
-	</div>
-
-
-
 
 </body>
 </html>
