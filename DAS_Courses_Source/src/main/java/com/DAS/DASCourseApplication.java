@@ -15,7 +15,6 @@ import com.DAS.Tools.ALEmail;
 
 @SpringBootApplication
 public class DASCourseApplication {
-	
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		DocNet authentication = new DocNet("https://raw.githubusercontent.com/AnLaVN/DAS_Courses/Releases/AUTHENTICATION.txt");

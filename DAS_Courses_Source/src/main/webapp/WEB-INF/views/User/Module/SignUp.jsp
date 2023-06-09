@@ -49,7 +49,7 @@
 				<div class="mt-5">
 					<button type="submit" class="btn btn-lg btn-primary w-100"><spring:message code="user.signup.signup"/></button>
 				</div>
-				<p><small><spring:message code="user.signup.termsofservice_1"/><a href="${url}SERVICE"><spring:message code="user.signup.termsofservice_2"/></a></small></p>
+				<p><small><spring:message code="user.signup.termsofservice_1"/> <a href="${url}SERVICE"><spring:message code="user.signup.termsofservice_2"/></a></small></p>
 			</form>
 		</div>
 	</div>
