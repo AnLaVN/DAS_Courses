@@ -5,7 +5,7 @@
 
 
 
-	<div class="m-0 mx-md-5 my-4 p-0 row">
+	<div class="m-0 mx-md-5 my-5 p-0 row">
 
 		<!-- Default Card -->
 		<div class="col-12 m-0 p-0 d-lg-none d-block">
@@ -31,8 +31,7 @@
 		</div>
 
 		<!-- Float Card -->
-		<div
-			class="col-12 col-lg-4 m-0 p-0 position-relative row d-none d-lg-block">
+		<div class="col-12 col-lg-4 m-0 p-0 position-relative row d-none d-lg-block">
 			<div class="sticky-top">
 				<div class="col-11 position-absolute"
 					style="left: 50%; transform: translateX(-50%)">
@@ -135,21 +134,6 @@
 					</c:choose>
 				</button>
 			</form>
-		</div>
-	</div>
-
-
-
-	<!-- Toast -->
-	<div class="toast-container position-fixed bottom-0 end-0 p-3">
-		<div id="Toast" class="toast align-items-center" role="alert">
-			<div class="d-flex">
-				<div class="toast-body text-danger fw-bold fs-6">
-					<spring:message code="user.course.exam.toast" />
-				</div>
-				<button type="button" class="btn-close me-2 m-auto"
-					data-bs-dismiss="toast"></button>
-			</div>
 		</div>
 	</div>
 

@@ -1,2 +1,0 @@
-[19:19:43.951]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[19:21:52.523]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049

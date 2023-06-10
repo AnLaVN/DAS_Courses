@@ -57,14 +57,11 @@ public class SignUp {
 				Log.add("SignUpPOST - Exception when try to save file from client !!!\n\t\tError code: " + e.toString());
 			}
 
-			sinhvienDAO.save(sv);					// Lưu dữ liệu vào csdl
-			ALCookie.add("userSignInCookie", 		// Thêm cookie vào trình duyệt
-					username + "~" + AES.Encrypt(	// Gồm hash username và mã hoá AES
-						password, 					// của hash mật khẩu
-						"DAS" + username),			// sử dụng key là "DAS" và hash username
-					7*24);							// có thời hạn là 7 ngày
+			// Lưu dữ liệu vào csdl và cookies
+			sinhvienDAO.save(sv);					
+			ALCookie.add("userSignInCookie", username + "~" + AES.Encrypt(password, "DAS" + username), 7*24);
 			
-			// Add seesion scope
+			// Add session scope
 			ALSession.setSession("userSV", sinhvienDAO.findById(username).get());
 			
 			// Thông báo qua Log
