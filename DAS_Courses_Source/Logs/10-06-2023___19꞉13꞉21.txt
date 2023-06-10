@@ -1,0 +1,8 @@
+[19:13:21.515]	Authentication - Auto SignIn with cookies for username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:13:21.553]	CertificatesGET - Get 1 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:13:24.618]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:13:37.904]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:13:39.133]	CertificatesGET - Get 1 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:13:40.690]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:13:42.397]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[19:13:44.249]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049

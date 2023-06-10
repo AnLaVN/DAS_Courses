@@ -28,7 +28,8 @@ public class Languages implements WebMvcConfigurer {
 						"classpath:/languages/ResetPass",
 						"classpath:/languages/Service",
 						"classpath:/languages/SignIn",
-						"classpath:/languages/SignUp");
+						"classpath:/languages/SignUp",
+						"classpath:/languages/Title");
 		ms.setDefaultEncoding("UTF-8");
 		return ms;
 	}
