@@ -16,6 +16,5 @@ public class RequestFilter implements WebMvcConfigurer{
 		registry.addInterceptor(auth)
 				.addPathPatterns("/**")
 				.excludePathPatterns("/", "/SERVICE", "/SignIn", "/SignUp", "/SignOut", "/ResetPass", "/resources/**", "/Image/**");
-	}
-	
+	}	
 }
