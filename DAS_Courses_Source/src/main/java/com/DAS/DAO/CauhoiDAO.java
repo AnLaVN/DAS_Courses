@@ -11,7 +11,8 @@ import com.DAS.Entity.Khoahoc;
 
 public interface CauhoiDAO extends JpaRepository<Cauhoi, Integer>{
 	
-	@Transactional
 	List<Cauhoi> findByKhoahoc(Khoahoc khoahoc);
 	
+	@Transactional
+	void deleteByKhoahoc(Khoahoc khoahoc);
 }

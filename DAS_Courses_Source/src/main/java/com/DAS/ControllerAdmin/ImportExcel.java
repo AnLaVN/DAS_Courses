@@ -36,18 +36,15 @@ public class ImportExcel {
 	@ResponseBody
 	@PostMapping("/importEX")
 	public String SaveExcelData(@RequestParam("idkh") String idkh, @RequestParam("ckImport") boolean rdoMode, @RequestParam("fileEX") MultipartFile pFile){
-		System.out.println(idkh+ "---"+rdoMode + "---" + pFile);
-		
 		
 		// Xử lí dữ liệu
 		Khoahoc khoahoc = khoahocDAO.findById(idkh).get();	// Lấy thông tin khoá học hiện tại thoe idkh
-		List<Cauhoi> newListCH = new ArrayList<>();			// Tạo danh sách trống chứa câu hỏi mới từ excel
 		
 		try { // Lưu file excel câu hỏi
 			String  abPath = ALParam.saveFile(pFile, "/File/UserExcel/", idkh+".xlsx").getAbsolutePath();
 			Log.add("SaveExcelData - Save Excel file successfully at: " + abPath);	// Thông báo qua Log
 			Iterator<Object[]> data = Excel.ReadExcel(abPath, "Sheet1");			// Lấy data từ excel
-			
+			if(rdoMode) cauhoiDAO.deleteByKhoahoc(khoahoc);
 			while (data.hasNext()) {						// Duyệt từng dòng dữ liệu
 				Object[] row = data.next();  				// Lấy dữ liệu trong dòng
 				String  cauhoi = String.valueOf(row[0]),
@@ -56,12 +53,8 @@ public class ImportExcel {
 						dapanC = String.valueOf(row[3]),
 						dapanD = String.valueOf(row[4]),
 						dapan  = String.valueOf(row[5]);
-				newListCH.add(new Cauhoi(khoahoc, cauhoi, dapanA, dapanB, dapanC, dapanD, dapan));
+				cauhoiDAO.save(new Cauhoi(khoahoc, cauhoi, dapanA, dapanB, dapanC, dapanD, dapan));
 			}
-			
-			if(rdoMode) khoahoc.setCauhois(newListCH);		// Nếu mode là ghi đè thì set list câu hỏi mới
-			else khoahoc.getCauhois().addAll(newListCH);	// Nếu mode là ghi tiếp thì add vào list câu hỏi
-			khoahocDAO.save(khoahoc);						// Lưu thay đổi vào csdl
 			new File(abPath).delete();						// Xoá file excel đã lưu
 			Log.add("SaveExcelData - Save data successfully at: " + abPath);
 			return getCauHoiHtml(idkh);

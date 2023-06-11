@@ -33,13 +33,13 @@ var cauHoi = new function() {
                             // set lại thông báo của toast
                             $('#bgToast').addClass("bg-info");
                             $('#message').text("Thêm mới thành công");
-                            $('#formAddCauHoi')[0].reset();
+                            $('#formImportCH')[0].reset();
                         } else {
                             $('#bgToast').addClass("bg-info");
                             $('#message').text("Có lỗi xảy ra trong quá trình xử lý !");
                         }
                         new bootstrap.Toast(document.getElementById('Toast')).show();
-                        $('#formImportCH').modal('hide');
+                        $('#importExcel').modal('hide');
                         // gán lại sự kiện cho các hàm
                         cauHoi.deleteCH();
                         cauHoi.addCauHoi();
