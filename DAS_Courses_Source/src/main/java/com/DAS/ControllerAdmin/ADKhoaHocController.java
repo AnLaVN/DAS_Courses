@@ -66,7 +66,7 @@ public class ADKhoaHocController {
 	public String CTkhoaHoc(Model model, @PathVariable("idkh") String idkh) {
 
 		model.addAttribute("message", false);
-		Khoahoc khoahoc = khoahocDAO.findByIdkh(idkh);
+		Khoahoc khoahoc = khoahocDAO.findById(idkh).get();
 		List<Khoahoc> listKhoaHoc = khoahocDAO.findAll();
 		model.addAttribute("listKhoaHoc", listKhoaHoc);
 		model.addAttribute("khoaHoc", khoahoc);
@@ -83,7 +83,7 @@ public class ADKhoaHocController {
 		System.out.println("okok");
 		try {
 			// tìm khóa học
-			Khoahoc kh = khoahocDAO.findByIdkh(idkh);
+			Khoahoc kh = khoahocDAO.findById(idkh).get();
 			if (!fileUp.isEmpty()) {
 				// lƯU Tạm FILE ẢNH VÀO MÁY CHỦ
 				File file = ALParam.saveFile(fileUp);
@@ -128,7 +128,7 @@ public class ADKhoaHocController {
 	@PostMapping("/admin/addKH")
 	public String ThemkhoaHoc(Khoahoc khoahoc, @RequestParam("fileAnh") MultipartFile fileUp) {
 		System.out.println(khoahoc.getIdkh());
-		if(khoahocDAO.findByIdkh(khoahoc.getIdkh())!=null) return "ID khóa học đã tồn tại !";
+		if(khoahocDAO.findById(khoahoc.getIdkh()).get()!=null) return "ID khóa học đã tồn tại !";
 		try {
 			
 			// lƯU Tạm FILE ẢNH VÀO MÁY CHỦ
@@ -155,7 +155,7 @@ public class ADKhoaHocController {
 	public String xoaKhoaHoc(@PathVariable("idkh") String idkh) {
 		try {
 			// tìm ra khóa học
-			Khoahoc kh = khoahocDAO.findByIdkh(idkh);
+			Khoahoc kh = khoahocDAO.findById(idkh).get();
 
 			// xóa ảnh trên cloudinary
 			UpFileCloud.removeCloudBinaryByUrl(kh.getAnhmota());

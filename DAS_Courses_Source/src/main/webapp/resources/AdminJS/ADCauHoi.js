@@ -7,6 +7,55 @@ $(document).ready(function() {
 
 
 var cauHoi = new function() {
+    // hàm import excel câu hỏi
+    this.ImportCauHoi = function() {
+        $('#formImportCH').off('submit').on('submit', function(e) {
+            if (!e.target.checkValidity()) {
+                e.preventDefault(); // Ngăn chặn submit form nếu không hợp lệ
+                e.stopPropagation(); // Ngăn chặn lan truyền sự kiện
+            } else {
+                //lấy dữ liệu trên form add câu hỏi
+                var formData = new FormData($('#formImportCH')[0]);
+                //gửi request kèm dữ liệu về server
+                $.ajax({
+                    type: "post",
+                    url: "/admin/khoahoc/addCauHoi/",
+                    data: formData,
+                    processData: false, // Ngăn việc xử lý dữ liệu formData
+                    contentType: false, // Ngăn việc đặt lại header Content
+                    dataType: 'html',
+                    success: function(response) {
+                        $('#hienThiCH').html(response);
+                        //add lại sự kiện xóa câu hỏi
+                        if (response != "false") {
+                            // set lại thông báo của toast
+                            $('#bgToast').addClass("bg-info");
+                            $('#message').text("Thêm mới thành công");
+                            $('#formAddCauHoi')[0].reset();
+                        } else {
+                            $('#bgToast').addClass("bg-info");
+                            $('#message').text("Có lỗi xảy ra trong quá trình xử lý !");
+                        }
+                        new bootstrap.Toast(document.getElementById('Toast')).show();
+                        $('#addCauHoi').modal('hide');
+                        // gán lại sự kiện cho các hàm
+                        cauHoi.deleteCH();
+                        cauHoi.addCauHoi();
+                        cauHoi.editcauHoi();
+                        cauHoi.updateCH();
+                    }
+                });
+
+            }
+
+            e.target.classList.add('was-validated');
+            //reset form
+
+        });
+    }
+
+
+
     // hàm thêm 
     this.addCauHoi = function() {
         $('#formAddCauHoi').off('submit').on('submit', function(e) {

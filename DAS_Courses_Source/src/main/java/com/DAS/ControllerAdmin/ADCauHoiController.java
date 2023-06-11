@@ -26,7 +26,7 @@ public class ADCauHoiController {
 	public String addCauHoi(Cauhoi cauhoi, @PathVariable("idkh") String idkh) {
 		
 		try {
-			cauhoi.setKhoahoc(khoahocDAO.findByIdkh(idkh));
+			cauhoi.setKhoahoc(khoahocDAO.findById(idkh).get());
 			cauhoiDAO.save(cauhoi);
 			return getCauHoiHtml(idkh);
 		} catch (Exception e) {
@@ -55,7 +55,7 @@ public class ADCauHoiController {
 			) {
 		try {
 			System.out.println(cauhoi.getTencauhoi() + cauhoi.getIdch());
-			cauhoi.setKhoahoc(khoahocDAO.findByIdkh(idkh));
+			cauhoi.setKhoahoc(khoahocDAO.findById(idkh).get());
 			cauhoiDAO.save(cauhoi);
 			
 			return getCauHoiHtml(idkh);
@@ -66,7 +66,7 @@ public class ADCauHoiController {
 	}
 
 	public String getCauHoiHtml(String idkh) {
-		List<Cauhoi> cauHois = cauhoiDAO.findByKhoahoc(khoahocDAO.findByIdkh(idkh));
+		List<Cauhoi> cauHois = cauhoiDAO.findByKhoahoc(khoahocDAO.findById(idkh).get());
 		String tabelTR = "";
 		for (Cauhoi cauhoi : cauHois) {
 			tabelTR += "<tr itemid=\""+cauhoi.getIdch()+"\">\r\n"

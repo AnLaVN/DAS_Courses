@@ -27,7 +27,7 @@ public class ADTaiNguyenController {
 	@PostMapping("/admin/khoahoc/addTaiNguyen")
 	public String addTaiNguyen(Tainguyen tainguyen, @RequestParam("idkh") String idkh) {
 		try {
-			Khoahoc kh = khoahocDAO.findByIdkh(idkh);
+			Khoahoc kh = khoahocDAO.findById(idkh).get();
 			tainguyen.setKhoahoc(kh);
 			tainguyenDAO.saveAndFlush(tainguyen);
 			return getCauHoiHtml(idkh);
@@ -53,7 +53,7 @@ public class ADTaiNguyenController {
 	public String updateTaiNguyen(Tainguyen tainguyen, @RequestParam("idkh") String idkh) {
 		try {
 
-			tainguyen.setKhoahoc(khoahocDAO.findByIdkh(idkh));
+			tainguyen.setKhoahoc(khoahocDAO.findById(idkh).get());
 			tainguyenDAO.save(tainguyen);
 			System.out.println("Cập nhật thành công");
 			 return getCauHoiHtml(idkh);
@@ -64,7 +64,7 @@ public class ADTaiNguyenController {
 	}
 
 	public String getCauHoiHtml(String idkh) {
-		List<Tainguyen> tainguyens = tainguyenDAO.findByKhoahoc(khoahocDAO.findByIdkh(idkh));
+		List<Tainguyen> tainguyens = tainguyenDAO.findByKhoahoc(khoahocDAO.findById(idkh).get());
 		String TaiNguyenTR = "";
 		for (Tainguyen tainguyen : tainguyens) {
 			TaiNguyenTR += "<tr style=\"height: auto;\" class=\"text-center\" itemid=\""+tainguyen.getIdtn()+"\">\r\n"

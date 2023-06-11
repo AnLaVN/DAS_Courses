@@ -125,7 +125,7 @@
 					</button>
 				</li>
 				<li class="col-6 col-xl-3 border-0 bg-body-tertiary list-group-item d-flex justify-content-center">
-					<button class="btn btn-outline-success fw-bold  col-10">
+					<button class="btn btn-outline-success fw-bold  col-10" data-bs-toggle="modal" data-bs-target="#importExcel">
 						<i class="fa-solid fa-file-import me-2"></i>Import Excel
 					</button>
 				</li>
@@ -146,6 +146,7 @@
 	
 	<div class="modal fade" id="updateTaiNguyen" tabindex="-1"><jsp:include page="../Modal/MDCapNhatTaiLieu.jsp"></jsp:include></div>
 	
+	<div class="modal fade" id="importExcel" tabindex="-1"><jsp:include page="../Modal/MDImportEX.jsp"></jsp:include></div>
 	
 	<div class="col-11 mx-auto">
 		<hr>

@@ -38,8 +38,7 @@ $(document).ready(function() {
                             $('#bgToast').addClass("bg-danger");
                             $('#message').text(response);
                         }
-
-                        new bootstrap.Toast(document.getElementById('Toast')).show();
+                        new bootstrap.Toast(document.getElementById('Toast')).show();// gọi thông báo toast
                     },
                     error: function(error) {
                         $('#loadingOverlay').css('display', 'none');
