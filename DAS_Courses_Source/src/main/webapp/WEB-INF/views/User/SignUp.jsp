@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100" ng-app="MyApp" ng-controller="MyCtrl" ng-init="Validation()" data-bs-theme="{{Theme}}">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <title>Sign Up</title>
+<<<<<<< HEAD
+    <title><spring:message code="user.signup.webtitle"/></title>
+=======
+    <link rel="icon" type="image/x-icon" href="/Image/Logo.png">
+    <title><spring:message code="user.signup.signup"/></title>
+>>>>>>> 33784bbda2416d2280d3e17b941c569cffac0865
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
     <style>
@@ -43,7 +49,7 @@
 	<div class="toast-container position-fixed top-0 end-0 p-3"  >
 		<div id="Toast" class="toast align-items-center" role="alert">
 			<div class="d-flex">
-				<div class="toast-body text-danger">Username hoặc email đã tồn tại !!!<br>Vui lòng chọn một username hoặc email khác.</div>
+				<div class="toast-body text-danger"><spring:message code="user.signup.toast_1"/><br><spring:message code="user.signup.toast_2"/></div>
 				<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
 			</div>
 		</div>

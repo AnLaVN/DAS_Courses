@@ -75,6 +75,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
+<<<<<<< HEAD
 		<dependency>
 			<groupId>com.cloudinary</groupId>
 			<artifactId>cloudinary-http44</artifactId>
@@ -92,6 +93,8 @@
 		</dependency>
 
 
+=======
+>>>>>>> 9ad81e8d281f7f8bbac10ffd77673e3dcc3c26bf
 	</dependencies>
 
 	<build>

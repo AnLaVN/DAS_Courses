@@ -14,7 +14,7 @@
 				</div>
 				<div class="p-2 m-0 py-2 border rounded-bottom"><!-- Body -->
 					<h5 class="fs-5 fw-bold">${Tainguyen.tentainguyen}</h5>
-					<a data-bs-toggle="collapse" href="#Description" role="button" ng-click="viewDescrip = true" ng-hide="viewDescrip">Mô tả</a>
+					<a data-bs-toggle="collapse" href="#Description" role="button" ng-click="viewDescrip = true" ng-hide="viewDescrip"><spring:message code="user.course.material.describe"/></a>
 					<span class="collapse" id="Description">${Tainguyen.mota}</span>
 					<div class="row justify-content-center m-0 mt-3 p-0">
 						<div class="col text-end m-0 p-0">
@@ -54,10 +54,10 @@
 			</c:forEach>
 			<c:choose>
 				<c:when test="${Khoahoc.cauhois.size() > 0}">
-					<button type="button" class="btn btn-lg btn-primary my-5 w-100" onclick="location.href='${url}Exam/${Khoahoc.idkh}'">Thi lấy chứng chỉ</button>
+					<button type="button" class="btn btn-lg btn-primary my-5 w-100" onclick="location.href='${url}Exam/${Khoahoc.idkh}'"><spring:message code="user.course.material.exam"/></button>
 				</c:when>
 				<c:otherwise>
-					<button type="button" class="btn btn-lg btn-danger my-5 w-100" disabled>Khoá học không có chứng chỉ</button>
+					<button type="button" class="btn btn-lg btn-danger my-5 w-100" disabled><spring:message code="user.course.material.noexam"/></button>
 				</c:otherwise>
 			</c:choose>
 		</div>

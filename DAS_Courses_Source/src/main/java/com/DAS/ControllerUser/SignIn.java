@@ -41,12 +41,8 @@ public class SignIn {
 		
 		// Kiểm tra sinhvien có khớp username và password trong csdl hay không
 		if(sinhvienDAO.existsByUsernameAndMatkhau(username, password)) {
-			if(isRem.orElse(false)) {	// Nếu sinhvien tích chọn ô remmber me?
-				ALCookie.add("userSignInCookie", 			// Thêm cookie vào trình duyệt
-							username + "~" + AES.Encrypt(	// Gồm hash username và mã hoá AES
-								password, 					// của hash mật khẩu
-								"DAS" + username),			// sử dụng key là "DAS" và hash username
-							7*24);							// có thời hạn là 7 ngày
+			if(isRem.orElse(false)) {	// Nếu sinhvien tích chọn ô remmber me thì thêm cookie vào trình duyệt
+				ALCookie.add("userSignInCookie", username + "~" + AES.Encrypt(password, "DAS" + username), 7*24);
 			}
 			
 			// Add seesion scope

@@ -40,9 +40,9 @@ public class Course {
 	@GetMapping("/{idkh}")
 	public String CourseGET(@PathVariable("idkh") String idkh, Model model) {
 		// Xử lí dữ liệu
-		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();				// Lấy idsv hiện tại
-		Khoahoc course = khoahocDAO.findById(idkh).orElse(new Khoahoc());						// Lấy khoá học theo idkh
-		Danhgia rating = danhgiaDAO.findById(new DanhgiaId(idsv, idkh)).orElse(new Danhgia());	// Lấy đánh giá của sinhvien theo idsv và idkh
+		String idsv = ((Sinhvien) ALSession.getSession("userSV")).getUsername();// Lấy idsv hiện tại
+		Khoahoc course = khoahocDAO.findById(idkh).get();						// Lấy khoá học theo idkh
+		Danhgia rating = danhgiaDAO.findById(new DanhgiaId(idsv, idkh)).get();	// Lấy đánh giá của sinhvien theo idsv và idkh
 
 		// Set dữ liệu qua view
 		model.addAttribute("Course", course);

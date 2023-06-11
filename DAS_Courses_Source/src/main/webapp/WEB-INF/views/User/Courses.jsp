@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100" ng-app="MyApp" ng-controller="MyCtrl" ng-init="Validation()" data-bs-theme="{{Theme}}">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+<<<<<<< HEAD
+    <title><spring:message code="user.course.webtitle"/></title>
+=======
+    <link rel="icon" type="image/x-icon" href="/Image/Logo.png">
     <title>Courses</title>
+>>>>>>> 33784bbda2416d2280d3e17b941c569cffac0865
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
     <style>
@@ -36,7 +42,7 @@
 
 	<c:choose>
 		<c:when test="${CoursesPage.totalElements > 0}"><%@include file="Module/Courses.jsp"%></c:when>
-		<c:otherwise><p class="h1 text-danger text-center mt-5">KHÔNG TÌM THẤY KHOÁ HỌC NÀO</p></c:otherwise>
+		<c:otherwise><p class="h1 text-danger text-center mt-5"><spring:message code="user.course.nofinded"/></p></c:otherwise>
 	</c:choose>
 
 	

@@ -21,7 +21,7 @@
 			<div class="card-body d-block d-md-none">
 				<h4 class="card-title">${diem.sinhvien.ten}</h4>
 				<p class="card-text">${diem.khoahoc.motangan}</p>
-				<h6 class="card-subtitle mb-2 text-body-secondary">Tiến độ bài thi / điểm đạt được</h6>
+				<h6 class="card-subtitle mb-2 text-body-secondary"><spring:message code="user.certificate.score"/></h6>
 				<div class="progress" role="progressbar">
 					<div class="progress-bar" style="width: ${diem.diem}%">
 						<fmt:formatNumber type="number" value="${diem.diem}"/>%

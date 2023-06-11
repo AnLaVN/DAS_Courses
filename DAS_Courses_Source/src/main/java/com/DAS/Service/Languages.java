@@ -1,4 +1,5 @@
 package com.DAS.Service;
+//Make By Bình An || AnLaVN || KatoVN
 
 import java.util.Locale;
 
@@ -18,7 +19,18 @@ public class Languages implements WebMvcConfigurer {
 	@Bean("messageSource")
 	public MessageSource getMessageSource() {
 		ReloadableResourceBundleMessageSource ms = new ReloadableResourceBundleMessageSource();
-		ms.setBasename("classpath:/languages/header");
+		ms.setBasenames("classpath:/languages/Certificate",
+						"classpath:/languages/Course",
+						"classpath:/languages/Footer",
+						"classpath:/languages/GetBackground",
+						"classpath:/languages/Header",
+						"classpath:/languages/Home",
+						"classpath:/languages/MyAcc",
+						"classpath:/languages/ResetPass",
+						"classpath:/languages/Service",
+						"classpath:/languages/SignIn",
+						"classpath:/languages/SignUp",
+						"classpath:/languages/Title");
 		ms.setDefaultEncoding("UTF-8");
 		return ms;
 	}
