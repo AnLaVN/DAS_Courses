@@ -18,7 +18,7 @@ import com.DAS.DAO.KhoahocDAO;
 import com.DAS.Entity.Khoahoc;
 
 @Controller
-@RequestMapping("/ThongKe")
+@RequestMapping("/admin/ThongKe")
 public class Thongke {
 	@Autowired
 	KhoahocDAO khoahocDAO;
@@ -35,7 +35,8 @@ public class Thongke {
 		// Set dữ liệu qua view
 		model.addAttribute("CoursesPage", coursesPage);
 		model.addAttribute("CurrentPage", currentPage);
-		return "Thongke/Thongke";
+		model.addAttribute("view","Module/Thongke.jsp");
+		return "/Admin/indexAdmin";
 	}
 	
 	@ModelAttribute("sizeCourses")

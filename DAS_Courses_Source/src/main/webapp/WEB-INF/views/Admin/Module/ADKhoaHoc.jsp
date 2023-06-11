@@ -17,7 +17,7 @@
 	</script>
 </c:if>
 <h3 class="mt-3 fw-bold ms-3" style="font-family: 'Courier New', Courier;">DANH SÁCH KHÓA HỌC</h3>
-<div class="row">
+<div class="row p-0 m-0">
 	<div class="col-10 col-md-6 col-lg-4 mx-auto mt-2">
 		<div class="input-group mb-3 ms-0">
 			<input type="text" class="form-control" style="border-radius: 20px 0px 0 20px; border-right: 0px;" placeholder="Tìm kiếm">
@@ -43,7 +43,7 @@
 </div>
 <hr>
 
-<div class="row gap-3 d-flex justify-content-center">
+<div class="row gap-3 d-flex justify-content-center m-0 p-0">
 	<!--Hiển thị box khóa học -->
 	<c:forEach var="khoaHoc" items="${listKhoaHoc.content}">
 		<div class="card col-9  col-md-5 col-xl-3 p-2 mt-4 box-KH card-KH">

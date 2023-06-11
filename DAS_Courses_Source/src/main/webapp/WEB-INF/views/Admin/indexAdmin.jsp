@@ -26,7 +26,7 @@
 	integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous"
 	referrerpolicy="no-referrer"></script>
 
-
+<link rel="icon" type="image/x-icon" href="/Image/Logo.png">
 <script type="text/javascript" src="/resources/AdminJS/ADKhoaHoc.js"></script>
 <script type="text/javascript" src="/resources/AdminJS/ADCauHoi.js"></script>
 <script type="text/javascript" src="/resources/AdminJS/ADTaiLieu.js"></script>
@@ -55,19 +55,20 @@
 						</a>
 					</h6>
 					<ul class="nav flex-column mb-2 ms-3">
-						<li class="nav-item"><a class="nav-link" href="#"> <span data-feather="file-text" class="align-text-bottom"></span><i
+						<li class="nav-item"><a class="nav-link" href="/admin/khoahoc"> <span data-feather="file-text" class="align-text-bottom"></span><i
 								class="fa-solid fa-circle me-2"></i>Khóa học
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span data-feather="file-text" class="align-text-bottom"></span><i
+						<li class="nav-item"><a class="nav-link" href="/admin/ThongKe"> <span data-feather="file-text" class="align-text-bottom"></span><i
 								class="fa-solid fa-circle me-2"></i>Thống kê
 						</a></li>
-						
+
 					</ul>
 				</div>
 			</nav>
 
 			<article class="col-md-9 ms-sm-auto col-lg-10 p-2 bg-body-tertiary">
-				<div style="height: auto;">	<jsp:include page="${view}"></jsp:include></div>
+				<div style="height: auto;">
+					<jsp:include page="${view}"></jsp:include></div>
 			</article>
 		</div>
 	</div>

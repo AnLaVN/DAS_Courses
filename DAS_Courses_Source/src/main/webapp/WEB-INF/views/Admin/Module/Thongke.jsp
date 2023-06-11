@@ -1,9 +1,8 @@
 <%@ page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en" class="h-100" ng-app="MyApp" ng-controller="MyCtrl" data-bs-theme="{{Theme}}">
+<!--  <html lang="en" class="h-100" ng-app="MyApp" ng-controller="MyCtrl" data-bs-theme="{{Theme}}">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,12 +16,9 @@
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
 </head>
-
+-->
 <body class="d-flex flex-column h-100">
-	<%@include file="../User/Module/Header.jsp"%>
-	
-	
-	
+
 	<div class="GH text-center m-4">${sizeCourses} COURSES</div>
 	<div class="h4 text-center m-4" ng-show="${sizeCourses} == 0">Không có khoá học nào</div>
 	<div class="TableItem" ng-hide="${sizeCourses} == 0">
@@ -74,7 +70,6 @@
 	
 
 
-	 <%@include file="../User/Module/Footer.jsp"%>
+	
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
