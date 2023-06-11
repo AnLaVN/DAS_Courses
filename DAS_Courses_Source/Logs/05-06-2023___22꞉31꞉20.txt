@@ -1,5 +1,0 @@
-[22:31:20.851]	SignOutREQ - Sign Out successfully.
-[22:31:34.441]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[22:31:34.551]	SignInPOST - Sign in successfully !
-[22:31:50.784]	DeleteAccPOST - Delete all information of username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[22:31:50.803]	SignOutREQ - Sign Out successfully.

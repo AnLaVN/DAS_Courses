@@ -10,7 +10,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="d-none d-md-block">
-			<a class="text-white mt-1 h6" href="#"><i class="fa-solid fa-user me-2"></i>Login</a>
+			<i class="bi bi-{{Theme=='dark'?'moon-stars':'sun'}} fs-4 text-light link-info mx-2" ng-click="ChangeTheme()" role="button"></i>
 		</div>
 	</div>
 </header>

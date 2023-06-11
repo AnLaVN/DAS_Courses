@@ -37,7 +37,7 @@
 				</a>
 			</div>
 			<div class=" col-12 col-lg-12  d-flex justify-content-center my-3 ">
-				<input class="form-control" name="fileAnh" onchange="getFilePath()" type="file" id="fileAnh" accept=".jpg,.png">
+				<input class="form-control" name="fileAnh" onchange="getFilePath()" required="required" type="file" id="fileAnh" accept=".jpg,.png">
 			</div>
 			<span class="text-danger fw-bold d-none" id="messageImage">Vui lòng chọn file ảnh !</span>
 		</div>
