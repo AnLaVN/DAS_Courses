@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.DAS.DAO.KhoahocDAO;
 import com.DAS.DAO.PhanloaiDAO;
+import com.DAS.DAO.SinhvienDAO;
 import com.DAS.Entity.Khoahoc;
 import com.DAS.Entity.Phanloai;
 import com.DAS.Tools.ALParam;
@@ -34,40 +36,53 @@ public class ADKhoaHocController {
 	@Autowired
 	PhanloaiDAO phanloaiDAO;
 
-	boolean ckUpdateKH = false;
+	@Autowired
+	SinhvienDAO sinhvienDAO;
+
+	boolean ckDeleteKH = false;
 
 	@RequestMapping("/admin/khoahoc")
 	public String khoaHoc(Model model, @RequestParam("pageNo") Optional<Integer> pageNo,
 			@RequestParam("keywords") Optional<String> keywords, @RequestParam("idPL") Optional<String> idPL) {
+	
 		int indexPage = pageNo.orElse(0);
 		Pageable pageable = PageRequest.of(pageNo.orElse(0), 9);
 		Page<Khoahoc> listKhoaHoc = khoahocDAO.findAllByNameLikeAndPL(keywords.orElse(""), idPL.orElse(""), pageable);
 		model.addAttribute("listKhoaHoc", listKhoaHoc);
 		model.addAttribute("indexPage", indexPage);
 		model.addAttribute("view", "Module/ADKhoaHoc.jsp");
+		// check khóa học delete thành công hiển thị toast
+		
+		if (ckDeleteKH) {
+			model.addAttribute("message", true);
+			ckDeleteKH = false;
+		}
 		return "/Admin/indexAdmin";
 	}
 
 	// Tìm kiếm kh theo id và fill lên form ct khóa học
 	@GetMapping("/admin/khoahoc/{idkh}")
+
 	public String CTkhoaHoc(Model model, @PathVariable("idkh") String idkh) {
+
+		model.addAttribute("message", false);
 		Khoahoc khoahoc = khoahocDAO.findByIdkh(idkh);
 		List<Khoahoc> listKhoaHoc = khoahocDAO.findAll();
 		model.addAttribute("listKhoaHoc", listKhoaHoc);
 		model.addAttribute("khoaHoc", khoahoc);
 		model.addAttribute("view", "Module/ADCTKhoaHoc.jsp");
-		if (ckUpdateKH) {
-			model.addAttribute("message", true);
-			ckUpdateKH = false;
-		}
+
 		return "/Admin/indexAdmin";
 	}
 
 	// Cập nhật thông tin khóa học
+	@ResponseBody
 	@PostMapping("/admin/update/{idkh}")
-	public String UpdateKH(Model model, @PathVariable("idkh") String idkh, Khoahoc khoahoc,@RequestParam("fileAnh") MultipartFile fileUp) {
+	public String UpdateKH(Model model, @PathVariable("idkh") String idkh, Khoahoc khoahoc,
+			@RequestParam("fileAnh") MultipartFile fileUp) {
+		System.out.println("okok");
 		try {
-			// tìm khóa học 
+			// tìm khóa học
 			Khoahoc kh = khoahocDAO.findByIdkh(idkh);
 			if (!fileUp.isEmpty()) {
 				// lƯU Tạm FILE ẢNH VÀO MÁY CHỦ
@@ -78,28 +93,27 @@ public class ADKhoaHocController {
 
 				// SAU KHI UP LÊN CLOUD XOG THÌ XÓA FILE ẢNH TRÊN MÁY CHỦ
 				file.delete();
-				
-				//xóa ảnh củ trên cloud
+
+//				xóa ảnh củ trên cloud
+				System.out.println("url kh" + kh.getAnhmota());
 				UpFileCloud.removeCloudBinaryByUrl(kh.getAnhmota());
-				
-				//cập nhật lại ảnh mới
+
+				// cập nhật lại ảnh mới
 				kh.setAnhmota(pathCloudinary);
-				
+
 			}
 			// set lại các trường cần update
 			kh.setTenkhoahoc(khoahoc.getTenkhoahoc());
 			kh.setMota(khoahoc.getMota());
 			kh.setMotangan(khoahoc.getMotangan());
 			kh.setPhanloai(khoahoc.getPhanloai());
-
 			khoahocDAO.saveAndFlush(kh);
-			ckUpdateKH = true;
-		} catch (Exception e) {
-			ckUpdateKH = false;
-			e.printStackTrace();
-		}
 
-		return "redirect:/admin/khoahoc/" + idkh;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "false";
+		}
+		return "true";
 	}
 
 	// gọi form thêm khóa học
@@ -110,9 +124,13 @@ public class ADKhoaHocController {
 	}
 
 	// Thêm mới khóa học
+	@ResponseBody
 	@PostMapping("/admin/addKH")
-	public String ThemkhoaHoc(Model model, Khoahoc khoahoc, @RequestParam("fileAnh") MultipartFile fileUp) {
+	public String ThemkhoaHoc(Khoahoc khoahoc, @RequestParam("fileAnh") MultipartFile fileUp) {
+		System.out.println(khoahoc.getIdkh());
+		if(khoahocDAO.findByIdkh(khoahoc.getIdkh())!=null) return "ID khóa học đã tồn tại !";
 		try {
+			
 			// lƯU Tạm FILE ẢNH VÀO MÁY CHỦ
 			File file = ALParam.saveFile(fileUp);
 
@@ -124,19 +142,43 @@ public class ADKhoaHocController {
 
 			khoahoc.setAnhmota(pathCloudinary);
 			khoahocDAO.save(khoahoc);
-
-			model.addAttribute("view", "Module/ADThemKhoaHoc.jsp");
-			model.addAttribute("message", true);
+			return "true";
 		} catch (Exception e) {
-			model.addAttribute("message", false);
+			e.printStackTrace();
+			
 		}
-		return "/Admin/indexAdmin";
+		return "false";
+	}
+
+	// xóa khóa học
+	@GetMapping("/admin/removeKH/{idkh}")
+	public String xoaKhoaHoc(@PathVariable("idkh") String idkh) {
+		try {
+			// tìm ra khóa học
+			Khoahoc kh = khoahocDAO.findByIdkh(idkh);
+
+			// xóa ảnh trên cloudinary
+			UpFileCloud.removeCloudBinaryByUrl(kh.getAnhmota());
+			// xóa khóa học trên csdl
+			khoahocDAO.delete(kh);
+			ckDeleteKH = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "redirect:/admin/khoahoc";
 	}
 
 	// lấy phân loại để fill vào combobox Phân loại
 	@ModelAttribute(name = "phanLoai")
 	public List<Phanloai> getPhanLoai() {
 		return phanloaiDAO.findAll();
+	}
+	
+	@ModelAttribute(name = "listKhoaHoc")
+	public Page<Khoahoc> getKhoaHoc() {
+		Pageable pageable = PageRequest.of(0, 9);
+		return  khoahocDAO.findAllByNameLikeAndPL("","",pageable);
+		
 	}
 
 }

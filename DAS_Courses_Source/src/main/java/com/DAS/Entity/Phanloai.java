@@ -32,7 +32,7 @@ public class Phanloai{
 	@Column(name = "TENPL")
 	private String tenpl;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "phanloai")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "phanloai",orphanRemoval = true)
 	private Set<Khoahoc> khoahocs = new HashSet<Khoahoc>(0);
 
 }

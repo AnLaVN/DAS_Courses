@@ -1,5 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
+<div class="toast-container position-fixed top-0 end-0 p-3 mt-5">
+	<div id="Toast" class="toast align-items-center mt-2" role="alert">
+		<div class="d-flex bg-info" style="border-radius: 5px">
+			<div class="toast-body fw-bold">Xóa thành công khóa học</div>
+			<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+		</div>
+	</div>
+</div>
+<c:if test="${message}">
+	<script>
+		new bootstrap.Toast(document.getElementById('Toast')).show()
+	</script>
+</c:if>
 <h3 class="mt-3 fw-bold ms-3" style="font-family: 'Courier New', Courier;">DANH SÁCH KHÓA HỌC</h3>
 <div class="row">
 	<div class="col-10 col-md-6 col-lg-4 mx-auto mt-2">

@@ -61,7 +61,7 @@
 						</h2>
 						<div id="Sentence${loop.index}" class="accordion-collapse collapse${loop.index==0?' show':''}" data-bs-parent="#ExamSentencesDelete">
 							<div class="accordion-body row m-0 p-0 p-md-2">
-								<div class="col-12 mt-2 mb-3">${cauhoi.cauhoi}</div>
+								<div class="col-12 mt-2 mb-3">${cauhoi.tencauhoi}</div>
 								
 								<div class="col-12 col-md-6 my-2">
 									<div class="form-check">

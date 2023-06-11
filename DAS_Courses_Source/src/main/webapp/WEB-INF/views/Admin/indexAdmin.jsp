@@ -27,6 +27,10 @@
 	referrerpolicy="no-referrer"></script>
 
 
+<script type="text/javascript" src="/resources/AdminJS/ADKhoaHoc.js"></script>
+<script type="text/javascript" src="/resources/AdminJS/ADCauHoi.js"></script>
+<script type="text/javascript" src="/resources/AdminJS/ADTaiLieu.js"></script>
+
 
 <link rel="stylesheet" href="../../../resources/style.css">
 <link rel="stylesheet" href="../../../resources/Admin.css">
@@ -55,11 +59,9 @@
 								class="fa-solid fa-circle me-2"></i>Khóa học
 						</a></li>
 						<li class="nav-item"><a class="nav-link" href="#"> <span data-feather="file-text" class="align-text-bottom"></span><i
-								class="fa-solid fa-circle me-2"></i>Tài nguyên khóa học
+								class="fa-solid fa-circle me-2"></i>Thống kê
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span data-feather="file-text" class="align-text-bottom"></span><i
-								class="fa-solid fa-circle me-2"></i>Bộ câu hỏi kiểm tra
-						</a></li>
+						
 					</ul>
 				</div>
 			</nav>

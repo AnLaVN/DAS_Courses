@@ -52,7 +52,7 @@ public class Sinhvien{
 	@JoinTable(name = "KHOAHOC_SINHVIEN", schema = "dbo", catalog = "DASJ5SQL", joinColumns = {
 			@JoinColumn(name = "USERNAME", nullable = false, updatable = false) }, inverseJoinColumns = {
 					@JoinColumn(name = "IDKH", nullable = false, updatable = false) })
-	private List<Khoahoc> khoahocs = new ArrayList<Khoahoc>(0);
+	private List<Khoahoc> khoahocs = new ArrayList<Khoahoc>();
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "sinhvien", orphanRemoval = true)
 	private List<Diem> diems = new ArrayList<Diem>();

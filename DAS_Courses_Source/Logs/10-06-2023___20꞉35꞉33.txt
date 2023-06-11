@@ -1,0 +1,3 @@
+[20:35:33.562]	ALParam - Save file successfully as Absolute Path: F:\KI6_SUMMER_2023\JAVA_5\LAB\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersFiles\z4193576336557_704096324e54702ad38fa21084919ab6.jpg
+[20:35:57.713]	ALParam - Save file successfully as Absolute Path: F:\KI6_SUMMER_2023\JAVA_5\LAB\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersFiles\DUY00179.JPG
+[20:36:24.030]	ALParam - Save file successfully as Absolute Path: F:\KI6_SUMMER_2023\JAVA_5\LAB\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersFiles\DUY00179.jfif
