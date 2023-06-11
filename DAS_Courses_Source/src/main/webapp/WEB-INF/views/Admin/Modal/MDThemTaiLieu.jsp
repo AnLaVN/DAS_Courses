@@ -18,7 +18,7 @@
 				<label for="" class="form-label">ID Youtube</label>
 				<div class="input-group mb-4 has-validation">
 					<span class="input-group-text">https://www.youtube.com/watch?v=</span>
-					<input type="text" maxlength="11" class="form-control" name="idyoutube" ng-init="IDVideo=''" ng-model="IDVideo" placeholder="IDYoutube" required>
+					<input type="text" maxlength="11" class="form-control" name="idyoutube" ng-model="IDVideo" placeholder="IDYoutube" required>
 					<div class="invalid-feedback">Vui lòng nhập ID Youtube !</div>
 				</div>
 				<div class="mb-3">

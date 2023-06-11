@@ -20,8 +20,6 @@ import lombok.RequiredArgsConstructor;
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
-
-
 public class Cauhoi{
 	@Id
 	@Column(name = "IDCH", unique = true, nullable = false, length = 10)

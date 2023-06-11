@@ -164,7 +164,7 @@ function handleClick(link) {
 
 // Code to get Youtube Thumnail link
 function checkYT(img) {
-    if (img.naturalWidth === 120 && img.naturalHeight === 90) {
+    if (img.naturalWidth === 120 && img.naturalHeight === 90 && !img.src.includes("hqdefault")) {
         img.src = img.src.replace("maxresdefault", "hqdefault");
     }
 }
