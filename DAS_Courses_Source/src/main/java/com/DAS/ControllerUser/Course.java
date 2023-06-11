@@ -74,10 +74,10 @@ public class Course {
 	}
 	
 	@GetMapping("/{idkh}/Material")
-	public String MaterialGET(@PathVariable("idkh") String idkh, @RequestParam("idtn") Optional<String> idtn, Model model) {
+	public String MaterialGET(@PathVariable("idkh") String idkh, @RequestParam("idtn") Optional<Integer> idtn, Model model) {
 		// Xử lí dữ liệu
 		Khoahoc khoahoc = khoahocDAO.findById(idkh).get();						// Lấy khoá học theo idkh
-		String currTN = idtn.orElse(khoahoc.getTainguyens().get(0).getIdtn());	// Lấy idtn của trang hiện tại, nếu không có gán idtn đầu tiên
+		Integer currTN = idtn.orElse(khoahoc.getTainguyens().get(0).getIdtn());	// Lấy idtn của trang hiện tại, nếu không có gán idtn đầu tiên
 
 		// Set dữ liệu qua view
 		model.addAttribute("Khoahoc", khoahoc);

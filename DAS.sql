@@ -1,5 +1,8 @@
 ﻿USE MASTER
 DROP DATABASE  IF EXISTS DASJ5SQL
+
+
+
 CREATE DATABASE DASJ5SQL
 USE DASJ5SQL
 
@@ -59,7 +62,7 @@ CREATE TABLE DANHGIA(
 );
 
 CREATE TABLE TAINGUYEN(
-	IDTN VARCHAR(10) PRIMARY KEY NOT NULL,
+	IDTN INT PRIMARY KEY NOT NULL IDENTITY(1,1),
 	TENTAINGUYEN NVARCHAR(128),
 	IDYOUTUBE VARCHAR(11),
 	MOTA NVARCHAR(1024),
@@ -68,8 +71,8 @@ CREATE TABLE TAINGUYEN(
 );
 
 CREATE TABLE CAUHOI(
-	IDCH VARCHAR(10) PRIMARY KEY NOT NULL,
-	CAUHOI NVARCHAR(512),
+	IDCH INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	TENCAUHOI NVARCHAR(512),
 	DAPANA NVARCHAR(256),
 	DAPANB NVARCHAR(256),
 	DAPANC NVARCHAR(256),
@@ -184,42 +187,42 @@ INSERT INTO KHOAHOC_SINHVIEN VALUES
 
 
 INSERT INTO TAINGUYEN VALUES
-	('TNFE01',N'Lộ Trình Học Lập Trình Front-End Từ Căn Bản Đến Nâng Cao | BÀI 1','DyXab2jrXhc',N'GIỚI THIỆU CHƯƠNG TRÌNH HỌC','KHFE001'),
-	('TNFE02',N'Tổng quan về thiết kế web và các bước xây dựng | BÀI 2','d07_8oNW9gg',N'TỔNG QUAN VỀ WEB VÀ INTERNET','KHFE001'),
+	(N'Lộ Trình Học Lập Trình Front-End Từ Căn Bản Đến Nâng Cao | BÀI 1','DyXab2jrXhc',N'GIỚI THIỆU CHƯƠNG TRÌNH HỌC','KHFE001'),
+	(N'Tổng quan về thiết kế web và các bước xây dựng | BÀI 2','d07_8oNW9gg',N'TỔNG QUAN VỀ WEB VÀ INTERNET','KHFE001'),
 
-	('TNBE01',N'Lập trình java web học java web backend lập trình web | BÀI 1','X5nt9_11Ozg',N'GIỚI THIỆU MỤC TIÊU VÀ ĐỀ CƯƠNG','KHBE001'),
-	('TNBE02',N'Học lập trình java web jsp servlet jdbc mysql cơ bản | BÀI 2','2DDisxS2Mdg',N'GIỚI THIỆU JAVA SERVLET VÀ JDBC','KHBE001'),
-	('TNBE03',N'Cài đặt eclipse 2018 mysql 8 jdk 8 maven 3.6 tomcat 8.5 | BÀI 3','dJ386tghZRI',N'CÀI ĐẶT IDE, MÔI TRƯỜNG VÀ SERVER','KHBE001'),
-	('TNBE04',N'Tạo project jsp servlet theo mô hình MVC | BÀI 5','43TVwPxgndE',N'HƯỚNG DẪN TẠO PROJECT VỚI MÔ HÌNH MVC','KHBE001'),
+	(N'Lập trình java web học java web backend lập trình web | BÀI 1','X5nt9_11Ozg',N'GIỚI THIỆU MỤC TIÊU VÀ ĐỀ CƯƠNG','KHBE001'),
+	(N'Học lập trình java web jsp servlet jdbc mysql cơ bản | BÀI 2','2DDisxS2Mdg',N'GIỚI THIỆU JAVA SERVLET VÀ JDBC','KHBE001'),
+	(N'Cài đặt eclipse 2018 mysql 8 jdk 8 maven 3.6 tomcat 8.5 | BÀI 3','dJ386tghZRI',N'CÀI ĐẶT IDE, MÔI TRƯỜNG VÀ SERVER','KHBE001'),
+	(N'Tạo project jsp servlet theo mô hình MVC | BÀI 5','43TVwPxgndE',N'HƯỚNG DẪN TẠO PROJECT VỚI MÔ HÌNH MVC','KHBE001'),
 
-	('TNDB01',N'Giới thiệu SQL và SQL server | BÀI 1','2fanjSYVElY',N'TÌM HIỂU VỀ SQL','KHDB001'),
-	('TNDB02',N'Tạo database | BÀI 2','XUIm5VQlpJM',N'SỬ DỤNG MS SQL ĐỂ TẠO DB','KHDB001'),
-	('TNDB03',N'Tạo bảng | BÀI 3','TrLKdQH_Qng',N'TẠO BẢNG VỚI CÂU LỆNH SQL','KHDB001'),
-	('TNDB04',N'Kiểu dữ liệu trong SQL | BÀI 4','_40bzGOHloo',N'TÌM HIỂU VỀ KIỂU DỮ LIỆU SQL','KHDB001'),
+	(N'Giới thiệu SQL và SQL server | BÀI 1','2fanjSYVElY',N'TÌM HIỂU VỀ SQL','KHDB001'),
+	(N'Tạo database | BÀI 2','XUIm5VQlpJM',N'SỬ DỤNG MS SQL ĐỂ TẠO DB','KHDB001'),
+	(N'Tạo bảng | BÀI 3','TrLKdQH_Qng',N'TẠO BẢNG VỚI CÂU LỆNH SQL','KHDB001'),
+	(N'Kiểu dữ liệu trong SQL | BÀI 4','_40bzGOHloo',N'TÌM HIỂU VỀ KIỂU DỮ LIỆU SQL','KHDB001'),
 
-	('TNDA01',N'Tổng quan Trí tuệ nhân tạo AI','9t1IsxTeyHQ',N'TÌM HIỂU VỀ AI','KHDA001'),
-	('TNDA02',N'Python cơ bản cho AI | BÀI 1','MpppDoAWDdA',N'KHÁI NIỆM CƠ BẢN - MÔI TRƯỜNG CÀI ĐẶT','KHDA001'),
-	('TNDA03',N'Python cơ bản cho AI | BÀI 2','muS8I4Unnyc',N'KHÁI NIỆM CƠ BẢN','KHDA001'),
-	('TNDA04',N'Python cơ bản cho AI | BÀI 3','Usr6ikXu-M4',N'KHÁI NIỆM CƠ BẢN','KHDA001'),
-	('TNDA05',N'Tìm kiếm lời giải [BFS, DFS] | BÀI 4','ZQozkaatPEg',N'KHÔNG GIAN TRẠNG THÁI','KHDA001'),
-	('TNDA06',N'Thuật toán Uniform cost search | BÀI 5','11xhp8Ec3zE',N'THUẬT TOÁN TÌM KIẾM','KHDA001')
+	(N'Tổng quan Trí tuệ nhân tạo AI','9t1IsxTeyHQ',N'TÌM HIỂU VỀ AI','KHDA001'),
+	(N'Python cơ bản cho AI | BÀI 1','MpppDoAWDdA',N'KHÁI NIỆM CƠ BẢN - MÔI TRƯỜNG CÀI ĐẶT','KHDA001'),
+	(N'Python cơ bản cho AI | BÀI 2','muS8I4Unnyc',N'KHÁI NIỆM CƠ BẢN','KHDA001'),
+	(N'Python cơ bản cho AI | BÀI 3','Usr6ikXu-M4',N'KHÁI NIỆM CƠ BẢN','KHDA001'),
+	(N'Tìm kiếm lời giải [BFS, DFS] | BÀI 4','ZQozkaatPEg',N'KHÔNG GIAN TRẠNG THÁI','KHDA001'),
+	(N'Thuật toán Uniform cost search | BÀI 5','11xhp8Ec3zE',N'THUẬT TOÁN TÌM KIẾM','KHDA001')
 
 
 INSERT INTO CAUHOI VALUES
-	('FEB01',N'Có bao nhiêu loại doctype trong html?','1','3','5','2','B','KHFE001'),
-	('FEB02',N'CSS được sử dụng để làm gì trong phát triển Front End?',N'Định dạng và tạo kiểu cho giao diện web',N'Xử lý các yêu cầu từ phía người dùng',N'Xử lý các yêu cầu từ phía người dùng',N'Tạo các chức năng logic phía server','A','KHFE001'),
-	('FEB03',N'HTML là viết tắt của thuật ngữ gì trong lĩnh vực phát triển web?',N'HyperText Markup Language',N'HyperTool Markup Language',N'HyperLink Markup Language',N'HighText Markup Language','A','KHFE001'),
-	('FEB04',N'Để tạo một đường viền xung quanh một phần tử HTML, ta sử dụng thuộc tính nào trong CSS?','background-color','background-color','font-size','margin','B','KHFE001'),
-	('FEB05',N'Để chọn phần tử đầu tiên trong danh sách các phần tử HTML, ta sử dụng selector nào trong CSS?','first-child','last-child','nth-child','only-child','A','KHFE001'),
-	('FEB06',N'Để tạo hiệu ứng chuyển động cho phần tử HTML trong CSS, ta sử dụng thuộc tính nào?','transform','transition ','animation','opacity','B','KHFE001'),
-	('FEB07',N'Để chọn tất cả các phần tử có cùng class trong CSS, ta sử dụng selector nào?','#',',','.',':','C','KHFE001'),
-	('FEB08',N'Để thêm một hình ảnh vào trang web, ta sử dụng thẻ HTML nào?','<div>','<img>','<span>','<p>','B','KHFE001'),
-	('FEB09',N'Để thêm một màu nền cho một phần tử trong CSS, ta sử dụng thuộc tính nào?','text-color','background-color','background-color','color','B','KHFE001'),
-	('FEB010',N'Để thay đổi kiểu chữ cho một phần tử trong CSS, ta sử dụng thuộc tính nào?','font-style','font-style','font-family','font-size','D','KHFE001'),
+	(N'Có bao nhiêu loại doctype trong html?','1','3','5','2','B','KHFE001'),
+	(N'CSS được sử dụng để làm gì trong phát triển Front End?',N'Định dạng và tạo kiểu cho giao diện web',N'Xử lý các yêu cầu từ phía người dùng',N'Xử lý các yêu cầu từ phía người dùng',N'Tạo các chức năng logic phía server','A','KHFE001'),
+	(N'HTML là viết tắt của thuật ngữ gì trong lĩnh vực phát triển web?',N'HyperText Markup Language',N'HyperTool Markup Language',N'HyperLink Markup Language',N'HighText Markup Language','A','KHFE001'),
+	(N'Để tạo một đường viền xung quanh một phần tử HTML, ta sử dụng thuộc tính nào trong CSS?','background-color','background-color','font-size','margin','B','KHFE001'),
+	(N'Để chọn phần tử đầu tiên trong danh sách các phần tử HTML, ta sử dụng selector nào trong CSS?','first-child','last-child','nth-child','only-child','A','KHFE001'),
+	(N'Để tạo hiệu ứng chuyển động cho phần tử HTML trong CSS, ta sử dụng thuộc tính nào?','transform','transition ','animation','opacity','B','KHFE001'),
+	(N'Để chọn tất cả các phần tử có cùng class trong CSS, ta sử dụng selector nào?','#',',','.',':','C','KHFE001'),
+	(N'Để thêm một hình ảnh vào trang web, ta sử dụng thẻ HTML nào?','<div>','<img>','<span>','<p>','B','KHFE001'),
+	(N'Để thêm một màu nền cho một phần tử trong CSS, ta sử dụng thuộc tính nào?','text-color','background-color','background-color','color','B','KHFE001'),
+	(N'Để thay đổi kiểu chữ cho một phần tử trong CSS, ta sử dụng thuộc tính nào?','font-style','font-style','font-family','font-size','D','KHFE001'),
 
-	('BEB01',N'Servlet là gì trong lĩnh vực phát triển Back End?',N'Servlet là gì trong lĩnh vực phát triển Back End?',N'Là một loại cơ sở dữ liệu',N'Là một thành phần của Java để xử lý yêu cầu và phản hồi trên phía máy chủ',N'Là một công nghệ để tạo giao diện người dùng động','C','KHBE001'),
-	('BEB02',N'Servlet được viết bằng ngôn ngữ lập trình nào?',N'Java',N'Python',N'PHP',N'C++',N'A','KHBE001'),
-	('BEB03',N'Servlet được sử dụng để thực hiện những tác vụ gì trong phát triển Back End?',N'Tạo và quản lý cơ sở dữ liệu',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ','B','KHBE001')
+	(N'Servlet là gì trong lĩnh vực phát triển Back End?',N'Servlet là gì trong lĩnh vực phát triển Back End?',N'Là một loại cơ sở dữ liệu',N'Là một thành phần của Java để xử lý yêu cầu và phản hồi trên phía máy chủ',N'Là một công nghệ để tạo giao diện người dùng động','C','KHBE001'),
+	(N'Servlet được viết bằng ngôn ngữ lập trình nào?',N'Java',N'Python',N'PHP',N'C++',N'A','KHBE001'),
+	(N'Servlet được sử dụng để thực hiện những tác vụ gì trong phát triển Back End?',N'Tạo và quản lý cơ sở dữ liệu',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ',N'Xử lý yêu cầu từ phía người dùng và tạo phản hồi từ phía máy chủ','B','KHBE001')
 
 INSERT INTO DANHGIA VALUES
 	('13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049','KHDA001',N'Em đã học hết khóa và cảm thấy mình giống một kỹ sư AI thực thụ 😎😎😎😎😎','1'),

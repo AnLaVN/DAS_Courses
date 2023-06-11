@@ -97,7 +97,7 @@ public class ALParam {
      * @throws IllegalStateException 
      */
     public static File saveFile(MultipartFile pFile, String pFolderPath) throws IllegalStateException, IOException {
-    	return saveFile(pFile, "/Image/UsersFiles/", pFile.getOriginalFilename());
+    	return saveFile(pFile, pFolderPath, pFile.getOriginalFilename());
     }
     
     /**Sử dụng phương thức này để lấy file từ client.
