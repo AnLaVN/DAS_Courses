@@ -15,8 +15,6 @@ public interface KhoahocDAO extends JpaRepository<Khoahoc, String>{
 	
 	Page<Khoahoc> findByTenkhoahocLike(String tenkhoahoc, Pageable pageable);
 	
-
-	
 	//Begin Make by Tiến Sỹ |TTS
 	
 	//Phân trang và tìm kiếm và phân loại
@@ -24,6 +22,4 @@ public interface KhoahocDAO extends JpaRepository<Khoahoc, String>{
 	Page<Khoahoc> findAllByNameLikeAndPL(String keywords,String idPL, Pageable pageable);
 		
 	//End Tiến Sỹ | TTS 
-	
-
 }
