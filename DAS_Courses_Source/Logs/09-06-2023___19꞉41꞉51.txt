@@ -1,2 +1,0 @@
-[19:41:51.847]	ALParam - Save file successfully as Absolute Path: F:\KI6_SUMMER_2023\JAVA_5\LAB\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersFiles\CV_TRANTIENSY.pdf
-[19:43:19.800]	ALParam - Save file successfully as Absolute Path: F:\KI6_SUMMER_2023\JAVA_5\LAB\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersFiles\DUY00180.JPG
