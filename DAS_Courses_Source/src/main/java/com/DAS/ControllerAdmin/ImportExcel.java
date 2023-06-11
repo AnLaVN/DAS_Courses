@@ -56,7 +56,7 @@ public class ImportExcel {
 				cauhoiDAO.save(new Cauhoi(khoahoc, cauhoi, dapanA, dapanB, dapanC, dapanD, dapan));
 			}
 			new File(abPath).delete();						// Xoá file excel đã lưu
-			Log.add("SaveExcelData - Save data successfully at: " + abPath);
+			Log.add("SaveExcelData - Save data successfully");
 			return getCauHoiHtml(idkh);
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();

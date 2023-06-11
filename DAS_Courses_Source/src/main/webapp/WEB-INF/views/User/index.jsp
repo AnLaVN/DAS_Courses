@@ -12,12 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-<<<<<<< HEAD
-    <title><spring:message code="user.index.webtitle"/></title>
-=======
     <link rel="icon" type="image/x-icon" href="/Image/Logo.png">
-    <title>DAS_Courses</title>
->>>>>>> 33784bbda2416d2280d3e17b941c569cffac0865
+    <title><spring:message code="user.index.webtitle"/></title>
     <link href="/resources/style.css" rel="stylesheet">
     <script src="/resources/script.js"></script>
     <style>
