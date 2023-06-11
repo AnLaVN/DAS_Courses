@@ -63,7 +63,7 @@ public class ImportExcel {
 			else khoahoc.getCauhois().addAll(newListCH);	// Nếu mode là ghi tiếp thì add vào list câu hỏi
 			khoahocDAO.save(khoahoc);						// Lưu thay đổi vào csdl
 			new File(abPath).delete();						// Xoá file excel đã lưu
-			Log.add("SaveExcelData - Save data successfully at: " + abPath);
+			Log.add("SaveExcelData - Save data successfully");
 			return getCauHoiHtml(idkh);
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
