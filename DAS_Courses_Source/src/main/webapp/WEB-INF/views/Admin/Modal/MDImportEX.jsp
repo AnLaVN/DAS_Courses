@@ -9,10 +9,10 @@
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<form novalidate="novalidate" id="formImportCH" method="post">
+			<form novalidate="novalidate" id="formImportCH" method="post" enctype="multipart/form-data">
 				<div class="mb-3">
 					<label for="fileInput" class="form-label">Chọn file Excel.</label>
-					<input class="form-control" type="file" id="fileInput" accept=".xlsx" required="required">
+					<input class="form-control" type="file" name="fileEX" id="fileInput" accept=".xlsx" required="required">
 				</div>
 
 				<div class="mb-3">

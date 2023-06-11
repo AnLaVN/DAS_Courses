@@ -3,6 +3,7 @@ $(document).ready(function() {
     cauHoi.deleteCH();
     cauHoi.editcauHoi();
     cauHoi.updateCH();
+    cauHoi.ImportCauHoi();
 });
 
 
@@ -17,9 +18,10 @@ var cauHoi = new function() {
                 //lấy dữ liệu trên form add câu hỏi
                 var formData = new FormData($('#formImportCH')[0]);
                 //gửi request kèm dữ liệu về server
+                formData.append('idkh', $('#idkh').text());
                 $.ajax({
                     type: "post",
-                    url: "/admin/khoahoc/addCauHoi/",
+                    url: "/admin/khoahoc/importEX",
                     data: formData,
                     processData: false, // Ngăn việc xử lý dữ liệu formData
                     contentType: false, // Ngăn việc đặt lại header Content
@@ -37,7 +39,7 @@ var cauHoi = new function() {
                             $('#message').text("Có lỗi xảy ra trong quá trình xử lý !");
                         }
                         new bootstrap.Toast(document.getElementById('Toast')).show();
-                        $('#addCauHoi').modal('hide');
+                        $('#formImportCH').modal('hide');
                         // gán lại sự kiện cho các hàm
                         cauHoi.deleteCH();
                         cauHoi.addCauHoi();

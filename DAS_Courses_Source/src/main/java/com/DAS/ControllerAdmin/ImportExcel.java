@@ -12,23 +12,33 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.AnLa.FILE.Excel;
 import com.AnLa.FILE.Log;
+import com.DAS.DAO.CauhoiDAO;
 import com.DAS.DAO.KhoahocDAO;
 import com.DAS.Entity.Cauhoi;
 import com.DAS.Entity.Khoahoc;
 import com.DAS.Tools.ALParam;
 
 @Controller
-@RequestMapping("admin/khoahoc/importEX")
+@RequestMapping("admin/khoahoc")
 public class ImportExcel {
 	@Autowired
 	KhoahocDAO khoahocDAO;
-
-	@PostMapping
-	public void SaveExcelData(@RequestParam("idkh") String idkh, @RequestParam("rdoModel") boolean rdoMode, @RequestParam("fileEX") MultipartFile pFile){
+	
+	@Autowired
+	CauhoiDAO cauhoiDAO;
+	
+	
+	@ResponseBody
+	@PostMapping("/importEX")
+	public String SaveExcelData(@RequestParam("idkh") String idkh, @RequestParam("ckImport") boolean rdoMode, @RequestParam("fileEX") MultipartFile pFile){
+		System.out.println(idkh+ "---"+rdoMode + "---" + pFile);
+		
+		
 		// Xử lí dữ liệu
 		Khoahoc khoahoc = khoahocDAO.findById(idkh).get();	// Lấy thông tin khoá học hiện tại thoe idkh
 		List<Cauhoi> newListCH = new ArrayList<>();			// Tạo danh sách trống chứa câu hỏi mới từ excel
@@ -36,7 +46,7 @@ public class ImportExcel {
 		try { // Lưu file excel câu hỏi
 			String  abPath = ALParam.saveFile(pFile, "/File/UserExcel/", idkh+".xlsx").getAbsolutePath();
 			Log.add("SaveExcelData - Save Excel file successfully at: " + abPath);	// Thông báo qua Log
-			Iterator<Object[]> data = Excel.ReadExcel(abPath, "Sheet 1");			// Lấy data từ excel
+			Iterator<Object[]> data = Excel.ReadExcel(abPath, "Sheet1");			// Lấy data từ excel
 			
 			while (data.hasNext()) {						// Duyệt từng dòng dữ liệu
 				Object[] row = data.next();  				// Lấy dữ liệu trong dòng
@@ -53,8 +63,37 @@ public class ImportExcel {
 			else khoahoc.getCauhois().addAll(newListCH);	// Nếu mode là ghi tiếp thì add vào list câu hỏi
 			khoahocDAO.save(khoahoc);						// Lưu thay đổi vào csdl
 			new File(abPath).delete();						// Xoá file excel đã lưu
+			Log.add("SaveExcelData - Save data successfully at: " + abPath);
+			return getCauHoiHtml(idkh);
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
 		}
+		
+		return "false";
+	}
+	
+	
+	public String getCauHoiHtml(String idkh) {
+		List<Cauhoi> cauHois = cauhoiDAO.findByKhoahoc(khoahocDAO.findById(idkh).get());
+		String tabelTR = "";
+		for (Cauhoi cauhoi : cauHois) {
+			tabelTR += "<tr itemid=\""+cauhoi.getIdch()+"\">\r\n"
+					+ "				<td>"+cauhoi.getTencauhoi()+"</td>\r\n"
+					+ "				<td>"+cauhoi.getDapana()+"</td>\r\n"
+					+ "				<td>"+cauhoi.getDapanb()+"</td>\r\n"
+					+ "				<td>"+cauhoi.getDapanc()+"</td>\r\n"
+					+ "				<td>"+cauhoi.getDapand()+"</td>\r\n"
+					+ "				<td class=\"text-center\">"+cauhoi.getDapandung()+"</td>\r\n"
+					+ "				<td class=\"d-flex justify-content-center\">\r\n"
+					+ "					<a class=\"fs-2 text-danger me-4\" id=\""+cauhoi.getIdch()+"\" name=\"btnXoaCH\">\r\n"
+					+ "						<i class=\"fa-sharp fa-solid fa-delete-left\"></i>\r\n"
+					+ "					</a>\r\n"
+					+ "					<a class=\"fs-2 editCH\"  name=\"editCH\">\r\n"
+					+ "						<i class=\"fa-solid fa-pen-to-square\"></i>\r\n"
+					+ "					</a>\r\n"
+					+ "				</td>\r\n"
+					+ "			</tr>";
+		}
+		return tabelTR;
 	}
 }
