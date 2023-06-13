@@ -43,34 +43,45 @@
 </head>
 
 <body ng-app="myApp">
+	<c:choose>
+		<c:when test="${!sessionScope.userAD}">
+		
 	<jsp:include page="Module/ADHeader.jsp"></jsp:include>
 	<div class="container-fluid ">
-		<div class="row">
-			<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse p-0" style="margin-top: -10px;">
-				<div class="position-sticky  pt-md-5 mt-3 sidebar-sticky">
-					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-5 mb-1 text-body-secondary text-uppercase">
-						<span>QUẢN LÝ</span> <a class="link-secondary" href="#" aria-label="Add a new report"> <span data-feather="plus-circle"
-							class="align-text-bottom"></span>
-						</a>
-					</h6>
-					<ul class="nav flex-column mb-2 ms-3">
-						<li class="nav-item"><a class="nav-link" href="/admin/khoahoc"> <span data-feather="file-text" class="align-text-bottom"></span><i
-								class="fa-solid fa-circle me-2"></i>Khóa học
-						</a></li>
-						<li class="nav-item"><a class="nav-link" href="/admin/ThongKe"> <span data-feather="file-text" class="align-text-bottom"></span><i
-								class="fa-solid fa-circle me-2"></i>Thống kê
-						</a></li>
-
-					</ul>
-				</div>
-			</nav>
-
-			<article class="col-md-9 ms-sm-auto col-lg-10 p-2 bg-body-tertiary">
-				<div style="height: auto;">
-					<jsp:include page="${view}"></jsp:include></div>
-			</article>
+			<div class="row">
+				<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse p-0" style="margin-top: -10px;">
+					<div class="position-sticky  pt-md-5 mt-3 sidebar-sticky">
+						<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-5 mb-1 text-body-secondary text-uppercase">
+							<span>QUẢN LÝ</span> <a class="link-secondary" href="#" aria-label="Add a new report"> <span data-feather="plus-circle"
+								class="align-text-bottom"></span>
+							</a>
+						</h6>
+						<ul class="nav flex-column mb-2 ms-3">
+							<li class="nav-item"><a class="nav-link" href="/admin/khoahoc"> <span data-feather="file-text" class="align-text-bottom"></span><i
+									class="fa-solid fa-circle me-2"></i>Khóa học
+							</a></li>
+							<li class="nav-item"><a class="nav-link" href="/admin/ThongKe"> <span data-feather="file-text" class="align-text-bottom"></span><i
+									class="fa-solid fa-circle me-2"></i>Thống kê
+							</a></li>
+	
+						</ul>
+					</div>
+				</nav>
+	
+				<article class="col-md-9 ms-sm-auto col-lg-10 p-2 bg-body-tertiary">
+					<div style="height: auto;">
+						<jsp:include page="${view}"></jsp:include></div>
+				</article>
+			</div>
 		</div>
-	</div>
+	
+		</c:when>
+		<c:otherwise>
+		<script>window.location = "/"</script>
+		</c:otherwise>
+	</c:choose>
+	
+	
 </body>
 
 </html>
