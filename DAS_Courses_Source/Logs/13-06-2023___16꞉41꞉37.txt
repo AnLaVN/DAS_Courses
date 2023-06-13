@@ -1,7 +1,0 @@
-[16:41:37.907]	Authentication - Can not get cookie information of client !!!
-[16:41:44.011]	Authentication - Can not get cookie information of client !!!
-[16:41:44.127]	Authentication - Can not get cookie information of client !!!
-[16:41:50.436]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[16:41:50.467]	SignInPOST - Sign in successfully !
-[16:49:00.017]	CertificatesGET - Get 1 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
-[16:49:01.475]	EnrolledGET - Get 4 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
