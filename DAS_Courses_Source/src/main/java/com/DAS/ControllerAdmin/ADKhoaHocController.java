@@ -127,8 +127,9 @@ public class ADKhoaHocController {
 	@ResponseBody
 	@PostMapping("/admin/addKH")
 	public String ThemkhoaHoc(Khoahoc khoahoc, @RequestParam("fileAnh") MultipartFile fileUp) {
-		System.out.println(khoahoc.getIdkh());
-		if(khoahocDAO.findById(khoahoc.getIdkh()).get()!=null) return "ID khóa học đã tồn tại !";
+
+//		if(khoahocDAO.findById(khoahoc.getIdkh()).get()!=null) return "ID khóa học đã tồn tại !";
+		if(khoahocDAO.existsByIdkh(khoahoc.getIdkh())) return "ID khóa học đã tồn tại !";
 		try {
 			
 			// lƯU Tạm FILE ẢNH VÀO MÁY CHỦ
