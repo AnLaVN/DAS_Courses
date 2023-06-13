@@ -15,7 +15,8 @@ public class SignOut {
 	@RequestMapping
 	public String SignOutREQ() {
 		// Xử lí dữ liệu
-		ALSession.removeSession("userSV");		// Xoá dữ liệu session
+		ALSession.removeSession("userSV");		// Xoá dữ liệu session userSV
+		ALSession.removeSession("userAD");		// Xoá dữ liệu session userAD
 		if(ALCookie.get("userSignInCookie") != null) {
 			ALCookie.remove("userSignInCookie");// Xoá dữ liệu cookie
 		}
