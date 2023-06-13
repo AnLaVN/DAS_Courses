@@ -82,6 +82,9 @@ CREATE TABLE CAUHOI(
 	FOREIGN KEY (IDKH) REFERENCES KHOAHOC(IDKH)
 );
 
+INSERT INTO ADMIN VALUES -- Admin@123 | Admin@123
+	('f0f0fd6447a06752677e916f12525ab3ae9f0480fd741c22b5871e48fe124483', 'f0f0fd6447a06752677e916f12525ab3ae9f0480fd741c22b5871e48fe124483', N'ADMIN', 'anldbps21776@fpt.edu.vn');
+
 INSERT INTO SINHVIEN VALUES
 	('13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049','ee3736b04a9127286a69fb06aaaeea2c9fb719063811cba48eaab7e056be9396',N'LÊ THÀNH ĐẠT','https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-da-dien-fb-hai-32-29-13-54-49.jpg','dtruog51@gmail.com'),  --LETHANHDAT2510|25101025
 	('ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e','3f8ea555d298590ca88337fbfcc1c00d6dbd48e019c4de2c93ab254706632f5c',N'EM LÀ SỸ NÈ','https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-da-dien-fb-hai-32-29-13-54-49.jpg','trantiensyhihihi@gmail.com'),  --TRANTIENSYHIHIHI|123456

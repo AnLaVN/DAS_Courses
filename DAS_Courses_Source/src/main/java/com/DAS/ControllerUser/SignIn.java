@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.AnLa.FILE.Log;
 import com.AnLa.HASH.AES;
 import com.AnLa.HASH.SHA256;
+import com.DAS.DAO.AdminDAO;
 import com.DAS.DAO.SinhvienDAO;
 import com.DAS.Entity.Sinhvien;
 import com.DAS.Tools.ALCookie;
@@ -24,6 +25,8 @@ import com.DAS.Tools.ALSession;
 public class SignIn {
 	@Autowired
 	SinhvienDAO sinhvienDAO;
+	@Autowired
+	AdminDAO adminDAO;
 	
 	@GetMapping
 	public String SignInGET() {
@@ -39,8 +42,22 @@ public class SignIn {
 		// Thông báo qua Log
 		Log.add("SignInPOST - Try to sign in with username: " + username);
 		
+		// Kiểm tra admin có khớp username và password trong csdl hay không
+		if(adminDAO.existsByUsernameAndMatkhau(username, password)) {
+			if(isRem.orElse(false)) {	// Nếu sinhvien tích chọn ô remmber me thì thêm cookie vào trình duyệt
+				ALCookie.add("userSignInCookie", username + "~" + AES.Encrypt(password, "DAS" + username), 7*24);
+			}
+			
+			// Add seesion scope
+			ALSession.setSession("userAD", adminDAO.findById(username).get());
+			
+			// Thông báo qua Log
+			Log.add("SignInPOST - Sign in with Admin role successfully !");
+			return "redirect:/admin/khoahoc";
+		}
+		
 		// Kiểm tra sinhvien có khớp username và password trong csdl hay không
-		if(sinhvienDAO.existsByUsernameAndMatkhau(username, password)) {
+		else if(sinhvienDAO.existsByUsernameAndMatkhau(username, password)) {
 			if(isRem.orElse(false)) {	// Nếu sinhvien tích chọn ô remmber me thì thêm cookie vào trình duyệt
 				ALCookie.add("userSignInCookie", username + "~" + AES.Encrypt(password, "DAS" + username), 7*24);
 			}
