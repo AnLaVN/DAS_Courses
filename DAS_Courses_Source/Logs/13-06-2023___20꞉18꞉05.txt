@@ -1,0 +1,5 @@
+[20:18:05.030]	Authentication - Can not get cookie information of client !!!
+[20:18:15.037]	Authentication - Can not get cookie information of client !!!
+[20:18:15.163]	Authentication - Can not get cookie information of client !!!
+[20:18:26.168]	SignInPOST - Try to sign in with username: f0f0fd6447a06752677e916f12525ab3ae9f0480fd741c22b5871e48fe124483
+[20:18:26.184]	SignInPOST - Sign in with Admin role successfully !

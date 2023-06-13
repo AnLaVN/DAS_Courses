@@ -1,0 +1,13 @@
+[16:51:51.703]	Authentication - Can not get cookie information of client !!!
+[16:52:04.769]	SignInPOST - Try to sign in with username: 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[16:52:04.844]	SignInPOST - Sign in successfully !
+[16:52:14.093]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:08:09.559]	CourseGET - View Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:09:16.367]	CourseJOIN - Username 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049 view course KHBE001
+[17:09:16.415]	MaterialGET - View material 3 in course KHBE001
+[17:10:16.810]	ExamGET - Exam Course KHBE001 by 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:11:23.388]	CertificatesGET - Get 0 certificates of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:11:24.932]	EnrolledGET - Get 3 courses enrolled of 13ef04f726b3d0e682efdaa96590812fa8a2b7fd4b63d587644443714bc27049
+[17:30:04.370]	SignUpPOST - Try to sign up with username: 7c9dd4f61b0e56fa63a8d6a25a5cde803934106d20374982b8fd0e66266c937d
+[17:30:04.443]	ALParam - Save file successfully as Absolute Path: D:\Ki6\Java5WP\DAS_Courses\DAS_Courses_Source\src\main\webapp\Image\UsersAvatar\7c9dd4f61b0e56fa63a8d6a25a5cde803934106d20374982b8fd0e66266c937d.png
+[17:30:04.628]	SignUpPOST - Sign up successfully !

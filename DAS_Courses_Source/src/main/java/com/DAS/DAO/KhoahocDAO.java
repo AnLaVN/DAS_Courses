@@ -11,6 +11,7 @@ import com.DAS.Entity.Phanloai;
 
 public interface KhoahocDAO extends JpaRepository<Khoahoc, String>{
 	
+	
 	Page<Khoahoc> findByPhanloai(Phanloai phanloai, Pageable pageable);
 	
 	Page<Khoahoc> findByTenkhoahocLike(String tenkhoahoc, Pageable pageable);
