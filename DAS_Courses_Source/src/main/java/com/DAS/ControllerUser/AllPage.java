@@ -25,4 +25,9 @@ public class AllPage {
 	public boolean isUserSV() {
 		return ALSession.getSession("userSV") != null;
 	}
+	
+	@ModelAttribute("isUserAD")
+	public boolean isUserAD() {
+		return ALSession.getSession("userAD") != null;
+	}
 }

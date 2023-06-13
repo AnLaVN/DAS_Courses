@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en" ng-app="MyApp" ng-controller="MyCtrl" data-bs-theme="{{Theme}}">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <head>
 <meta charset="UTF-8">
@@ -44,7 +45,7 @@
 
 <body ng-app="myApp">
 	<c:choose>
-		<c:when test="${!sessionScope.userAD}">
+		<c:when test="${isUserAD}">
 		
 	<jsp:include page="Module/ADHeader.jsp"></jsp:include>
 	<div class="container-fluid ">
@@ -77,7 +78,7 @@
 	
 		</c:when>
 		<c:otherwise>
-		<script>window.location = "/"</script>
+			<script>window.location = "/"</script>
 		</c:otherwise>
 	</c:choose>
 	
