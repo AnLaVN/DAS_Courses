@@ -27,9 +27,6 @@ public class DASCourseApplication {
 		System.setProperty("spring.datasource.password", "");//AES.Decrypt(hashPassword, hashKey)); 
 		ALEmail.ZohoMail = new Email(AES.Decrypt(hashEmail, hashKey), AES.Decrypt(hashEPass, hashKey), "smtp.zoho.com");
 		
-//		System.setProperty("spring.mail.username", AES.Decrypt(hashEmail, hashKey));
-//		System.setProperty("spring.mail.password", AES.Decrypt(hashEPass, hashKey));
-		
 		SpringApplication.run(DASCourseApplication.class, args);
 		
 	}

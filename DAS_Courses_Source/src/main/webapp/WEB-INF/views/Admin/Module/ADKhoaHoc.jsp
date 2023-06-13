@@ -19,7 +19,7 @@
 <h3 class="mt-3 fw-bold ms-3" style="font-family: 'Courier New', Courier;">DANH SÁCH KHÓA HỌC</h3>
 <div class="row p-0 m-0">
 	<div class="col-10 col-md-6 col-lg-4 mx-auto mt-2">
-		<div class="input-group mb-3 ms-0">
+		<!--  <div class="input-group mb-3 ms-0">
 			<input type="text" class="form-control" style="border-radius: 20px 0px 0 20px; border-right: 0px;" placeholder="Tìm kiếm">
 			<a class="input-group-text bg-white" id="basic-addon1" href="#" style="text-decoration: none; border-radius: 0px 20px 20px 0px;"><i
 				class="fa-solid fa-magnifying-glass me-2"></i></a>
@@ -33,7 +33,7 @@
 					<option value="${phanloai.idpl}">${phanloai.tenpl}</option>
 				</c:forEach>
 			</select>
-		</div>
+		</div>-->
 	</div>
 	<div class="col-10 mx-auto col-lg-2 mt-3 mt-lg-0">
 		<a href="/admin/addKH" class="btn btn-outline-info mt-2 fw-bold col-12" style="border-radius: 20px 20px 20px 20px;" id="themMoi"> <i
