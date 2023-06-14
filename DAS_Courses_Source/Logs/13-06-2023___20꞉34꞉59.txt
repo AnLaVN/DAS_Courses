@@ -1,0 +1,17 @@
+[20:34:59.402]	SignInPOST - Try to sign in with username: ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:34:59.449]	SignInPOST - Sign in successfully !
+[20:36:11.215]	EnrolledGET - Get 3 courses enrolled of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:36:12.628]	CertificatesGET - Get 0 certificates of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:37:38.864]	CourseGET - View Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:38:27.555]	CourseJOIN - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e view course KHBE001
+[20:38:27.570]	MaterialGET - View material 3 in course KHBE001
+[20:38:30.619]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:38:58.322]	ExamPOST - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e submit exam of course KHBE001 with 0.0 mark
+[20:38:58.354]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:39:08.746]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:39:14.972]	ExamPOST - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e submit exam of course KHBE001 with 33.333333333333336 mark
+[20:39:15.003]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:39:26.918]	ExamPOST - Username ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e submit exam of course KHBE001 with 100.0 mark
+[20:39:27.185]	ExamGET - Exam Course KHBE001 by ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:39:36.193]	EnrolledGET - Get 3 courses enrolled of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
+[20:39:41.910]	CertificatesGET - Get 1 certificates of ea6505a1103f71ca44504fdb5ff1479a4038b9fbc86f3befefdbf321ba50847e
