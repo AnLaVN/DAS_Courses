@@ -3,7 +3,8 @@
   <img src="https://raw.githubusercontent.com/AnLaVN/DAS_Courses/Releases/DAS_Courses_Logo/Logo.png" width = "50%">
   <br><br>
   <a href="https://github.com/AnLaVN/DAS_Courses/blob/Releases/LICENSE.md"><img src="https://img.shields.io/github/license/AnLaVN/DAS_Courses" alt="GitHub license"/></a>
-  <a href="https://cloudinary.com/"><img src="https://img.shields.io/badge/Cloud-Cloudinary-blue"></a>
+  <a href="https://cloudinary.com"><img src="https://img.shields.io/badge/Cloud-Cloudinary-blue"></a>
+  <a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/Java-Spring_Boot-green"></a>
   <br><br>
   <img src="https://img.shields.io/github/repo-size/AnLaVN/DAS_Courses">
   <img src="https://img.shields.io/github/languages/code-size/AnLaVN/DAS_Courses">
